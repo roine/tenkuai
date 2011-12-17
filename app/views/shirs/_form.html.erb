@@ -1,0 +1,66 @@
+<%= form_for(@shir) do |f| %>
+  <% if @shir.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@shir.errors.count, "error") %> prohibited this shir from being saved:</h2>
+
+      <ul>
+      <% @shir.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :category_id %><br />
+   <!--<%= f.number_field :category_id %>-->
+<select name='category'>
+<%@categories.each do |c|%>
+<option value="<%=c.id%>"><%=c.title%></option>
+<%end%>
+</select>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :instruction %><br />
+    <%= f.text_area :instruction %>
+  </div>
+  <div class="field">
+    <%= f.label :tag_id %><br />
+    <%= f.number_field :tag_id %>
+  </div>
+  <div class="field">
+    <%= f.label :days_to_complete %><br />
+    <%= f.number_field :days_to_complete %>
+  </div>
+  <div class="field">
+    <%= f.label :image %><br />
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :shipping_required %><br />
+    <%= f.check_box :shipping_required %>
+  </div>
+  <div class="field">
+    <%= f.label :shipping_id %><br />
+    <%= f.number_field :shipping_id %>
+  </div>
+  <div class="field">
+    <%= f.label :date_timestamp %><br />
+    <%= f.number_field :date_timestamp %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

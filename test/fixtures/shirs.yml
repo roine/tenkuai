@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 1
+  title: MyString
+  category_id: 1
+  description: MyText
+  instruction: MyText
+  tag_id: 1
+  days_to_complete: 1
+  image: MyString
+  shipping_required: false
+  shipping_id: 1
+  date_timestamp: 1
+
+two:
+  user_id: 1
+  title: MyString
+  category_id: 1
+  description: MyText
+  instruction: MyText
+  tag_id: 1
+  days_to_complete: 1
+  image: MyString
+  shipping_required: false
+  shipping_id: 1
+  date_timestamp: 1

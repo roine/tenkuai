@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+<%=@user.username%>
+
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @shir.title %>
+</p>
+
+<p>
+  <b>Category:</b>
+<%i=0%>
+  <% @categories.each do |c| %>
+<%i+=1%>
+<%if i!= @categories.count%>
+<%="#{c.title},"%>
+<%else%>
+<%="#{c.title}"%>
+<%end%>
+<%end%>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @shir.description %>
+</p>
+
+<p>
+  <b>Instruction:</b>
+  <%= @shir.instruction %>
+</p>
+
+<p>
+  <b>Tag:</b>
+  <%= @shir.tag_id %>
+</p>
+
+<p>
+  <b>Days to complete:</b>
+  <%= @shir.days_to_complete %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @shir.image %>
+</p>
+
+<p>
+  <b>Shipping required:</b>
+  <%= @shir.shipping_required %>
+</p>
+
+<p>
+  <b>Shipping:</b>
+  <%= @shir.shipping_id %>
+</p>
+
+<p>
+  <b>Date timestamp:</b>
+  <%= @shir.date_timestamp %>
+</p>
+
+
+<%= link_to 'Edit', edit_shir_path(@shir) %> |
+<%= link_to 'Back', shirs_path %>

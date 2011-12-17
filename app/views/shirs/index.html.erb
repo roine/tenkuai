@@ -1,0 +1,43 @@
+<h1>Listing shirs</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Title</th>
+    <th>Category</th>
+    <th>Description</th>
+    <th>Instruction</th>
+    <th>Tag</th>
+    <th>Days to complete</th>
+    <th>Image</th>
+    <th>Shipping required</th>
+    <th>Shipping</th>
+    <th>Date timestamp</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @shirs.each do |shir| %>
+  <tr>
+    <td><%= shir.user_id %></td>
+    <td><%= shir.title %></td>
+    <td><%= shir.category_id %></td>
+    <td><%= shir.description %></td>
+    <td><%= shir.instruction %></td>
+    <td><%= shir.tag_id %></td>
+    <td><%= shir.days_to_complete %></td>
+    <td><%= shir.image %></td>
+    <td><%= shir.shipping_required %></td>
+    <td><%= shir.shipping_id %></td>
+    <td><%= shir.date_timestamp %></td>
+    <td><%= link_to 'Show', shir %></td>
+    <td><%= link_to 'Edit', edit_shir_path(shir) %></td>
+    <td><%= link_to 'Destroy', shir, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Shir', new_shir_path %>
