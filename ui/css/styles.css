@@ -1,0 +1,114 @@
+/*	Resets
+	------	*/
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, 
+img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, hr, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, 
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figure, figcaption, hgroup, 
+menu, footer, header, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+
+a img {border: 0;}
+
+
+
+/*	Typography presets
+	------------------	*/
+
+.gigantic {
+	font-size: 110px;
+	line-height: 120px;
+	letter-spacing: -2px;
+}
+
+.huge, h1 {
+	font-size: 68px;
+	line-height: 72px;
+	letter-spacing: -1px;
+}
+
+.large, h2 {
+	font-size: 42px;
+	line-height: 48px;
+}
+
+.bigger, h3 {
+	font-size: 26px;
+	line-height: 36px;
+}
+
+.big, h4 {
+	font-size: 22px;
+	line-height: 30px;
+}
+
+body {
+	font: 16px/24px Arial, sans-serif;
+}
+
+.small, small {
+	font-size: 13px;
+	line-height: 18px;
+}
+
+/* Selection colours (easy to forget) */
+
+::selection 	 	{background: rgb(255,255,158);}
+::-moz-selection 	{background: rgb(255,255,158);}
+img::selection 		{background: transparent;}
+img::-moz-selection	{background: transparent;}
+body {-webkit-tap-highlight-color: rgb(255,255,158);}
+
+/* Chrome Safari Hack */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+}
+
+/* Default */
+@font-face {font-family: 'RokkittRegular'; src: url('Rokkitt-webfont.eot'); src: url('Rokkitt-webfont.eot?#iefix') format('embedded-opentype'), url('Rokkitt-webfont.woff') format('woff'), url('Rokkitt-webfont.ttf') format('truetype'), url('Rokkitt-webfont.svg#RokkittRegular') format('svg'); font-weight: normal; font-style: normal;}
+.right {float: right;} .left {float: left;} .clear {clear: both;} .center {text-align: center;}
+
+body {
+	background: #fcfcfc;
+	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
+}
+
+.wrap {width: 960px; margin: 0 auto;}
+.section {padding: 10px 0; position: relative; min-width: 1024px;}
+
+#header {background: #8FBE00; border-bottom: 1px solid #ccc; min-height: 30px; -moz-box-shadow: 0 0 3px #333;-webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333;}
+#logo {min-height: 30px; -moz-box-shadow: 0 0 3px #333;-webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333; background: #c43715; top: 0; margin-left: 365px; width: 245px; height: 125px; position: absolute; text-align: center; -webkit-border-bottom-right-radius: 20px; -webkit-border-bottom-left-radius: 20px; -moz-border-radius-bottomright: 20px; -moz-border-radius-bottomleft: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px;}
+.nav {font-weight: normal; text-shadow: 1px 1px 1px #888; position: relative; top: 3px; text-transform: capitalize; font-family: RokkittRegular; font-size: 20px; color: #fff;}
+.nav li {float: left; list-style-type: none; margin: 0 15px;}
+.nav li.signUp {padding: 5px 10px; position: relative ;top: -5px; background-color:#c43715; border-width:0px; border-color:#ffc5b3; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; -moz-box-shadow:0px 0px 2px #888; -webkit-box-shadow:0px 0px 2px #888; box-shadow:0px 0px 2px #888; }
+.nav li a {color: #fff; text-decoration: none;}
+.nav li a:hover {color: #eee;}
+.nav li.signUp:hover {color: #fff; background: #d13919; cursor: pointer;}
+.nav li.signUp a:hover {color: #fff;}
+#mainContent {min-height: 500px;}
+#footer {background: #eee; border-top: 1px solid #ddd; min-height: 120px; height: auto; -moz-box-shadow: 0 0 3px #ccc;-webkit-box-shadow: 0 0 3px #ccc;box-shadow: 0 0 3px #ccc;}
+#footer .fCol {float: left; min-height: 120px; min-width: 100px; margin: 10px 10px 20px 10px; padding: 0 10px;}
+#footer #fCat {width: 250px;}
+#footer #fNewsletter {width: 390px;}
+#footer #fSocial {width: 200px;}
+#footer #fSocial ul li {-webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; background: #ddd; padding: 5px 10px; margin-bottom: 2px; list-style-type: none; font-size: 12px;}
+#footer #fSocial ul li a img {position: relative; top: 4.5px; padding-right:10px;}
+#footer #fSocial ul li a {color : #555; text-decoration: none;}
+#footer #fSocial ul li a:hover {color: #333;}
+#footer .fCol h3 {color: #555; font-weight: normal; font-size: 19px; font-family: RokkittRegular;}
+#footer #final {width: 960px; text-align: center; border-top: 1px solid #ddd; margin-bottom: -5px; padding: 5px 0; font-size: 11.5px; color: #777;}
+#footer #final span {margin-left: 10px;}
+#footer #final ul {text-align: center;}
+#footer #final ul li {display: inline; float: left; list-style-type: none; margin: 0 10px;}
+#footer #final ul li a {color: #888; text-decoration: none;}
+#footer #final ul li a:hover {color: #555;}
