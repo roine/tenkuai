@@ -60,9 +60,12 @@ body {
 .homeShirLatest h4, .homeShir h4 {overflow: hidden; max-height: 40px; height: auto; line-height: 1.3em; font-family: arial; font-size: 15px; font-weight: normal; margin: 8px 0;}
 .homeShirLatest h4 a, .homeShir h4 a {color: #d13919; text-decoration: none;} 
 .homeShirLatest h4 a:hover, .homeShir h4 a:hover {color: #333;}
-.small a {color: #333;}
-.small a:hover {color: #333;}
+.small a {color: #333; text-decoration: none;}
+.small a:hover {color: #d13919;}
 .homeShirLatest .shortDesc, .homeShir .shortDesc {line-height: 1.5em; height: auto; color: #555; max-height: 48px; overflow: hidden; font-size: 12px;}
+.homeShirLatest>img {margin: 2px; float: left; position: relative; width: 97px; height: 97px;-webkit-border-top-left-radius: 3px; -webkit-border-bottom-left-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-bottomleft: 3px; border-top-left-radius: 3px; border-bottom-left-radius: 3px;}
+.homeLatestDesc {padding: 9px 10px; float: left; position: relative; width: 185px; max-height: 77px;}
+.homeLatestDesc h4 {font-size: 14px; max-height: 70px;}
 
 #footer {background: #eee; min-height: 120px; height: auto; -moz-box-shadow: 0 0 3px #ccc;-webkit-box-shadow: 0 0 3px #ccc;box-shadow: 0 0 3px #ccc;}
 #footer .fCol {float: left; min-height: 120px; min-width: 100px; margin: 10px 10px 20px 10px; padding: 0 10px;}
@@ -70,18 +73,16 @@ body {
 #footer #fCat ul {position: relative; top: 10px; min-height: 160px;}
 #footer #fCat ul li {font-size: 12px; margin-left: 10px; list-style-position: inside; width: 45%; float: left;}
 #footer #fCat ul li a {text-decoration: none; color: #555;}
-#footer #fCat ul li a:hover {color: #d13919;}
+#footer #fCat ul li a:hover, #footer #final ul li a:hover {color: #d13919;}
 #footer #fNewsletter {width: 350px;}
 #footer #fSocial {width: 200px;}
-#footer #fSocial ul {position: relative; top: 10px;}
-#footer #fSocial ul li {-webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; background: #ddd; padding: 5px 10px; margin-bottom: 2px; list-style-type: none; font-size: 12px;}
-#footer #fSocial ul li a img {position: relative; top: 4.5px; padding-right:10px;}
-#footer #fSocial ul li a {color : #555; text-decoration: none;}
-#footer #fSocial ul li a:hover {color: #d13919;}
+#footer #fSocial #fSocialUl {position: relative; top: 10px;}
+#footer #fSocial #fSocialUl a {color: #555; width: 100%; text-decoration: none; display: block; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; background: #ddd; padding: 5px 10px; margin-bottom: 2px; list-style-type: none; font-size: 12px;}
+#footer #fSocial #fSocialUl a img {position: relative; top: 4.5px; padding-right:10px;}
+#footer #fSocial #fSocialUl a:hover {color: #d13919;}
 #footer .fCol h3 {color: #555; font-weight: normal; font-size: 19px; font-family: RokkittRegular;}
 #footer #final {width: 960px; text-align: center; border-top: 1px solid #ddd; margin-bottom: -5px; padding: 5px 0; font-size: 11.5px; color: #777;}
 #footer #final span {margin-left: 10px;}
 #footer #final ul {text-align: center;}
 #footer #final ul li {display: inline; float: left; list-style-type: none; margin: 0 10px;}
 #footer #final ul li a {color: #888; text-decoration: none;}
-#footer #final ul li a:hover {color: #555;}
