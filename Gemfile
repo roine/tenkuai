@@ -31,3 +31,8 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug'
 
+gem 'friendly_id'
+
+
+gem 'rspec-rails'
+gem 'inherited_resources'
