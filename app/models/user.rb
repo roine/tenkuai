@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+  has_friendly_id :username, :use_slug => true
+
   has_many :shirs
   
   validates :username, :presence=>true, :length=>{:minimum=>3, :maximum=>25}
