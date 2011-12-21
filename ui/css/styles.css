@@ -25,7 +25,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 /* Default */
 @font-face {font-family: 'RokkittRegular'; src: url('Rokkitt-webfont.eot'); src: url('Rokkitt-webfont.eot?#iefix') format('embedded-opentype'), url('Rokkitt-webfont.woff') format('woff'), url('Rokkitt-webfont.ttf') format('truetype'), url('Rokkitt-webfont.svg#RokkittRegular') format('svg'); font-weight: normal; font-style: normal;}
 .right {float: right;} .left {float: left;} .clear {clear: both;} .center {text-align: center;}
-
+.bold {font-weight: bold;}
 .colLeft {float: left; position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-right: 10px;}
 .colMiddle {float: left; position: relative; top: 90px; width: 245px; max-width: 245px;}
 .colRight {float: left; position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-left: 10px;}
@@ -35,11 +35,13 @@ body {
 	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
 }
 
+a {text-decoration: none;}
+a:hover {color: #d13919;} 
+
 .wrap {width: 960px; margin: 0 auto;}
 .section {padding: 10px 0; position: relative; min-width: 1024px;}
 
 /* Header */
-
 #header {background: #8FBE00; min-height: 25px; -moz-box-shadow: 0 0 3px #333;-webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333;}
 #logo {min-height: 30px; -moz-box-shadow: 0 0 3px #333;-webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333; background: #c43715; top: 0; margin-left: 355px; width: 245px; height: 125px; position: absolute; text-align: center; -webkit-border-bottom-right-radius: 20px; -webkit-border-bottom-left-radius: 20px; -moz-border-radius-bottomright: 20px; -moz-border-radius-bottomleft: 20px; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px;}
 .nav {font-weight: normal; text-transform: capitalize; font-family: RokkittRegular; font-size: 20px; color: #fff;}
@@ -52,13 +54,12 @@ body {
 #mainContent {min-height: 500px; padding-bottom: 35px;}
 
 /* Homepage */
-
 .homeCol {float: left;}
 .homeCol h2 {font-family: RokkittRegular; font-size: 25px; font-weight: normal; color: #555; padding-left: 15px; text-transform: capitalize;}
 #homeFeatured {position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-right: 10px;}
 #homeCat {position: relative; top: 90px; width: 245px; max-width: 245px;}
-#homeCat #homeCatUl a {width: 100%; display:block; text-align: center;  font-family: RokkittRegular; font-size: 20px; border-bottom: 1px dotted #ccc; text-decoration: none; color: #333; padding: 5px 0;}
-#homeCat #homeCatUl a:hover {background: #F9F2E7; color: #d13919;}
+#colMiddleUl a, #homeCat #homeCatUl a {width: 100%; display:block; text-align: center;  font-family: RokkittRegular; font-size: 20px; border-bottom: 1px dotted #ccc; text-decoration: none; color: #333; padding: 5px 0;}
+#colMiddleUl a:hover, #homeCat #homeCatUl a:hover {background: #F9F2E7; color: #d13919;}
 #homeLatest {position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-left: 10px;}
 #homeLatest>h2 {padding-left: 30px;}
 .homeShir {background: #fff; -webkit-border-radius: 5px; height: 270px; -moz-border-radius: 5px; border-radius: 5px; border: 3px solid #f5f5f5; width: 310px; margin: 10px auto 20px auto;}
@@ -77,18 +78,37 @@ body {
 .homeLatestDesc h4 {font-size: 14px; max-height: 70px;}
 
 /* Shi'r Individual Page */
-
-#shir .orderMain {-moz-box-shadow: 0 0 3px #333; -webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333; text-shadow: none; cursor: pointer; padding: 20px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #00A8C6; font-family: RokkittRegular; text-transform: uppercase; text-align: center; width: auto; color: #fff;}
+#shir .orderMain {margin: 20px auto 30px auto; -moz-box-shadow: 0 0 3px #333; -webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333; text-shadow: none; cursor: pointer; padding: 15px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #00A8C6; font-family: RokkittRegular; text-transform: uppercase; text-align: center; width: auto; color: #fff;}
 #shir .orderMain h2 {font-size: 30px; word-spacing: 3px;}
 #shir .orderMain:hover {background: #e8401c;}
 #shir h1 {font-family: RokkittRegular; padding-right: 20px; color: #333; font-size: 30px; line-height :1.3em;}
 #shir .mainImg {-moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc;box-shadow: 0 0 3px #ccc; border:1px solid #ccc; width: 310px; margin: 20px 0 0 2px; height: 220px; -webkit-border-top-left-radius: 20px;-webkit-border-bottom-right-radius: 20px;-moz-border-radius-topleft: 20px;-moz-border-radius-bottomright: 20px;border-top-left-radius: 20px;border-bottom-right-radius: 20px;}
 #shir .colLeft p {font-size: 14px; text-align: justify; padding: 15px 30px 20px 0px;}
 #shir .colRight .shirWrap {padding-left: 25px;}
-#shir .delivery {font-family: RokkittRegular;}
+#shir #productMisc {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #F9F2E7; border: 1px solid #feecd4; padding: 10px 0 30px 0;}
+#shir #productMisc h4 {font-size: 16px; margin-top: -25px; color:#444;}
+#shir #productMisc .pRow {padding: 5px; border-bottom: 1px solid #f3e2cc; font-size: 12px; margin: 0 15px;} 
+#shir #productMisc .pRowThick {padding: 5px; margin: 20px 15px 0px 15px; border-bottom: 3px solid #f3e2cc; font-size: 12px;} 
+#shir #productMisc #taggedAs {text-align: center; padding: 10px 0 15px 15px;}
+#shir #productMisc #taggedAs a {color: #333; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background: #f3e2cc; font-size: 12px; text-decoration: none; float: left; display: inline-block; padding: 3px 8px; margin: 5px;}
+#shir #productMisc a {color: #d13919;}
+#shir #productMisc a:hover {color: #333;}
+#shir #productMisc .bold {color: #555;}
+.c444 {color: #444;}
+
+/* Ajaxful Rating */
+.ajaxful-rating, .ajaxful-rating a:hover, .ajaxful-rating a:active, .ajaxful-rating a:focus, .ajaxful-rating .show-value {background: url("../img/star.png") repeat-x scroll left -1000px transparent;}
+.ajaxful-rating {list-style: none outside none; width: 125px; background-position: left top; height: 25px; list-style: none outside none; margin: 0; overflow: hidden; padding: 0; position: relative; top: -1px;}
+.ajaxful-rating .show-value {background-position: left center; z-index: 1;}
+.ajaxful-rating a, .ajaxful-rating span, .ajaxful-rating .show-value {border: medium none; height: 25px; left: 0; line-height: 25px; outline: medium none; overflow: hidden; position: absolute; text-indent: -1000em; top: 0;}
+.ajaxful-rating li {display: inline;}
+.ajaxful-rating .stars-1 {width: 20%; z-index: 6;}
+.ajaxful-rating .stars-2 {width: 40%; z-index: 5;}
+.ajaxful-rating .stars-3 {width: 60%; z-index: 4;}
+.ajaxful-rating .stars-4 {width: 80%; z-index: 3;}
+.ajaxful-rating .stars-5 {width: 100%; z-index: 2;}
 
 /* Footer */
-
 #footer {background: #eee; min-height: 120px; height: auto; -moz-box-shadow: 0 0 3px #ccc;-webkit-box-shadow: 0 0 3px #ccc;box-shadow: 0 0 3px #ccc;}
 #footer .fCol {float: left; min-height: 120px; min-width: 100px; margin: 10px 10px 20px 10px; padding: 0 10px;}
 #footer #fCat {width: 290px;}
@@ -101,7 +121,7 @@ body {
 #footer #fSocial #fSocialUl {position: relative; top: 10px;}
 #footer #fSocial #fSocialUl a {color: #555; width: 100%; text-decoration: none; display: block; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; background: #ddd; padding: 5px 10px; margin-bottom: 2px; list-style-type: none; font-size: 12px;}
 #footer #fSocial #fSocialUl a img {position: relative; top: 4.5px; padding-right:10px;}
-#footer #fSocial #fSocialUl a:hover {color: #d13919;}
+#footer #fSocial #fSocialUl a:hover, #shir #productMisc #taggedAs a:hover {color: #d13919;}
 #footer .fCol h3 {color: #555; font-weight: normal; font-size: 19px; font-family: RokkittRegular;}
 #footer #final {width: 960px; text-align: center; border-top: 1px solid #ddd; margin-bottom: -5px; padding: 5px 0; font-size: 11.5px; color: #777;}
 #footer #final span {margin-left: 10px;}
