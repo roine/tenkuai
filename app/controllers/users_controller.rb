@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.json
+  before_filter :authenticate_user!, :except => [:show, :index]
   
   def to_params
     user_id

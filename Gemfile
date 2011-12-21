@@ -33,6 +33,8 @@ gem 'jquery-rails'
 
 gem 'friendly_id'
 
+gem 'devise'
+
 
 gem 'rspec-rails'
 gem 'inherited_resources'
