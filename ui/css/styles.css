@@ -57,7 +57,7 @@ a:hover {color: #d13919;}
 .homeCol {float: left;}
 .homeCol h2 {font-family: RokkittRegular; font-size: 25px; font-weight: normal; color: #555; padding-left: 15px; text-transform: capitalize;}
 #homeFeatured {position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-right: 10px;}
-#homeCat {position: relative; top: 90px; width: 245px; max-width: 245px;}
+#homeCat {position: relative; top: 110px; width: 245px; max-width: 245px;}
 #colMiddleUl a, #homeCat #homeCatUl a {width: 100%; display:block; text-align: center;  font-family: RokkittRegular; font-size: 20px; border-bottom: 1px dotted #ccc; text-decoration: none; color: #333; padding: 5px 0;}
 #colMiddleUl a:hover, #homeCat #homeCatUl a:hover {background: #F9F2E7; color: #d13919;}
 #homeLatest {position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-left: 10px;}
@@ -94,6 +94,7 @@ a:hover {color: #d13919;}
 #shir #productMisc a {color: #d13919;}
 #shir #productMisc a:hover {color: #333;}
 #shir #productMisc .bold {color: #555;}
+#shir #share {margin-left: 30px; padding: 5px 0 25px; text-align: right; width: 308px;}
 .c444 {color: #444;}
 
 /* Ajaxful Rating */
@@ -117,6 +118,8 @@ a:hover {color: #d13919;}
 #footer #fCat ul li a {text-decoration: none; color: #555;}
 #footer #fCat ul li a:hover, #footer #final ul li a:hover {color: #d13919;}
 #footer #fNewsletter {width: 350px;}
+#footer #fNewsletter #mc_embed_signup form {padding: 10px 0;}
+#footer #fNewsletter #mc_embed_signup #mce-EMAIL {width: 285px; padding: 10px; font-family: arial; border: 3px solid #ccc; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; font-size: 15px;}
 #footer #fSocial {width: 200px;}
 #footer #fSocial #fSocialUl {position: relative; top: 10px;}
 #footer #fSocial #fSocialUl a {color: #555; width: 100%; text-decoration: none; display: block; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; background: #ddd; padding: 5px 10px; margin-bottom: 2px; list-style-type: none; font-size: 12px;}
