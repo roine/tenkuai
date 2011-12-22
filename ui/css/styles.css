@@ -29,7 +29,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 .colLeft {float: left; position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-right: 10px;}
 .colMiddle {float: left; position: relative; top: 90px; width: 245px; max-width: 245px;}
 .colRight {float: left; position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-left: 10px;}
-.c444 {color: #444;}
+.c444 {color: #444;} .c888 {color: #888;}
 
 body {
 	background: #fcfcfc;
@@ -82,14 +82,16 @@ a {text-decoration: none;}
 #homeFeaturedOrgs h2, .homeCatUl h2 {padding: 0 0 8px 0;}
 .homeFeaturedOrg {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;  border: 2px solid #EEEEEE; display: inline-block; float: left; height: 112px; margin: 3px; width: 112px;}
 
-/* Shi'r Individual Page */
+/* User and Shi'r Individual Page */
 #shir .orderMain {margin: 20px auto 0px auto; -moz-box-shadow: 0 0 3px #333; -webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333; text-shadow: none; cursor: pointer; padding: 15px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #00A8C6; font-family: RokkittRegular; text-transform: uppercase; text-align: center; width: auto; color: #fff;}
 #shir .orderMain h2 {font-size: 30px; word-spacing: 3px;}
 #shir .orderMain:hover {background: #e8401c;}
-#shir h1 {font-family: RokkittRegular; padding-right: 20px; color: #333; font-size: 30px; line-height :1.3em;}
-#shir .mainImg {-moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc;box-shadow: 0 0 3px #ccc; border:1px solid #ccc; width: 310px; margin: 20px 0 0 2px; height: 220px; -webkit-border-top-left-radius: 20px;-webkit-border-bottom-right-radius: 20px;-moz-border-radius-topleft: 20px;-moz-border-radius-bottomright: 20px;border-top-left-radius: 20px;border-bottom-right-radius: 20px;}
-#shir .colLeft p {font-size: 14px; text-align: justify; padding: 15px 30px 20px 0px;}
-#shir .colRight .shirWrap {padding-left: 25px;}
+
+#user h1, #shir h1 {font-family: RokkittRegular; padding-right: 20px; color: #333; font-size: 30px; line-height :1.3em;}
+#user .mainImg, #shir .mainImg {-moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc;box-shadow: 0 0 3px #ccc; border:1px solid #ccc; width: 310px; margin: 20px 0 0 2px; height: 220px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
+#user .colLeft p, #shir .colLeft p {font-size: 14px; text-align: justify; padding: 15px 30px 20px 0px;}
+#user .colRight .userWrap, #shir .colRight .shirWrap {padding-left: 25px;}
+
 #shir #productMisc {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #F9F2E7; border: 1px solid #feecd4; padding: 10px 0 30px 0;}
 #shir #productMisc h4 {color: #444; font-family: RokkittRegular; font-size: 22px; font-weight: normal; margin-top: -25px;}
 #shir #productMisc .pRow {padding: 5px; border-bottom: 1px solid #f3e2cc; font-size: 12px; margin: 0 15px;} 
@@ -112,6 +114,14 @@ a {text-decoration: none;}
 #shir #feedback p {margin-top: 8px; font-size: 11.5px; line-height: 1.4em; color: #555;}
 #shir #askQuestion {font-family: Arial; font-size: 13px; text-decoration: none; padding:8px; color: #d13919; text-align: right; display: block;}
 #shir #askQuestion:hover {color: #333;}
+
+/* User */
+#user #profilePic {width: 100px; height: 100px; border: 5px solid #eee; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; float: left;}
+#user h1 {float: left; margin-left: 10px; width: 190px; line-height :1.3em; overflow: hidden; padding: 12px 0; height: auto; max-height: 100px;}
+#user #profileDetails {margin: 20px 0;}
+#user #profileDetails ul li {font-size: 13px; list-style-type: none; border-bottom: 1px dotted #eee; padding: 5px;}
+#user #profileDetails ul li .left {color: #888; width: 35%;}
+#user #profileDetails ul li .right {width: 65%; text-align: left;}
 
 /* Ajaxful Rating */
 .ajaxful-rating, .ajaxful-rating a:hover, .ajaxful-rating a:active, .ajaxful-rating a:focus, .ajaxful-rating .show-value {background: url("../img/star.png") repeat-x scroll left -1000px transparent;}
