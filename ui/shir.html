@@ -8,8 +8,8 @@
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link rel="stylesheet" media="all" href="css/styles.css"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<!-- Adding "maximum-scale=1" fixes the Mobile Safari auto-zoom bug: http://filamentgroup.com/examples/iosScaleBug/ -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	
 	</head>
 	
 	<body id="shir">
@@ -39,18 +39,47 @@
 				
 				<div class="colMiddle">
 						<div class="orderMain">
-							<h2>BUY !</h2>
+							<h2>buy this</h2>
 						</div> <!-- orderMain -->
 						
-						<div id="colMiddleUl">
-							<a href="">Ask the seller a question</a>
-						</div> <!-- colMiddleUl-->
+						<a id="askQuestion" href="">Ask the seller a question</a>
+						
+						<div id="feedback">
+							<h4>Latest Buyers' Feedback</h4>
+							
+							<div class="feedbackList">
+								<ul>
+									<li>
+										<img class="left" src="img/test/feedbackImg.jpg" alt="">
+										<div class="right"><a href="">Gengis Khan</a> <div class="smaller">posted this 1 day ago</div></div>
+										<div class="clear"></div>
+										<p>excellent work on time, i recommend to everyone try, must encourage arjunrocks to climb greater heights</p>
+									</li>
+								
+									<li>
+										<img class="left" src="img/test/feedbackImg.jpg" alt="">
+										<div class="right"><a href="">Mark Zuckerberg</a> <div class="smaller">posted this 1 day ago</div></div>
+										<div class="clear"></div>
+										<p>You did an amazing job! Thanks so much for your time, Ill let you know how my coworker reacts :)</p>
+									</li>
+								
+									<li>
+										<img class="left" src="img/test/feedbackImg.jpg" alt="">
+										<div class="right"><a href="">Sean Kingston</a> <div class="smaller">posted this 1 day ago</div></div>
+										<div class="clear"></div>
+										<p>Fantastic!!!!! It was very good! I see why you are a top-seller!</p>
+									</li>
+								</ul>
+							</div> <!-- feedbackList -->
+							<p class="center"><span class="up"><img src="img/up.png" alt=""></span> <span class="down"><img src="img/down.png" alt=""></span></p>
+						</div> <!-- feedback -->
+						
 				</div> <!-- colMiddle -->
 				
 				<div class="colRight">
 					
 					<div id="share">
-					<span class='st_sina_button' displayText='Sina'></span><span  class='st_twitter_button' displayText='Tweet'></span><span  class='st_email_button' displayText='Email'></span><span  class='st_facebook_button' displayText='Facebook'></span>
+					<span class='st_sina_button' displayText='Sina'></span><span  class='st_twitter_button' displayText='Tweet'></span><span class='st_email_button' displayText='Email'></span><span  class='st_facebook_button' displayText='Facebook'></span>
 					</div> <!-- share -->
 					
 					<div class="shirWrap">
@@ -94,7 +123,7 @@
 							</div>
 							
 							<div class="pRow">
-								<div class="left"><a href="">Santa Claus</a></div>
+								<div class="left"><a href="user.html">Santa Claus</a></div>
 								<div class="right">Beijing, China</div>
 								<div class="clear"></div>
 							</div>
@@ -211,10 +240,14 @@
 				</div> <!-- final -->
 				
 			</div> <!-- wrap-->
-		</div> <!-- footer -->
-		
-		<script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'b82ba7ef-2c97-481b-b8cb-3977c069518d'});</script>
-		
-	</body>
+		</div> <!-- footer -->		
 	
+		<script src="js/jquery.easing.1.3.js"></script>
+		<script src="js/jquery-1.7.1.min.js"></script>
+		<script src="js/jcarousellite_1.0.1.min.js"></script>
+		<script src="js/20kuai.js"></script>
+		
+	<script type="text/javascript">var switchTo5x=true;</script><script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script><script type="text/javascript">stLight.options({publisher:'b82ba7ef-2c97-481b-b8cb-3977c069518d'});</script>
+	
+	</body>
 </html>
