@@ -96,14 +96,15 @@ a {text-decoration: none;}
 #shir #productMisc .pRowThick {padding: 5px; margin: 20px 15px 0px 15px; border-bottom: 3px solid #f3e2cc; font-size: 12px;} 
 #shir #productMisc #taggedAs {text-align: center; padding: 10px 0 15px 15px;}
 #shir #productMisc #taggedAs a {color: #333; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background: #f3e2cc; font-size: 12px; text-decoration: none; float: left; display: inline-block; padding: 3px 8px; margin: 5px;}
-#shir #productMisc a, #shir #feedback .up:hover, #shir #feedback .down:hover {cursor: pointer; color: #d13919;}
+#shir #productMisc a {cursor: pointer; color: #d13919;}
 #shir #productMisc a:hover {color: #333;}
 #shir #productMisc .bold {color: #555;}
 #shir #share {margin-left: 30px; padding: 5px 0 25px; text-align: right; width: 308px;}
 #shir #feedback {margin-top: 0px; padding: 15px 0; font-size: 13px;}
-#shir #feedback .up, #shir #feedback .down {cursor: pointer; padding: 0 10px; text-align:center;}
+#shir #feedback .up, #shir #feedback .down {cursor: pointer; padding: 10px; text-align:center;}
+#shir #feedback .up:hover, #shir #feedback .down:hover {background: #eee;}
 #shir #feedback h4 {border-top: 1px dotted #ccc; padding-top: 10px; text-align: center; font-family: RokkittRegular; font-size: 18px; font-weight: normal; text-transform: uppercase; margin-bottom: 5px;}
-#shir .feedbackList {max-width: 245px; max-height: 300px; height: auto; overflow: hidden;}
+#shir .feedbackList {max-width: 245px; max-height: 290px; height: auto; overflow: hidden;}
 #shir .feedbackList ul li {display: block; padding: 8px 0; border-bottom: 1px dotted #eee;}
 #shir .feedbackList ul li img {float: left; border: 1px solid #ccc; width: 24px; height: 24px;position: relative; top: 1px;}
 #shir .feedbackList ul li .right {margin-left: 10px; text-align: left; font-size: 11.5px; color: #555; width: 205px; line-height: 1.2em;}
