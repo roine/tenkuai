@@ -11,4 +11,8 @@ class User < ActiveRecord::Base
   has_many :shirs
   
   validates :username, :presence=>true,:uniqueness=>true
+  def update_with_password(params={})
+    params.delete(:current_password)
+    self.update_without_password(params)
+  end
  end
