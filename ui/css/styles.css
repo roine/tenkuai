@@ -116,12 +116,20 @@ a {text-decoration: none;}
 #shir #askQuestion:hover {color: #333;}
 
 /* User */
+#user {font-size: 13px;}
+#user h2 {color: #555; font-family: RokkittRegular; font-size: 25px; font-weight: normal; text-transform: capitalize;}
 #user #profilePic {width: 100px; height: 100px; border: 5px solid #eee; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; float: left;}
 #user h1 {float: left; margin-left: 10px; width: 190px; line-height :1.3em; overflow: hidden; padding: 12px 0; height: auto; max-height: 100px;}
-#user #profileDetails {margin: 20px 0;}
-#user #profileDetails ul li {font-size: 13px; list-style-type: none; border-bottom: 1px dotted #eee; padding: 5px;}
-#user #profileDetails ul li .left {color: #888; width: 35%;}
-#user #profileDetails ul li .right {width: 65%; text-align: left;}
+#user .profileDetails {margin: 20px 0;}
+#user .profileDetails ul {margin: 10px 0;}
+#user .profileDetails ul li {font-size: 13px; list-style-type: none; border-bottom: 1px dotted #eee; padding: 5px;}
+#user .profileDetails ul li .left {color: #888; width: 35%;}
+#user .profileDetails ul li .right {width: 65%; text-align: left;}
+#user .profileDetails p {line-height: 1.8em; font-size: 13px; padding: 5px;}
+#user .profileDetails ul li a {color: #d13919;}
+#user .profileDetails ul li a:hover {color: #333;}
+#user #contactUser {cursor: pointer; display: block; width:45%; float: right; margin: 20px auto; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; text-align: center; background: #00A8C6; color: #fff;} 
+#user #contactUser:hover {background: #e8401c;}
 
 /* Ajaxful Rating */
 .ajaxful-rating, .ajaxful-rating a:hover, .ajaxful-rating a:active, .ajaxful-rating a:focus, .ajaxful-rating .show-value {background: url("../img/star.png") repeat-x scroll left -1000px transparent;}
