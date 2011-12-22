@@ -11,7 +11,15 @@
 	  <%= render 'devise/menu/logged_in' %>
 	  <%= render 'devise/menu/logged_out' %>
 	</ul>
+	<% if flash[:warning] or flash[:notice] %>
+	  <div id="notice" class="center<% if flash[:warning] %>warning<% end %>">
+	    <%= flash[:warning] || flash[:notice] %>
+	  </div>
+	  
+	<% end %>
 <%= yield %>
-
+<script type="text/javascript">
+    setTimeout('$("#notice").fadeOut(1000);', 4000)
+  </script>
 </body>
 </html>
