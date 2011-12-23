@@ -6,4 +6,11 @@ $(document).ready(function() {
 		vertical: true
 	});
 	
+	$(".activityEntry").jCarouselLite({
+	    btnNext: ".down",
+	    btnPrev: ".up",
+		vertical: true,
+		visible: 4
+	});
+	
 });
