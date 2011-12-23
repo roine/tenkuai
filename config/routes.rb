@@ -1,10 +1,7 @@
 Tenkuai::Application.routes.draw do
   devise_for :users, :path_names => { :sign_up => "join", :sign_in => "login", :edit => "pa" }
   resources :categories
-
   resources :shirs
-
-  resources :users
 
   get "home/index"
   
@@ -59,8 +56,8 @@ Tenkuai::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
    root :to => 'home#index'
-   resources :users, :expect => [:show, :index, :new, :create, :edit]
-   resources :users, :only => [:index, :new, :create, :edit]
+   resources :users, :only=>[:show, :index]
+
    match ':id', :as => :username,
                 :via => :get,
                 :controller=> :users,
