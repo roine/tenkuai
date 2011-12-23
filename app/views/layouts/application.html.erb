@@ -23,7 +23,11 @@
   </script>
 <div class=debug>
 Controller =><%= controller_name%><br />
-Action =><%=action_name%>
+Action =><%=action_name%><br />
+<%if user_signed_in?%>
+Username =><%=current_user.username%><br />
+id =><%=current_user.id%>
+<%end%>
 </div>
 </body>
 </html>

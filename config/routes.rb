@@ -56,14 +56,17 @@ Tenkuai::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
    root :to => 'home#index'
-   resources :users, :only=>[:show, :index]
+   resources :users, :only=>[:show] do
+     resources :shirs
+   end
+   
 
    match ':id', :as => :username,
                 :via => :get,
                 :controller=> :users,
                 :action => :show
   
-  
+   match '*a', :to => 'errors#routing'
    #match '/:username' => 'users#show'
   # See how all your routes lay out with "rake routes"
 
