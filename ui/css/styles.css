@@ -106,7 +106,7 @@ a {text-decoration: none;}
 #shir #feedback .up, #shir #feedback .down, .up, .down {cursor: pointer; padding: 10px; text-align:center;}
 #shir #feedback .up:hover, #shir #feedback .down:hover, .up:hover , .down:hover {background: #eee;}
 #shir #feedback h4 {border-top: 1px dotted #ccc; padding-top: 10px; text-align: center; font-family: RokkittRegular; font-size: 18px; font-weight: normal; text-transform: uppercase; margin-bottom: 5px;}
-#shir .feedbackList {max-width: 245px; max-height: 290px; height: auto; overflow: hidden;}
+#shir .feedbackList {max-width: 245px;height: auto; overflow: hidden;}
 #shir .feedbackList ul li {display: block; padding: 8px 0; border-bottom: 1px dotted #eee;}
 #shir .feedbackList ul li img {float: left; border: 1px solid #ccc; width: 24px; height: 24px;position: relative; top: 1px;}
 #shir .feedbackList ul li .right {margin-left: 10px; text-align: left; font-size: 11.5px; color: #555; width: 205px; line-height: 1.2em;}
