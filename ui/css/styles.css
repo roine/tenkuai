@@ -52,6 +52,8 @@ a {text-decoration: none;}
 .nav li a.signUp:hover {color: #fff; text-shadow: 1px 1px 1px #555; background: #e8401c;}
 
 #mainContent {min-height: 500px; padding-bottom: 35px;}
+.404 {width: 100%;}
+.404 h1 {font-size: 88px; text-shadow: 1px 1px 1px #555; font-family: RokkittRegular;} 
 
 /* Homepage */
 .homeCol {float: left;}
