@@ -16,3 +16,5 @@ ul.hmenu li {
   display: inline;  
 }
 .center{text-align:center;margin:0 auto;display:block;}
+
+.debug{background: none repeat scroll 0 0 rgba(0, 0, 50, 0.2);margin: 10px;padding: 20px;}

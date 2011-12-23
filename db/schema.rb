@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111221134829) do
+ActiveRecord::Schema.define(:version => 20111223065408) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20111221134829) do
     t.integer  "date_timestamp"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cached_slug"
   end
 
   create_table "slugs", :force => true do |t|
