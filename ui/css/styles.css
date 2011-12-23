@@ -103,10 +103,10 @@ a {text-decoration: none;}
 #shir #productMisc .bold {color: #555;}
 #shir #share {margin-left: 30px; padding: 5px 0 25px; text-align: right; width: 308px;}
 #shir #feedback {margin-top: 0px; padding: 15px 0; font-size: 13px;}
-#shir #feedback .up, #shir #feedback .down {cursor: pointer; padding: 10px; text-align:center;}
-#shir #feedback .up:hover, #shir #feedback .down:hover {background: #eee;}
+#shir #feedback .up, #shir #feedback .down, .up, .down {cursor: pointer; padding: 10px; text-align:center;}
+#shir #feedback .up:hover, #shir #feedback .down:hover, .up:hover , .down:hover {background: #eee;}
 #shir #feedback h4 {border-top: 1px dotted #ccc; padding-top: 10px; text-align: center; font-family: RokkittRegular; font-size: 18px; font-weight: normal; text-transform: uppercase; margin-bottom: 5px;}
-#shir .feedbackList {max-width: 245px; max-height: 290px; height: auto; overflow: hidden;}
+#shir .feedbackList {max-width: 245px;height: auto; overflow: hidden;}
 #shir .feedbackList ul li {display: block; padding: 8px 0; border-bottom: 1px dotted #eee;}
 #shir .feedbackList ul li img {float: left; border: 1px solid #ccc; width: 24px; height: 24px;position: relative; top: 1px;}
 #shir .feedbackList ul li .right {margin-left: 10px; text-align: left; font-size: 11.5px; color: #555; width: 205px; line-height: 1.2em;}
@@ -130,6 +130,14 @@ a {text-decoration: none;}
 #user .profileDetails ul li a:hover {color: #333;}
 #user #contactUser {cursor: pointer; display: block; width:45%; float: right; margin: 20px auto; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; text-align: center; background: #00A8C6; color: #fff;} 
 #user #contactUser:hover {background: #e8401c;}
+#user .activityEntry ul li {display: block; list-style-type: none; border-bottom: 1px dotted #eee; background:#fff; padding: 10px; font-size: 13px;}
+#user .activityEntry ul li  .small {padding-bottom: 8px;}
+#user .activityEntry ul li  .left  {margin: 2px; float: left; position: relative; width: 97px; height: 97px;-webkit-border-top-left-radius: 3px; -webkit-border-bottom-left-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-bottomleft: 3px; border-top-left-radius: 3px; border-bottom-left-radius: 3px;}
+#user .activityEntry ul li  .right {width: 190px; padding: 8px 0;}
+#user .activityEntry ul li  .right h4 {font-size: 14px; font-weight: normal; line-height: 1.4em;}
+#user .activityEntry ul li  .right>.small {position: relative; top: 10px;}
+#user .activityEntry ul li  .right>.small a, #user .activityEntry .small a {color: #d13919;}
+#user .activityEntry ul li .right>.small a:hover, #user .activityEntry .small a:hover {color: #555;}
 
 /* Ajaxful Rating */
 .ajaxful-rating, .ajaxful-rating a:hover, .ajaxful-rating a:active, .ajaxful-rating a:focus, .ajaxful-rating .show-value {background: url("../img/star.png") repeat-x scroll left -1000px transparent;}
