@@ -15,7 +15,9 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    if !User.find_by_id(params[:id]).nil?
     @user = User.find(params[:id])
+
     @shirs = @user.shirs
     
    
@@ -23,6 +25,7 @@ class UsersController < ApplicationController
       format.html # show.html.erb
       format.json { render :json => @user }
     end
+  end
   end
 
   # GET /users/new

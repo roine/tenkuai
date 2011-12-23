@@ -57,7 +57,7 @@ Tenkuai::Application.routes.draw do
   # just remember to delete public/index.html.
    root :to => 'home#index'
    resources :users, :only=>[:show] do
-     resources :shirs
+     resources 'shirs'
    end
    
 
