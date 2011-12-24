@@ -1,5 +1,5 @@
 Tenkuai::Application.routes.draw do
-  devise_for :users, :path_names => { :sign_up => "join", :sign_in => "login", :edit => "pa" }
+  devise_for :users, :path_names => { :sign_up => "join", :sign_in => "login"}
   resources :categories
   resources :shirs
 
@@ -59,7 +59,7 @@ Tenkuai::Application.routes.draw do
    resources :users, :only=>[:show] do
      resources 'shirs'
    end
-   
+   resources :roles
 
    match ':id', :as => :username,
                 :via => :get,

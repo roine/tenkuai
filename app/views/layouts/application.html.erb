@@ -10,6 +10,9 @@
 	<ul class="hmenu">
 	  <%= render 'devise/menu/logged_in' %>
 	  <%= render 'devise/menu/logged_out' %>
+	<li><%=link_to 'Categories', categories_path%></li>
+	<li><%=link_to "Shirs", shirs_path %></li>
+	<li><%=link_to "Roles", roles_path %></li>
 	</ul>
 	<% if flash[:warning] or flash[:notice] %>
 	  <div id="notice" class="center<% if flash[:warning] %>warning<% end %>">
@@ -26,7 +29,11 @@ Controller =><%= controller_name%><br />
 Action =><%=action_name%><br />
 <%if user_signed_in?%>
 Username =><%=current_user.username%><br />
-id =><%=current_user.id%>
+id =><%=current_user.id%><br />
+<%unless current_user.role_id.nil?%>
+<%t=current_user.roles%>
+Type =><%=t.name%>
+<%end%>
 <%end%>
 </div>
 </body>

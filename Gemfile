@@ -38,3 +38,5 @@ gem 'devise'
 
 gem 'rspec-rails'
 gem 'inherited_resources'
+
+gem "cancan"

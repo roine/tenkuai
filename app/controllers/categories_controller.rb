@@ -2,8 +2,8 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
+    
     @categories = Category.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @categories }
@@ -25,6 +25,7 @@ class CategoriesController < ApplicationController
   # GET /categories/new.json
   def new
     @category = Category.new
+    authorize! :create, @category
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,13 +36,14 @@ class CategoriesController < ApplicationController
   # GET /categories/1/edit
   def edit
     @category = Category.find(params[:id])
+    authorize! :edit, @category
   end
 
   # POST /categories
   # POST /categories.json
   def create
     @category = Category.new(params[:category])
-
+    authorize! :create, @category
     respond_to do |format|
       if @category.save
         format.html { redirect_to @category, :notice => 'Category was successfully created.' }
@@ -57,7 +59,7 @@ class CategoriesController < ApplicationController
   # PUT /categories/1.json
   def update
     @category = Category.find(params[:id])
-
+    authorize! :update, @category
     respond_to do |format|
       if @category.update_attributes(params[:category])
         format.html { redirect_to @category, :notice => 'Category was successfully updated.' }
@@ -73,6 +75,7 @@ class CategoriesController < ApplicationController
   # DELETE /categories/1.json
   def destroy
     @category = Category.find(params[:id])
+    authorize! :destroy, @category
     @category.destroy
 
     respond_to do |format|

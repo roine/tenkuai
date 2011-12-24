@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<%if !User.find_by_id(params[:id]).nil?%>
+
 
 <p>
   <b>Email:</b>
@@ -23,7 +23,7 @@
 
 <p>
   <b>User type:</b>
-  <%= @user.user_type_id %>
+  <%= @user.roles.name %>
 </p>
 
 <p>
@@ -35,7 +35,4 @@
 <%@shirs.each do |s|%>
 <%= s.title%>
 <%end%>
-<%end%>
-<%else%>
-<div class='nouser'><%=params[:id]%> doesn't exist'</div>
 <%end%>

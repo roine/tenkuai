@@ -11,4 +11,7 @@ class CreateUsers < ActiveRecord::Migration
       t.timestamps
     end
   end
+  def up
+    rename.column :user_type_id, :role_id
+  end
 end
