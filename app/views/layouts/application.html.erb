@@ -31,8 +31,9 @@ Action =><%=action_name%><br />
 Username =><%=current_user.username%><br />
 id =><%=current_user.id%><br />
 <%unless current_user.role_id.nil?%>
-<%t=current_user.roles%>
+<%current_user.roles.each do |t|%>
 Type =><%=t.name%>
+<%end%>
 <%end%>
 <%end%>
 </div>
