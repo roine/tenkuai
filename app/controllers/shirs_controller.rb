@@ -34,7 +34,7 @@ class ShirsController < ApplicationController
 
   # GET /shirs/1/edit
   def edit
-     @categories = Category.all
+    @categories = Category.all
     @shir = Shir.find(params[:id])
   end
 

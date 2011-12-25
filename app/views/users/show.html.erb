@@ -2,35 +2,35 @@
 
 
 <p>
-  <b>Email:</b>
-  <%= @user.email %>
+	<b>Email:</b>
+	<%= @user.email %>
 </p>
 
 <p>
-  <b>Username:</b>
-  <%= @user.username %>
+	<b>Username:</b>
+	<%= @user.username %>
 </p>
 
 <p>
-  <b>Password:</b>
-  <%= @user.password %>
+	<b>Password:</b>
+	<%= @user.password %>
 </p>
 
 <p>
-  <b>Photo:</b>
-  <%= @user.photo %>
+	<b>Photo:</b>
+	<%= @user.photo %>
 </p>
 
 <p>
-  <b>User type:</b>
-  <% @user.roles.each do |u| %>
+	<b>User type:</b>
+	<% @user.roles.each do |u| %>
 	<%=u.name%>
 	<%end%>
 </p>
 
 <p>
-  <b>Order:</b>
-  <%= @user.order_id %>
+	<b>Order:</b>
+	<%= @user.order_id %>
 </p>
 <%=@shirs.count%> Shir<br />
 <%if !@shirs.empty?%>

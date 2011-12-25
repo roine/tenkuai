@@ -16,13 +16,16 @@
 
   <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
   <%= f.password_field :current_password %></div>
-
+<%current_user.roles.each do |r|%>
+<%if r.name == 'admin'%>
 <div><%= f.label :role_id %><br />
   <% Role.all.each do |role| %>
     <label><%= role.name %>
       <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
     </label>
   <% end %></div>
+<%end%>
+<%end%>
 
   <div><%= f.submit "Update" %></div>
 <% end %>

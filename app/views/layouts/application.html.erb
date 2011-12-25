@@ -30,10 +30,8 @@ Action =><%=action_name%><br />
 <%if user_signed_in?%>
 Username =><%=current_user.username%><br />
 id =><%=current_user.id%><br />
-<%unless current_user.role_id.nil?%>
 <%current_user.roles.each do |t|%>
 Type =><%=t.name%>
-<%end%>
 <%end%>
 <%end%>
 </div>

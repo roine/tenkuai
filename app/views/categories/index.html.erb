@@ -1,37 +1,39 @@
 <%if can? :read, @category%>
 <h1>Listing categories</h1>
 <table>
-  <tr>
-    <th>Title</th>
-    <th>Desc</th>
-    <th>Shir</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+	<tr>
+		<th>Title</th>
+		<th>Desc</th>
+		<th>Shir</th>
+		<th></th>
+		<th></th>
+		<th></th>
+	</tr>
 
-<% @categories.each do |category| %>
-  <tr>
-    <td><%= category.title %></td>
-    <td><%= category.desc %></td>
-	<!-- <%if category.shirs.count != 0%>
-	<%category.shirs.each do |c| %>
-    <td><%=c.name%></td>
-	<%end%>
-	<%else%> -->
-	<td>no category</td>
-	<!-- <%end%> -->
-    <td><%= link_to 'Show', category %></td>
-	<%if can? :edit, @category%>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-	<%end%>
-    <td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
+	<% @categories.each do |category| %>
+	<tr>
+		<td><%= category.title %></td>
+		<td><%= category.desc %></td>
+		<!-- <%if category.shirs.count != 0%>
+		<%category.shirs.each do |c| %>
+		<td><%=c.name%></td>
+		<%end%>
+		<%else%> -->
+		<td>no category</td>
+		<!-- <%end%> -->
+		<td><%= link_to 'Show', category %></td>
+		<%if can? :edit, @category%>
+		<td><%= link_to 'Edit', edit_category_path(category) %></td>
+		<%end%>
+		<%if can? :destroy, @category%>
+		<td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
+		<%end%>
+	</tr>
+	<% end %>
 </table>
 
 <br />
 <%if can? :create, @categories%>
-  <%= link_to 'New Category', new_category_path %>
+<%= link_to 'New Category', new_category_path %>
 <%end%>
 <%end%>
