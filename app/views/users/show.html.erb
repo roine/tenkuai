@@ -23,7 +23,9 @@
 
 <p>
   <b>User type:</b>
-  <%= @user.roles.name %>
+  <% @user.roles.each do |u| %>
+	<%=u.name%>
+	<%end%>
 </p>
 
 <p>
