@@ -12,7 +12,7 @@ class User < ActiveRecord::Base
   has_many :shirs
   has_and_belongs_to_many :roles
   
-  before_save :setup_role
+  # before_save :setup_role
 
   #allow to save the edit form without typing password
   def update_with_password(params={})
@@ -21,11 +21,11 @@ class User < ActiveRecord::Base
   end
 
   #setup default role
-  def setup_role 
-    if self.role_ids.empty?     
-      self.role_ids = [3] 
-    end
-  end
+  # def setup_role 
+  #     if self.role_ids.empty?     
+  #       self.role_ids = [3] 
+  #     end
+  #   end
 
 
   #check the username field
