@@ -8,4 +8,6 @@ Hi <%=link_to current_user.username, current_user.username%>!
   <%= link_to('Login', new_user_session_path)  %>  
   </li>
 <% end %>
+<%unless @last.nil?%>
 Last created account <%= @last.username%> the <%=@created_at%>
+<%end%>
