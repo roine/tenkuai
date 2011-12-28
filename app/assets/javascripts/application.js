@@ -4,6 +4,9 @@
 // It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
 // the compiled file.
 //
-//= require jquery
-//= require jquery_ujs
-//= require_tree .
+
+//= require jquery-1.7.1.min
+//= require jquery.easing.1.3
+//= require jcarousellite_1.0.1.min
+//= require 20kuai
+//= require_self

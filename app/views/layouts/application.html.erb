@@ -9,7 +9,6 @@
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<%= stylesheet_link_tag  "application" %>
-	  <%= javascript_include_tag "application" %>
 	</head>
 	
 	<body>
@@ -32,26 +31,25 @@
 	
         <%= yield %>
         
-        
-        	<div class=debug>
-				Controller =><%= controller_name%><br />
-				Action =><%=action_name%><br />
-				<%if user_signed_in?%>
-				Username =><%=current_user.username%><br />
-				id =><%=current_user.id%><br />
-				Type =>
-				<%i = 0%>
-				<%current_user.roles.each do |t|%>
-				<%=t.name%>
-				<%i+=1%>
-				<%unless i == current_user.roles.count %>
-				,
-				<%end%>
-				<%end%>
-				<%end%>
-			</div>
-        
     </div> <!-- mainContent -->
+    
+    <div style="display:none;" class=debug>
+			Controller =><%= controller_name%><br />
+			Action =><%=action_name%><br />
+			<%if user_signed_in?%>
+			Username =><%=current_user.username%><br />
+			id =><%=current_user.id%><br />
+			Type =>
+			<%i = 0%>
+			<%current_user.roles.each do |t|%>
+			<%=t.name%>
+			<%i+=1%>
+			<%unless i == current_user.roles.count %>
+			,
+			<%end%>
+			<%end%>
+			<%end%>
+		</div>
   
     <div id="footer" class="section">
     	<div class="wrap">
@@ -116,6 +114,8 @@
 		
     	</div> <!-- wrap-->
     </div> <!-- footer -->
-
+    
+	  <%= javascript_include_tag "application" %>
+	  
   </body>
 </html>

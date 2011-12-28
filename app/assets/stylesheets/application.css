@@ -51,7 +51,7 @@ a {text-decoration: none;}
 .wrap {width: 960px; margin: 0 auto;}
 .section {padding: 10px 0; position: relative; min-width: 1024px;}
 
-#mainContent {min-height: 500px; padding-bottom: 35px;}
+#mainContent {min-height: 500px; padding-bottom: 35px; position: relative; height: auto;}
 .page404 {width: 100%; text-align: center;}
 .page404>h1 {font-size: 288px; margin-top: 245px; text-shadow: 1px 1px 1px #555; color: #fff; color: #d13919; display: block; clear: both; font-family: RokkittRegular;} 
 .page404>h2 {font-size: 35px; font-family: RokkittRegular; margin-top: 45px; color: #eee; text-shadow: 1px 1px 1px #ccc; text-transform: capitalize; clear:both; display: block;}
@@ -167,7 +167,7 @@ a {text-decoration: none;}
 .ajaxful-rating .stars-5 {width: 100%; z-index: 2;}
 
 /* Footer */
-#footer {background: #eee; min-height: 120px; height: auto; -moz-box-shadow: 0 0 3px #ccc;-webkit-box-shadow: 0 0 3px #ccc;box-shadow: 0 0 3px #ccc;}
+#footer {background: #eee; min-height: 120px; height: auto; -moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc; box-shadow: 0 0 3px #ccc;}
 #footer .fCol {float: left; min-height: 120px; min-width: 100px; margin: 10px 10px 20px 10px; padding: 0 10px;}
 #footer #fCat {width: 290px;}
 #footer #fCat ul {position: relative; top: 10px; min-height: 160px;}
