@@ -109,7 +109,8 @@ a {text-decoration: none;}
 
 #shir #productMisc {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #F9F2E7; border: 1px solid #feecd4; padding: 10px 0 30px 0;}
 #shir #productMisc h4 {color: #444; font-family: RokkittRegular; font-size: 22px; font-weight: normal; margin-top: -25px;}
-#shir #productMisc .pRow {padding: 5px; border-bottom: 1px solid #f3e2cc; font-size: 12px; margin: 0 15px; text-transform: capitalize;}
+#shir #productMisc .pRow {padding: 5px; border-bottom: 1px solid #f3e2cc; font-size: 12px; margin: 0 15px;}
+#shir #productMisc .pRow .left {text-transform: capitalize;}
 #shir #productMisc .pRowThick {padding: 5px; margin: 20px 15px 0px 15px; border-bottom: 3px solid #f3e2cc; font-size: 12px;} 
 #shir #productMisc #taggedAs {text-align: center; padding: 10px 0 15px 15px;}
 #shir #productMisc #taggedAs a {color: #333; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background: #f3e2cc; font-size: 12px; text-decoration: none; float: left; display: inline-block; padding: 3px 8px; margin: 5px;}
