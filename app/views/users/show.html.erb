@@ -35,6 +35,6 @@
 <%=@shirs.count%> Shir<br />
 <%if !@shirs.empty?%>
 <%@shirs.each do |s|%>
-<%= s.title%>
+<%=link_to s.title, user_shir_path(@user, s)%>
 <%end%>
 <%end%>
