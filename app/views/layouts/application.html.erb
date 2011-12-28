@@ -39,13 +39,12 @@
     	<div class="wrap">
     		<div id="fCat" class="fCol">
     			<h3>Browse categories</h3>
-    			<% if can? :read, @category %>
     			<ul>
+
     			  <% Category.all.each do |category| %>
     				<li><%= link_to category.title, category %></li>
     				<% end %>
     			</ul>
-    		  <% end %>
     		</div>
 		
     		<div id="fNewsletter" class="fCol">
@@ -66,9 +65,9 @@
     		<div id="fSocial" class="fCol">
     			<h3>Connect with us</h3>
     			<div id="fSocialUl">
-    				<%= link_to image_tag("/fSocial/facebook.png", :alt => "Find us on Facebook"), "http://facebook.com", :target => "_blank" %> 
-    				<%= link_to image_tag("/fSocial/weibo.png", :alt => "Follow us us on Weibo"), "http://weibo.com", :target => "_blank" %>
-    				<%= link_to image_tag("/fSocial/blog.png", :alt => "Read the 20 kuai blog"), "http://blog.20kuai.com", :target => "_blank" %>
+    				<%= link_to image_tag("fSocial/facebook.png", :alt => "Find us on Facebook"), "http://facebook.com", :target => "_blank" %> 
+    				<%= link_to image_tag("fSocial/weibo.png", :alt => "Follow us us on Weibo"), "http://weibo.com", :target => "_blank" %>
+    				<%= link_to image_tag("fSocial/blog.png", :alt => "Read the 20 kuai blog"), "http://blog.20kuai.com", :target => "_blank" %>
     			</div> <!-- fSocialUl -->
     		</div>
 		
