@@ -34,7 +34,7 @@
 
 <%if can? :read, Shir%>
 
-    <td><%= link_to 'Show', shir %></td>
+    <td><%= link_to 'Show', user_shir_path(shir.user, shir) %></td>
 <%end%>
 <%if shir.user.id == current_user.id%>
 <%if can? :edit, Shir%>
