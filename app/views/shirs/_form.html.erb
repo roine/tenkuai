@@ -11,11 +11,9 @@
     </div>
   <% end %>
 <%if user_signed_in?%>
-<%if action_name == 'new'%>
   <div class="field">
-    <%= f.number_field :user_id, :value => current_user.id, :type => 'hidden' %>
+    <%= f.number_field :user_id, :value => current_user.id %>
   </div>
-<%end%>
 <%end%>
   <div class="field">
     <%= f.label :title %><br />
