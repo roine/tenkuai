@@ -3,6 +3,12 @@ class UsersController < ApplicationController
   # GET /users.json
 
   before_filter :authenticate_user!, :except => [:show]
+  
+  before_filter :get_categories
+  
+  def get_categories
+  @categories = Category.all
+  end
 
   # GET /users/1
   # GET /users/1.json

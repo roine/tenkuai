@@ -1,4 +1,11 @@
 class CategoriesController < ApplicationController
+  
+  before_filter :get_categories
+  
+  def get_categories
+  @categories = Category.all
+  end
+  
   # GET /categories
   # GET /categories.json
   def index
