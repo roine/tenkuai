@@ -1,6 +1,13 @@
 class ShirsController < ApplicationController
   # GET /shirs
   # GET /shirs.json
+  
+  before_filter :get_categories
+  
+  def get_categories
+  @categories = Category.all
+  end
+  
   def index
     @shirs = Shir.all
     respond_to do |format|
@@ -25,7 +32,6 @@ class ShirsController < ApplicationController
   # GET /shirs/new.json
   def new
     @shir = Shir.new
-    @categories = Category.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render :json => @shir }
