@@ -1,13 +1,8 @@
+<!-- if user is logged in display his name with a link to his account -->
 <%if user_signed_in?%>
-Hi <%=link_to current_user.username, current_user.username%>!
-  <li>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>        
-  </li>
-<% else %>
-  <li>
-  <%= link_to('Login', new_user_session_path)  %>  
-  </li>
+<div class='username'>Hi <%=link_to current_user.username, current_user.username%>!</div>
 <% end %>
+<!-- if there is a last user then display his name and date of creation -->
 <%unless @last.nil?%>
 Last created account <%= @last.username%> the <%=@created_at%>
 <%end%>

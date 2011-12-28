@@ -4,13 +4,13 @@ Tenkuai::Application.routes.draw do
   resources :shirs
 
   get "home/index"
-  
-  
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
-   #  match 'user/:id' => 'users#show'
+  #  match 'user/:id' => 'users#show'
   # Keep in mind you can assign values other than :controller and :action
 
   # Sample of named route:
@@ -55,19 +55,21 @@ Tenkuai::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'home#index'
-   resources :users, :only=>[:show] do
-     resources 'shirs'
-   end
-   resources :roles
-
-   match ':id', :as => :username,
-                :via => :get,
-                :controller=> :users,
-                :action => :show
+  root :to => 'home#index'
   
-   match '*a', :to => 'errors#routing'
-   #match '/:username' => 'users#show'
+  #link the shirs with the users and only display the view show
+  resources :users, :only=>[:show] do
+    resources 'shirs'
+  end
+  resources :roles
+
+  match ':id', :as => :username,
+  :via => :get,
+  :controller=> :users,
+  :action => :show
+
+  match '*a', :to => 'errors#routing'
+  #match '/:username' => 'users#show'
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.

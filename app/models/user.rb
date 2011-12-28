@@ -6,8 +6,11 @@ class User < ActiveRecord::Base
 
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :role_ids
+  
   #add the friendly id as username
+  extend FriendlyId
   has_friendly_id :username, :use_slug => true
+  
   #sql relation between tables
   has_many :shirs
   has_and_belongs_to_many :roles
