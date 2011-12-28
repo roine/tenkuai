@@ -31,11 +31,19 @@
     <td><%= shir.shipping_required %></td>
     <td><%= shir.shipping_id %></td>
     <td><%= shir.date_timestamp %></td>
+<%if shir.user.id == current_user.id%>
+<%if can? :read, Shir%>
     <td><%= link_to 'Show', shir %></td>
+<%end%>
+<%if can? :edit, Shir%>
     <td><%= link_to 'Edit', edit_shir_path(shir) %></td>
+<%end%>
+<%if can? :destroy, Shir%>
     <td><%= link_to 'Destroy', shir, :confirm => 'Are you sure?', :method => :delete %></td>
+<%end%>
   </tr>
 <% end %>
+<%end%>
 </table>
 
 <br />
