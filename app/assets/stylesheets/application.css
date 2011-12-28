@@ -167,7 +167,7 @@ a {text-decoration: none;}
 .ajaxful-rating .stars-5 {width: 100%; z-index: 2;}
 
 /* Footer */
-#footer {background: #eee; min-height: 120px; height: auto; -moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc; box-shadow: 0 0 3px #ccc;}
+#footer {position: relative; top: 50px; background: #eee; min-height: 120px; height: auto; -moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc; box-shadow: 0 0 3px #ccc;}
 #footer .fCol {float: left; min-height: 120px; min-width: 100px; margin: 10px 10px 20px 10px; padding: 0 10px;}
 #footer #fCat {width: 290px;}
 #footer #fCat ul {position: relative; top: 10px; min-height: 160px;}
