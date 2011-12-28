@@ -32,6 +32,7 @@ class ShirsController < ApplicationController
   # GET /shirs/new.json
   def new
     @shir = Shir.new
+    authorize! :create, @shirs
     respond_to do |format|
       format.html # new.html.erb
       format.json { render :json => @shir }
@@ -42,6 +43,7 @@ class ShirsController < ApplicationController
   def edit
     @categories = Category.all
     @shir = Shir.find(params[:id])
+    authorize! :edit, @shir
   end
 
   # POST /shirs

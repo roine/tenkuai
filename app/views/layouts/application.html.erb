@@ -1,6 +1,5 @@
 <!doctype html>
 <html>
-
 	<head>
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
@@ -34,17 +33,23 @@
         <%= yield %>
         
         
-        <div class=debug>
-        Controller =><%= controller_name%><br />
-        Action =><%=action_name%><br />
-        <%if user_signed_in?%>
-        Username =><%=current_user.username%><br />
-        id =><%=current_user.id%><br />
-        <%current_user.roles.each do |t|%>
-        Type =><%=t.name%>
-        <%end%>
-        <%end%>
-        </div>
+        	<div class=debug>
+				Controller =><%= controller_name%><br />
+				Action =><%=action_name%><br />
+				<%if user_signed_in?%>
+				Username =><%=current_user.username%><br />
+				id =><%=current_user.id%><br />
+				Type =>
+				<%i = 0%>
+				<%current_user.roles.each do |t|%>
+				<%=t.name%>
+				<%i+=1%>
+				<%unless i == current_user.roles.count %>
+				,
+				<%end%>
+				<%end%>
+				<%end%>
+			</div>
         
     </div> <!-- mainContent -->
   
@@ -113,4 +118,5 @@
     </div> <!-- footer -->
 
   </body>
+>>>>>>> ced0d0e26911b1faaa7df762917e2d0f8aa03b49
 </html>

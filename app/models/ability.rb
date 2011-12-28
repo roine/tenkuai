@@ -12,9 +12,15 @@ class Ability
       elsif c.name == 'admin'
         can :manage, :all
       elsif c.name == 'user'
-        can :read, :all
+        
+        can :create, Shir
+        can :read, [Category, Shir]
+        can [:show, :edit, :destroy], Shir, :user_id => user.id
       end
     end
+    can :read, :all
+    
+    
 
     #
     # The first argument to `can` is the action you are giving the user permission to do.
