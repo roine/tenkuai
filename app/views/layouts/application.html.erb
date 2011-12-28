@@ -1,108 +1,114 @@
 <!doctype html>
 <html>
 
-	<head>
-		<meta charset="utf-8"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
-	  <%= csrf_meta_tags %>
-		<title>20 Kuai</title>
-		<!--[if lt IE 9]>
-			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
-		<%= stylesheet_link_tag  "application" %>
-	  <%= javascript_include_tag "application" %>
-	</head>
-	
-	<body>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
+	<%= csrf_meta_tags %>
+	<title>20 Kuai</title>
+	<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<%= stylesheet_link_tag  "application" %>
+	<%= javascript_include_tag "application" %>
+</head>
 
-    <div id="header" class="section">
-  		<div class="wrap">
-  			<ul class="nav left">
-  				<li><%= link_to "Home", root_path %></li>
-  				<li><%= link_to "Browse Shirs", shirs_path %></li>
-  			</ul>
-  			<div id="logo"><%= link_to image_tag("logo.png", :alt => "20 Kuai logo"), root_path %></div>
-  			<ul class="nav right">
-  				<%= render 'devise/menu/logged_in' %>
-          <%= render 'devise/menu/logged_out' %>
-  			</ul>
-  		</div>
-  	</div> 
-	
-  	<div id="mainContent" class="section">
-	
-        <%= yield %>
-        
-        
-        <div class=debug>
-        Controller =><%= controller_name%><br />
-        Action =><%=action_name%><br />
-        <%if user_signed_in?%>
-        Username =><%=current_user.username%><br />
-        id =><%=current_user.id%><br />
-        <%current_user.roles.each do |t|%>
-        Type =><%=t.name%>
-        <%end%>
-        <%end%>
-        </div>
-        
-    </div> <!-- mainContent -->
-  
-    <div id="footer" class="section">
-    	<div class="wrap">
-    		<div id="fCat" class="fCol">
-    			<h3>Browse categories</h3>
-    			<% if can? :read, @category %>
-    			<ul>
-    			  <% Category.all.each do |category| %>
-    				<li><%= link_to category.title, category %></li>
-    				<% end %>
-    			</ul>
-    		  <% end %>
-    		</div>
-		
-    		<div id="fNewsletter" class="fCol">
-    				<h3>Sign up for our weekly digest</h3>
-				
-    				<!-- MailChimp -->
-    				<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-    				<div id="mc_embed_signup">
-    				<form action="http://20kuai.us4.list-manage.com/subscribe/post?u=e61dc58421b2c9196ba4a0ab4&amp;id=3379d3b5d2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+<body>
 
-    					<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-    					<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    				</form>
-    				</div>
-		
-    		</div>  <!-- fNewsletter -->
-		
-    		<div id="fSocial" class="fCol">
-    			<h3>Connect with us</h3>
-    			<div id="fSocialUl">
-    				<%= link_to image_tag("fSocial/facebook.png", :alt => "Find us on Facebook"), "http://facebook.com", :target => "_blank" %> 
-    				<%= link_to image_tag("fSocial/weibo.png", :alt => "Follow us us on Weibo"), "http://weibo.com", :target => "_blank" %>
-    				<%= link_to image_tag("fSocial/blog.png", :alt => "Read the 20 kuai blog"), "http://blog.20kuai.com", :target => "_blank" %>
-    			</div> <!-- fSocialUl -->
-    		</div>
-		
-    		<div class="clear"></div>
-		
-    		<div id="final">
-    			<span class="left">
-    				© 20kuai.com
-    			</span>
-    			<ul class="right">
-    				<li><a href="">About Us</a></li>
-    				<li><a href="">Guidelines</a></li>
-    				<li><a href="">Terms of Use</a></li>
-    				<li><a href="">Privacy Policy</a></li>
-    				<li><a href="">Contact</a></li>
-    			</ul>
-    			<div class="clear"></div>
-    		</div> <!-- final -->
-		
-    	</div> <!-- wrap-->
-    </div> <!-- footer -->
+	<div id="header" class="section">
+		<div class="wrap">
+			<ul class="nav left">
+				<li><%= link_to "Home", root_path %></li>
+				<li><%= link_to "Browse Shirs", shirs_path %></li>
+			</ul>
+			<div id="logo"><%= link_to image_tag("logo.png", :alt => "20 Kuai logo"), root_path %></div>
+			<ul class="nav right">
+				<%= render 'devise/menu/logged_in' %>
+				<%= render 'devise/menu/logged_out' %>
+			</ul>
+		</div>
+	</div> 
 
-  </body>
+	<div id="mainContent" class="section">
+
+		<%= yield %>
+
+
+		<div class=debug>
+			Controller =><%= controller_name%><br />
+			Action =><%=action_name%><br />
+			<%if user_signed_in?%>
+			Username =><%=current_user.username%><br />
+			id =><%=current_user.id%><br />
+			Type =>
+			<%i = 0%>
+			<%current_user.roles.each do |t|%>
+			<%=t.name%>
+			<%i+=1%>
+			<%unless i == current_user.roles.count %>
+			,
+			<%end%>
+			<%end%>
+			<%end%>
+		</div>
+
+	</div> <!-- mainContent -->
+
+	<div id="footer" class="section">
+		<div class="wrap">
+			<div id="fCat" class="fCol">
+				<h3>Browse categories</h3>
+				<% if can? :read, @category %>
+				<ul>
+					<% Category.all.each do |category| %>
+					<li><%= link_to category.title, category %></li>
+					<% end %>
+				</ul>
+				<% end %>
+			</div>
+
+			<div id="fNewsletter" class="fCol">
+				<h3>Sign up for our weekly digest</h3>
+
+				<!-- MailChimp -->
+				<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
+				<div id="mc_embed_signup">
+					<form action="http://20kuai.us4.list-manage.com/subscribe/post?u=e61dc58421b2c9196ba4a0ab4&amp;id=3379d3b5d2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+
+						<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+						<div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+					</form>
+				</div>
+
+			</div>  <!-- fNewsletter -->
+
+			<div id="fSocial" class="fCol">
+				<h3>Connect with us</h3>
+				<div id="fSocialUl">
+					<%= link_to image_tag("fSocial/facebook.png", :alt => "Find us on Facebook"), "http://facebook.com", :target => "_blank" %> 
+					<%= link_to image_tag("fSocial/weibo.png", :alt => "Follow us us on Weibo"), "http://weibo.com", :target => "_blank" %>
+					<%= link_to image_tag("fSocial/blog.png", :alt => "Read the 20 kuai blog"), "http://blog.20kuai.com", :target => "_blank" %>
+				</div> <!-- fSocialUl -->
+			</div>
+
+			<div class="clear"></div>
+
+			<div id="final">
+				<span class="left">
+					© 20kuai.com
+				</span>
+				<ul class="right">
+					<li><a href="">About Us</a></li>
+					<li><a href="">Guidelines</a></li>
+					<li><a href="">Terms of Use</a></li>
+					<li><a href="">Privacy Policy</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+				<div class="clear"></div>
+			</div> <!-- final -->
+
+		</div> <!-- wrap-->
+	</div> <!-- footer -->
+
+</body>
 </html>
