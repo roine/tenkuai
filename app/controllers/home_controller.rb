@@ -5,6 +5,7 @@ class HomeController < ApplicationController
     
     @created_at = @last.created_at.+8.hours
     @categories = Category.all
+    @shirs = Shir.all
     
     end
   end

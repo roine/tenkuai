@@ -85,6 +85,7 @@ a {text-decoration: none;}
 .homeShirLatest h4, .homeShir h4 {overflow: hidden; max-height: 40px; height: auto; line-height: 1.3em; font-family: arial; font-size: 15px; font-weight: normal; margin: 8px 0;}
 .homeShirLatest h4 a, .homeShir h4 a {color: #333; text-decoration: none;} 
 .homeShirLatest h4 a:hover, .homeShir h4 a:hover {color: #d13919;}
+.homeShirLatest .small {text-transform: capitalize;}
 .small a, #shir #feedback  a:hover;{color: #333; text-decoration: none;}
 #shir #feedback a, .small a:hover {color: #d13919; text-decoration: none;}
 .homeShirLatest .shortDesc, .homeShir .shortDesc {line-height: 1.5em; height: auto; color: #555; max-height: 48px; overflow: hidden; font-size: 12px;}
