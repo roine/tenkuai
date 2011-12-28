@@ -22,7 +22,8 @@
       <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
     </label>
   <% end %></div>
-
+<div><%= f.label :debug %><br />
+  <%= f.text_field :debug %></div>
 
   <div><%= f.submit "Update" %></div>
 <% end %>
