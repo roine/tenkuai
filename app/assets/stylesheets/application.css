@@ -103,6 +103,7 @@ a {text-decoration: none;}
 #user h1, #shir h1 {font-family: RokkittRegular; padding-right: 20px; color: #333; font-size: 30px; line-height :1.3em;}
 #user .mainImg, #shir .mainImg {-moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc;box-shadow: 0 0 3px #ccc; border:1px solid #ccc; width: 310px; margin: 20px 0 0 2px; height: 220px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
 #user .colLeft p, #shir .colLeft p {font-size: 14px; text-align: justify; padding: 15px 30px 20px 0px;}
+#shir .colLeft h3 {font-size: 18px;}
 #user .colRight .userWrap, #shir .colRight .shirWrap {padding-left: 25px;}
 
 #shir #productMisc {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #F9F2E7; border: 1px solid #feecd4; padding: 10px 0 30px 0;}
