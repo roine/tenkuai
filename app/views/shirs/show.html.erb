@@ -1,64 +1,64 @@
 <div id="shir" class="wrap">
-	
+
 	<div class="colLeft">
 		<h1><%= @shir.title %></h1>
 		<img src="img/test/shirMainImg.jpg" class="mainImg">
 		<p><%= @shir.description %></p>
 	</div> <!-- colLeft -->
-	
+
 	<div class="colMiddle">
-			<div class="orderMain">
-				<h2>buy this</h2>
-			</div> <!-- orderMain -->
-			
-			<a id="askQuestion" href="">Ask the seller a question</a>
-			
-			<div id="feedback">
-				<h4>Latest Buyer Feedback</h4>
-				
-				<div class="feedbackList">
-					<ul>
-						<li>
-							<img class="left" src="img/test/feedbackImg.jpg" alt="">
-							<div class="right"><a href="">Gengis Khan</a> <div class="smaller">posted this 1 day ago</div></div>
-							<div class="clear"></div>
-							<p>excellent work on time, i recommend to everyone try, must encourage arjunrocks to climb greater heights</p>
-						</li>
-					
-						<li>
-							<img class="left" src="img/test/feedbackImg.jpg" alt="">
-							<div class="right"><a href="">Mark Zuckerberg</a> <div class="smaller">posted this 1 day ago</div></div>
-							<div class="clear"></div>
-							<p>You did an amazing job! Thanks so much for your time, Ill let you know how my coworker reacts :)</p>
-						</li>
-					
-						<li>
-							<img class="left" src="img/test/feedbackImg.jpg" alt="">
-							<div class="right"><a href="">Sean Kingston</a> <div class="smaller">posted this 1 day ago</div></div>
-							<div class="clear"></div>
-							<p>Fantastic!!!!! It was very good! I see why you are a top-seller!</p>
-						</li>
-					</ul>
-				</div> <!-- feedbackList -->
-				<p class="center"><span class="up"><img src="img/up.png" alt=""></span> <span class="down"><img src="img/down.png" alt=""></span></p>
-			</div> <!-- feedback -->
-			
+		<div class="orderMain">
+			<h2>buy this</h2>
+		</div> <!-- orderMain -->
+
+		<a id="askQuestion" href="">Ask the seller a question</a>
+
+		<div id="feedback">
+			<h4>Latest Buyer Feedback</h4>
+
+			<div class="feedbackList">
+				<ul>
+					<li>
+						<img class="left" src="img/test/feedbackImg.jpg" alt="">
+						<div class="right"><a href="">Gengis Khan</a> <div class="smaller">posted this 1 day ago</div></div>
+						<div class="clear"></div>
+						<p>excellent work on time, i recommend to everyone try, must encourage arjunrocks to climb greater heights</p>
+					</li>
+
+					<li>
+						<img class="left" src="img/test/feedbackImg.jpg" alt="">
+						<div class="right"><a href="">Mark Zuckerberg</a> <div class="smaller">posted this 1 day ago</div></div>
+						<div class="clear"></div>
+						<p>You did an amazing job! Thanks so much for your time, Ill let you know how my coworker reacts :)</p>
+					</li>
+
+					<li>
+						<img class="left" src="img/test/feedbackImg.jpg" alt="">
+						<div class="right"><a href="">Sean Kingston</a> <div class="smaller">posted this 1 day ago</div></div>
+						<div class="clear"></div>
+						<p>Fantastic!!!!! It was very good! I see why you are a top-seller!</p>
+					</li>
+				</ul>
+			</div> <!-- feedbackList -->
+			<p class="center"><span class="up"><img src="img/up.png" alt=""></span> <span class="down"><img src="img/down.png" alt=""></span></p>
+		</div> <!-- feedback -->
+
 	</div> <!-- colMiddle -->
-	
+
 	<div class="colRight">
-		
+
 		<div id="share">
-		<span class='st_sina_button' displayText='Sina'></span><span  class='st_twitter_button' displayText='Tweet'></span><span class='st_email_button' displayText='Email'></span><span  class='st_facebook_button' displayText='Facebook'></span>
+			<span class='st_sina_button' displayText='Sina'></span><span  class='st_twitter_button' displayText='Tweet'></span><span class='st_email_button' displayText='Email'></span><span  class='st_facebook_button' displayText='Facebook'></span>
 		</div> <!-- share -->
-		
+
 		<div class="shirWrap">
-			
+
 			<div id="productMisc">
-				
+
 				<div class="pRowThick">
 					<h4>About this Shi'r</h4>
 				</div>
-				
+
 				<div class="pRow">
 					<div class="c444 left">Shi'r Rating</div>
 					<div class="right"> 
@@ -72,68 +72,72 @@
 					</div>
 					<div class="clear"></div>
 				</div>
-				
+
 				<div class="pRow">
 					<div class="c444 left">Delivery Time</div>
 					<div class="right"><%= @shir.days_to_complete %> days</div>
 					<div class="clear"></div>
 				</div>
-				
+
 				<div class="pRow">
 					<div class="c444 left">Orders in Queue</div>
 					<div class="right">0</div>
 					<div class="clear"></div>
 				</div>
-				
+
 				<div class="pRowThick bold">
 					<div class="left">Seller : </div>
 					<div class="right"></div>
 					<div class="clear"></div>
 				</div>
-				
+
 				<div class="pRow">
-					<div class="left"><%= link_to @user, @shir.user_id %></div>
+					<div class="left">
+						<%= link_to @user.username, @shir.user %>
+					</div>
 					<div class="right">Beijing, China</div>
 					<div class="clear"></div>
 				</div>
-				
+
 				<div class="pRow">
 					<div class="c444 left">Created this Shir</div>
 					<div class="right">2 months ago</div>
 					<div class="clear"></div>
 				</div>
-				
+
 				<div class="pRowThick bold">
 					<div class="left">Categories : </div>
+					
 					<div class="right"></div>
 					<div class="clear"></div>
 				</div>
-			
-				<% @categories.each do |c| %>
+
+				
 				<div class="pRow">
-					<div class="left"><%="#{c.title}"%></div>
+					<div class="left">
+						<% @categories.each do |c| %>
+					<%=c%>
+					<%end%></div>
 					<div class="right">-</div>
 					<div class="clear"></div>
 				</div>
-        <% end %>
-				
+
 				<div class="pRowThick bold">
 					<div class="left">Tagged as : </div>
 					<div class="right"></div>
 					<div class="clear"></div>
 				</div>
-				
+
 				<div id="taggedAs">
-				 <a href="">ass</a>
+					<a href="">ass</a>
 					<span class="clear"></span>
 				</div>
-				
+
 				<div class="clear"></div>
-				
+
 			</div> <!-- productMisc -->
-			
+
 		</div> <!-- shirWrap -->
 	</div> <!-- colRight -->
-	
+
 	<div class="clear"></div>
->>>>>>> ced0d0e26911b1faaa7df762917e2d0f8aa03b49
