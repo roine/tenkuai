@@ -32,8 +32,8 @@
         <%= yield %>
         
     </div> <!-- mainContent -->
-    
-    <div style="display:none;" class=debug>
+<%if current_user.debug == true%>
+    <div class=debug>
 			Controller =><%= controller_name%><br />
 			Action =><%=action_name%><br />
 			<%if user_signed_in?%>
@@ -50,6 +50,7 @@
 			<%end%>
 			<%end%>
 		</div>
+		<%end%>
   
     <div id="footer" class="section">
     	<div class="wrap">
