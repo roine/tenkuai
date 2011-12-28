@@ -27,7 +27,11 @@
 	<%=u.name%>
 	<%end%>
 </p>
-
+<%if user_signed_in?%>
+<%if current_user.id == @user.id%>
+<p><%=link_to 'Edit Account', edit_user_registration_path%></p>
+<%end%>
+<%end%>
 <p>
 	<b>Order:</b>
 	<%= @user.order_id %>
@@ -38,3 +42,4 @@
 <%=link_to s.title, user_shir_path(@user, s)%>
 <%end%>
 <%end%>
+
