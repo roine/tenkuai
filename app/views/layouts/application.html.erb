@@ -32,7 +32,20 @@
   	<div id="mainContent" class="section">
 	
         <%= yield %>
-
+        
+        
+        <div class=debug>
+        Controller =><%= controller_name%><br />
+        Action =><%=action_name%><br />
+        <%if user_signed_in?%>
+        Username =><%=current_user.username%><br />
+        id =><%=current_user.id%><br />
+        <%current_user.roles.each do |t|%>
+        Type =><%=t.name%>
+        <%end%>
+        <%end%>
+        </div>
+        
     </div> <!-- mainContent -->
   
     <div id="footer" class="section">
