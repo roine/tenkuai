@@ -41,7 +41,7 @@
     			<h3>Browse categories</h3>
     			<% if can? :read, @category %>
     			<ul>
-    			  <% @categories.each do |category| %>
+    			  <% Category.all.each do |category| %>
     				<li><%= link_to category.title, category %></li>
     				<% end %>
     			</ul>

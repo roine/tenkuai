@@ -68,6 +68,8 @@ Tenkuai::Application.routes.draw do
   :controller=> :users,
   :action => :show
 
+
+  
   match '*a', :to => 'errors#routing'
   #match '/:username' => 'users#show'
   # See how all your routes lay out with "rake routes"
