@@ -18,10 +18,10 @@
     <div id="header" class="section">
   		<div class="wrap">
   			<ul class="nav left">
-  				<li><%= link_to "Home", { :controller => 'home', :action => "index" } %></li>
+  				<li><%= link_to "Home", root_path %></li>
   				<li><%= link_to "Browse Shirs", shirs_path %></li>
   			</ul>
-  			<div id="logo"><%= link_to image_tag("logo.png", :alt => "20 Kuai logo"), { :controller => 'home', :action => "index" } %></div>
+  			<div id="logo"><%= link_to image_tag("logo.png", :alt => "20 Kuai logo"), root_path %></div>
   			<ul class="nav right">
   				<%= render 'devise/menu/logged_in' %>
           <%= render 'devise/menu/logged_out' %>
