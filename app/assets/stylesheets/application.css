@@ -108,7 +108,8 @@ a {text-decoration: none;}
 #user .colRight .userWrap, #shir .colRight .shirWrap {padding-left: 25px;}
 
 #shir #productMisc {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #F9F2E7; border: 1px solid #feecd4; padding: 10px 0 30px 0;}
-#shir #productMisc h4 {color: #444; font-family: RokkittRegular; font-size: 22px; font-weight: normal; margin-top: -25px;}
+#shir #productMisc #editShir {position: relative; float: right; top: -18px;}
+#shir #productMisc h4 {color: #444; font-family: RokkittRegular; font-size: 22px; float: left; font-weight: normal; margin-top: -25px;}
 #shir #productMisc .pRow {padding: 5px; border-bottom: 1px solid #f3e2cc; font-size: 12px; margin: 0 15px;}
 #shir #productMisc .pRow .left {text-transform: capitalize;}
 #shir #productMisc .pRowThick {padding: 5px; margin: 20px 15px 0px 15px; border-bottom: 3px solid #f3e2cc; font-size: 12px;} 
