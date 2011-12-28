@@ -2,53 +2,57 @@
 
 	<div class="colLeft">
 		<h1><%= @shir.title %></h1>
-		<img src="img/test/shirMainImg.jpg" class="mainImg">
+		<%= image_tag("test/shirMainImg.jpg", :alt => @shir.title, :class=> "mainImg") %>
 		<p><%= @shir.description %></p>
+		
+		<h3>Instructions</h3>
+		<p><%= @shir.instruction %></p>
 	</div> <!-- colLeft -->
 
 	<div class="colMiddle">
-		<div class="orderMain">
-			<h2>buy this</h2>
-		</div> <!-- orderMain -->
 
-		<a id="askQuestion" href="">Ask the seller a question</a>
-
-		<div id="feedback">
-			<h4>Latest Buyer Feedback</h4>
-
-			<div class="feedbackList">
-				<ul>
-					<li>
-						<img class="left" src="img/test/feedbackImg.jpg" alt="">
-						<div class="right"><a href="">Gengis Khan</a> <div class="smaller">posted this 1 day ago</div></div>
-						<div class="clear"></div>
-						<p>excellent work on time, i recommend to everyone try, must encourage arjunrocks to climb greater heights</p>
-					</li>
-
-					<li>
-						<img class="left" src="img/test/feedbackImg.jpg" alt="">
-						<div class="right"><a href="">Mark Zuckerberg</a> <div class="smaller">posted this 1 day ago</div></div>
-						<div class="clear"></div>
-						<p>You did an amazing job! Thanks so much for your time, Ill let you know how my coworker reacts :)</p>
-					</li>
-
-					<li>
-						<img class="left" src="img/test/feedbackImg.jpg" alt="">
-						<div class="right"><a href="">Sean Kingston</a> <div class="smaller">posted this 1 day ago</div></div>
-						<div class="clear"></div>
-						<p>Fantastic!!!!! It was very good! I see why you are a top-seller!</p>
-					</li>
-				</ul>
-			</div> <!-- feedbackList -->
-			<p class="center"><span class="up"><img src="img/up.png" alt=""></span> <span class="down"><img src="img/down.png" alt=""></span></p>
-		</div> <!-- feedback -->
-
+			<div class="orderMain">
+				<h2>buy this</h2>
+			</div> <!-- orderMain -->
+			
+			<a id="askQuestion" href="">Ask the seller a question</a>
+			
+			<div id="feedback">
+				<h4>Latest Buyer Feedback</h4>
+				
+				<div class="feedbackList">
+					<ul>
+						<li>
+							<%= image_tag("test/feedbackImg.jpg", :alt => "username", :class=> "left") %>
+							<div class="right"><a href="">Gengis Khan</a> <div class="smaller">posted this 1 day ago</div></div>
+							<div class="clear"></div>
+							<p>excellent work on time, i recommend to everyone try, must encourage arjunrocks to climb greater heights</p>
+						</li>
+					
+						<li>
+							<%= image_tag("test/feedbackImg.jpg", :alt => "username", :class=> "left") %>
+							<div class="right"><a href="">Mark Zuckerberg</a> <div class="smaller">posted this 1 day ago</div></div>
+							<div class="clear"></div>
+							<p>You did an amazing job! Thanks so much for your time, Ill let you know how my coworker reacts :)</p>
+						</li>
+					
+						<li>
+							<%= image_tag("test/feedbackImg.jpg", :alt => "username", :class=> "left") %>
+							<div class="right"><a href="">Sean Kingston</a> <div class="smaller">posted this 1 day ago</div></div>
+							<div class="clear"></div>
+							<p>Fantastic!!!!! It was very good! I see why you are a top-seller!</p>
+						</li>
+					</ul>
+				</div> <!-- feedbackList -->
+				<p class="center"><span class="up"><%= image_tag("up.png", :alt => "Up") %></span> <span class="down"><%= image_tag("down.png", :alt => "Down") %></span></p>
+			</div> <!-- feedback -->
+			
 	</div> <!-- colMiddle -->
 
 	<div class="colRight">
 
 		<div id="share">
-			<span class='st_sina_button' displayText='Sina'></span><span  class='st_twitter_button' displayText='Tweet'></span><span class='st_email_button' displayText='Email'></span><span  class='st_facebook_button' displayText='Facebook'></span>
+		<span class='st_sina_button' displayText='Sina'></span><span class='st_twitter_button' displayText='Tweet'></span><span class='st_email_button' displayText='Email'></span><span  class='st_facebook_button' displayText='Facebook'></span>
 		</div> <!-- share -->
 
 		<div class="shirWrap">
