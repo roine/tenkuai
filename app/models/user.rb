@@ -5,7 +5,9 @@ class User < ActiveRecord::Base
   :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :role_ids, :debug, :introduction, :website, :country, :city
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :role_ids, :debug, 
+                  :introduction, :website, :country, :city, :photo_file_name, :photo_content_type, 
+                  :photo_file_size, :photo
   
   #add the friendly id as username
   extend FriendlyId
@@ -22,6 +24,12 @@ class User < ActiveRecord::Base
     params.delete(:current_password)
     self.update_without_password(params)
   end
+  
+  #conf for the profile pictures
+  has_attached_file :photo,
+      :styles => {
+        :thumb=> "100x100#",
+        :small  => "150x150#" }
 
   #setup default role
   # def setup_role 
