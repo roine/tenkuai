@@ -157,6 +157,7 @@ a {text-decoration: none;}
 #user .activityEntry ul li .right>.small {position: relative; top: 10px;}
 #user .activityEntry ul li .right>.small a, #user .activityEntry .small a {color: #d13919;}
 #user .activityEntry ul li .right>.small a:hover, #user .activityEntry .small a:hover {color: #555;}
+#user .activityEntry {}
 
 /* Ajaxful Rating */
 .ajaxful-rating, .ajaxful-rating a:hover, .ajaxful-rating a:active, .ajaxful-rating a:focus, .ajaxful-rating .show-value {background: url("../images/star.png") repeat-x scroll left -1000px transparent;}
