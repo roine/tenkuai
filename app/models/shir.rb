@@ -1,7 +1,7 @@
 class Shir < ActiveRecord::Base
   #sql relation between tables
   belongs_to :user
-  has_many :categories
+  belongs_to :category
 
   #use friendly id as title
   has_friendly_id :title, :use_slug => true

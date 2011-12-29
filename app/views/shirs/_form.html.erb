@@ -21,8 +21,8 @@
   </div>
   <div class="field">
     <%= f.label :category_id %><br />
-   <!--<%= f.number_field :category_id %>-->
-<select name='category'>
+   <!-- <%= f.number_field :category_id %>-->
+<select name='shir[category_id]'>
 <%@categories.each do |c|%>
 <option value="<%=c.id%>"><%=c.title%></option>
 <%end%>

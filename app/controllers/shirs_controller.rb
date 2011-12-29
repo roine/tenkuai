@@ -20,7 +20,6 @@ class ShirsController < ApplicationController
   # GET /shirs/1.json
   def show
     @shir = Shir.find(params[:id])
-    @categories = @shir.categories
     @user = @shir.user
     respond_to do |format|
       format.html # show.html.erb
