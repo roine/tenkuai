@@ -61,57 +61,38 @@
 	</div> <!-- colLeft -->
 	
 	<div class="colMiddle">
-		
+	
+		<%if user_signed_in?%>
+    <%if current_user.id == @user.id%>
+		<%=link_to 'Edit Account', edit_user_registration_path%>
+		<%end%>
+		<% else %>
 		hello
+    <%end%>
 		
 	</div> <!-- colMiddle -->
 	
 	<div class="colRight">
 		<div class="userWrap">
-			<h2>Activity</h2>
+			<h2><%= @user.username %>'s Shirs</h2>
 			
 			<div class="activityEntry">
 				<ul>
+						
+				  <% unless @shirs.nil? %>
+          <% @shirs.each do |s| %>
 					<li>
-						<p class="small">On the 12th Dec 2011, Santa Claus posted :</p>
+						<p class="small">12th Dec 2011 -</p>
 						<div class="left"><%= image_tag("test/latestImg1.jpg", :alt => "Post Photo") %></div>
 						<div class="right">
-							<h4><a href="">i am trying to limit the title to just a few characters maybe a bit more here cool</a></h4>
-							<p class="small"><a href="">BUY THIS !</a></p>
+							<h4><%=link_to s.title, user_shir_path(@user, s) %></h4>
 						</div>
 						<div class="clear"></div>
 					</li>
-					
-					<li>
-						<p class="small">On the 12th Dec 2011, Santa Claus bought :</p>
-						<div class="left"><%= image_tag("test/latestImg1.jpg", :alt => "Post Photo") %></div>
-						<div class="right">
-							<h4><a href="">i am trying to limit the title to just a few characters maybe a bit more here cool</a></h4>
-							<p class="small">from: <a href="">Batman</a></p>
-						</div>
-						<div class="clear"></div>
-					</li>
-					
-					<li>
-						<p class="small">On the 12th Dec 2011, Santa Claus posted :</p>
-						<div class="left"><%= image_tag("test/latestImg1.jpg", :alt => "Post Photo") %></div>
-						<div class="right">
-							<h4><a href="">i am trying to limit the title to just a few characters maybe a bit more here cool</a></h4>
-							<p class="small"><a href="">BUY THIS !</a></p>
-						</div>
-						<div class="clear"></div>
-					</li>
-					
-					<li>
-						<p class="small">On the 12th Dec 2011, Santa Claus bought :</p>
-						<div class="left"><%= image_tag("test/latestImg1.jpg", :alt => "Post Photo") %></div>
-						<div class="right">
-							<h4><a href="">i am trying to limit the title to just a few characters maybe a bit more here cool</a></h4>
-							<p class="small">from: <a href="">Batman</a></p>
-						</div>
-						<div class="clear"></div>
-					</li>
-				</ul>							
+  				<% end %>
+  				<% end %>
+          
+				</ul>
 			</div> <!-- activityEntry -->
 			<p class="center"><span class="up"><%= image_tag("up.png", :alt => "Up") %></span> <span class="down"><%= image_tag("down.png", :alt => "Down") %></span></p>
 			
