@@ -109,10 +109,15 @@ a {text-decoration: none;}
 
 #shir #productMisc {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #F9F2E7; border: 1px solid #feecd4; padding: 10px 0 30px 0;}
 <<<<<<< HEAD
+<<<<<<< HEAD
 #shir #productMisc #editShir {position: relative; float: right; top: -18px;}
 #shir #productMisc h4 {color: #444; font-family: RokkittRegular; font-size: 22px; float: left; font-weight: normal; margin-top: -25px;}
 #shir #productMisc .pRow {padding: 5px; border-bottom: 1px solid #f3e2cc; font-size: 12px; margin: 0 15px;}
 #shir #productMisc .pRow .left {text-transform: capitalize;}
+=======
+#shir #productMisc h4 {color: #444; font-family: RokkittRegular; font-size: 22px; font-weight: normal; margin-top: -25px;}
+#shir #productMisc .pRow {padding: 5px; border-bottom: 1px solid #f3e2cc; font-size: 12px; margin: 0 15px; text-transform: capitalize;}
+>>>>>>> parent of b4f46f5... latest
 =======
 #shir #productMisc h4 {color: #444; font-family: RokkittRegular; font-size: 22px; font-weight: normal; margin-top: -25px;}
 #shir #productMisc .pRow {padding: 5px; border-bottom: 1px solid #f3e2cc; font-size: 12px; margin: 0 15px; text-transform: capitalize;}
