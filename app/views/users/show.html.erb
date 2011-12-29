@@ -1,45 +1,102 @@
-<p id="notice"><%= notice %></p>
-
-
-<p>
-	<b>Email:</b>
-	<%= @user.email %>
-</p>
-
-<p>
-	<b>Username:</b>
-	<%= @user.username %>
-</p>
-
-<p>
-	<b>Password:</b>
-	<%= @user.password %>
-</p>
-
-<p>
-	<b>Photo:</b>
-	<%= @user.photo %>
-</p>
-
-<p>
-	<b>User type:</b>
-	<% @user.roles.each do |u| %>
-	<%=u.name%>
-	<%end%>
-</p>
-<%if user_signed_in?%>
-<%if current_user.id == @user.id%>
-<p><%=link_to 'Edit Account', edit_user_registration_path%></p>
-<%end%>
-<%end%>
-<p>
-	<b>Order:</b>
-	<%= @user.order_id %>
-</p>
-<%=@shirs.count%> Shir<br />
-<%if !@shirs.empty?%>
-<%@shirs.each do |s|%>
-<%=link_to s.title, user_shir_path(@user, s)%>
-<%end%>
-<%end%>
-
+<div id="user" class="wrap">
+	<div class="colLeft">
+	  <%= image_tag("test/santa.jpg", :alt => "Santa Claus", :id => "profilePic") %><h1 class="capitalize left"><%= @user.username %></h1>
+		
+		<br class="clear">
+		
+		<div class="profileDetails">
+			<ul>
+				<li>
+					<div class="left">User</div> <!-- left --> 
+					<div class="capitalize" class="right"><%= @user.username %></div> <!-- right -->
+					<div class="clear"></div>
+				</li>
+				
+				<li>
+					<div class="left">Location</div> <!-- left --> 
+					<div class="right">Beijing, China</div> <!-- right -->
+					<div class="clear"></div>
+				</li>
+				
+				<li>
+					<div class="left">Website</div> <!-- left --> 
+					<div class="right"><a href="" target="_blank">http://www.santa.com</a></div> <!-- right -->
+					<div class="clear"></div>
+				</li>
+				
+				<li>
+					<div class="left">Member Since</div> <!-- left --> 
+					<div class="right">Dec 22, 2000</div> <!-- right -->
+					<div class="clear"></div>
+				</li>
+				
+			</ul>
+			<p class="c888">Introduction</p>
+			<p>Santa Claus, also known as Saint Nicholas, Father Christmas, Kris Kringle, and simply "Santa", is a figure with legendary, mythical, historical and folkloric origins who, in many western cultures, is said to bring gifts to the homes of the good children during the late evening and overnight hours of Christmas Eve, December 24.[1] The modern figure was derived from the Dutch figure of Sinterklaas,[2] which, in turn, may have part of its basis in hagiographical tales concerning the historical figure of gift giver Saint Nicholas. A nearly identical story is attributed by Greek and Byzantine folklore to Basil of Caesarea. Basil's feast day on January 1 is considered the time of exchanging gifts in Greece.</p>
+			
+			<a id="contactUser">Send Message</a>
+		
+		</div> <!-- profileDetails -->
+		
+	</div> <!-- colLeft -->
+	
+	<div class="colMiddle">
+		
+		hello
+		
+	</div> <!-- colMiddle -->
+	
+	<div class="colRight">
+		<div class="userWrap">
+			<h2>Activity</h2>
+			
+			<div class="activityEntry">
+				<ul>
+					<li>
+						<p class="small">On the 12th Dec 2011, Santa Claus posted :</p>
+						<div class="left"><%= image_tag("test/latestImg1.jpg", :alt => "Post Photo") %></div>
+						<div class="right">
+							<h4><a href="">i am trying to limit the title to just a few characters maybe a bit more here cool</a></h4>
+							<p class="small"><a href="">BUY THIS !</a></p>
+						</div>
+						<div class="clear"></div>
+					</li>
+					
+					<li>
+						<p class="small">On the 12th Dec 2011, Santa Claus bought :</p>
+						<div class="left"><%= image_tag("test/latestImg1.jpg", :alt => "Post Photo") %></div>
+						<div class="right">
+							<h4><a href="">i am trying to limit the title to just a few characters maybe a bit more here cool</a></h4>
+							<p class="small">from: <a href="">Batman</a></p>
+						</div>
+						<div class="clear"></div>
+					</li>
+					
+					<li>
+						<p class="small">On the 12th Dec 2011, Santa Claus posted :</p>
+						<div class="left"><%= image_tag("test/latestImg1.jpg", :alt => "Post Photo") %></div>
+						<div class="right">
+							<h4><a href="">i am trying to limit the title to just a few characters maybe a bit more here cool</a></h4>
+							<p class="small"><a href="">BUY THIS !</a></p>
+						</div>
+						<div class="clear"></div>
+					</li>
+					
+					<li>
+						<p class="small">On the 12th Dec 2011, Santa Claus bought :</p>
+						<div class="left"><%= image_tag("test/latestImg1.jpg", :alt => "Post Photo") %></div>
+						<div class="right">
+							<h4><a href="">i am trying to limit the title to just a few characters maybe a bit more here cool</a></h4>
+							<p class="small">from: <a href="">Batman</a></p>
+						</div>
+						<div class="clear"></div>
+					</li>
+				</ul>							
+			</div> <!-- activityEntry -->
+			<p class="center"><span class="up"><%= image_tag("up.png", :alt => "Up") %></span> <span class="down"><%= image_tag("down.png", :alt => "Down") %></span></p>
+			
+		</div> <!-- userWrap -->
+	</div> <!-- colRight -->
+	
+	<div class="clear"></div>
+</div> <!-- wrap -->
