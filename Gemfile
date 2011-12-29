@@ -35,6 +35,7 @@ gem 'friendly_id'
 
 gem 'devise'
 
+gem 'paperclip'
 
 gem 'rspec-rails'
 gem 'inherited_resources'
