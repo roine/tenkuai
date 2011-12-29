@@ -101,7 +101,19 @@
 					<div class="left">
 						<%= link_to @user.username, @shir.user %>
 					</div>
-					<div class="right">Beijing, China</div>
+					<div class="right">
+					<%unless @user.city.nil?%>
+					<%=@user.city%>
+					,
+					<%end%>
+					<%unless @user.country.nil?%>
+					<%=@user.country%>
+						<%if !@user.city.empty?%>
+					
+						<%end%>
+					
+					<%end%>
+					</div>
 					<div class="clear"></div>
 				</div>
 
