@@ -32,6 +32,7 @@
     <td><%= shir.shipping_id %></td>
     <td><%= shir.date_timestamp %></td>
 
+<%if user_signed_in?%>
 <%if can? :read, Shir%>
 
     <td><%= link_to 'Show', user_shir_path(shir.user, shir) %></td>
@@ -46,9 +47,11 @@
   </tr>
 <% end %>
 <%end%>
+<%end%>
 </table>
 
 <br />
 <% if can? :create, Shir%>
 <%= link_to 'New Shir', new_shir_path %>
+
 <%end%>
