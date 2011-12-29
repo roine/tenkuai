@@ -1,0 +1,37 @@
+<%if current_user.debug == true%>
+
+    <div class=debug>
+
+			Controller =><%= controller_name%><br />
+
+			Action =><%=action_name%><br />
+
+			<%if user_signed_in?%>
+
+			Username =><%=current_user.username%><br />
+
+			id =><%=current_user.id%><br />
+
+			Type =>
+
+			<%i = 0%>
+
+			<%current_user.roles.each do |t|%>
+
+			<%=t.name%>
+
+			<%i+=1%>
+
+			<%unless i == current_user.roles.count %>
+
+			,
+
+			<%end%>
+
+			<%end%>
+
+			<%end%>
+
+		</div>
+
+		<%end%>
