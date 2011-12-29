@@ -33,7 +33,7 @@ class ShirsController < ApplicationController
   # GET /shirs/new.json
   def new
     @shir = Shir.new
-    authorize! :create, @shirs
+    authorize! :create, @shir
     respond_to do |format|
       format.html # new.html.erb
       format.json { render :json => @shir }

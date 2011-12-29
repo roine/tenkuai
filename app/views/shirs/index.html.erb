@@ -49,5 +49,6 @@
 </table>
 
 <br />
-
+<% if can? :create, Shir%>
 <%= link_to 'New Shir', new_shir_path %>
+<%end%>

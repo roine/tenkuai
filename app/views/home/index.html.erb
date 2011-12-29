@@ -57,8 +57,8 @@
 		<div class="homeShirLatest">
 			<%= image_tag("test/latestImg1.jpg", :alt => "title of shir") %>
 			<div class="homeLatestDesc">
-				<p class="small">For 20 kuai, <%= link_to s.user.username, s.user %> will..</p>
-				<h4><%= link_to s.title, s %></h4>
+				<p class="small">For 20 kuai, <%= link_to s.user.username, username_path(s.user) %> will..</p>
+				<h4><%= link_to s.title, user_shir_path(s.user.username, s) %></h4>
 			</div> <!-- homeLatestDesc -->
 		</div> <!-- homeShirLatest -->
 	  <%end%>
