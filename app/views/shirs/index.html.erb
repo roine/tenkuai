@@ -32,11 +32,12 @@
     <td><%= shir.shipping_id %></td>
     <td><%= shir.date_timestamp %></td>
 
-<%if user_signed_in?%>
+
 <%if can? :read, Shir%>
 
     <td><%= link_to 'Show', user_shir_path(shir.user, shir) %></td>
 <%end%>
+<%if user_signed_in?%>
 <%if shir.user.id == current_user.id%>
 <%if can? :edit, Shir%>
     <td><%= link_to 'Edit', edit_shir_path(shir) %></td>
