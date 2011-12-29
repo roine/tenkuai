@@ -8,4 +8,11 @@ class Shir < ActiveRecord::Base
 
   #check validity of fields
   validates :title, :presence=>true
+  
+  #conf for the profile pictures
+  has_attached_file :photo,
+      :styles => {
+        :thumb=> "97x97!",
+        :small  => "306x132!",
+        :medium => "310x220!" }
 end

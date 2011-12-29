@@ -55,7 +55,11 @@
 		<%unless @shirs.nil?%>
 		<% @shirs.each do |s| %>
 		<div class="homeShirLatest">
+			<%unless s.photo_file_name.nil?%>
+			<%= image_tag s.photo.url(:thumb) %>
+			<%else%>
 			<%= image_tag("test/latestImg1.jpg", :alt => "title of shir") %>
+			<%end%>
 			<div class="homeLatestDesc">
 				<p class="small">For 20 kuai, <%= link_to s.user.username, username_path(s.user) %> will..</p>
 				<h4><%= link_to s.title, user_shir_path(s.user.username, s) %></h4>
