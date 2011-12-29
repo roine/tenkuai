@@ -12,10 +12,9 @@ class Ability
       elsif c.name == 'admin'
         can :manage, :all
       elsif c.name == 'user'
-        
-        can :create, Shir
         can :read, [Category, Shir]
-        can [:show, :edit, :destroy], Shir, :user_id => user.id
+        can :manage, Shir, :user_id => user.id
+        can :create, Shir
       end
     end
     can :read, :all
