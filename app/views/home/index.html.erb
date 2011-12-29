@@ -52,7 +52,7 @@
 	
 	<div id="homeLatest" class="homeCol">
 		<h2>Newest Shir</h2>
-		
+		<%unless @shirs.nil?%>
 		<% @shirs.each do |s| %>
 		<div class="homeShirLatest">
 			<%= image_tag("test/latestImg1.jpg", :alt => "title of shir") %>
@@ -62,6 +62,7 @@
 			</div> <!-- homeLatestDesc -->
 		</div> <!-- homeShirLatest -->
 	  <%end%>
+	<%end%>
 	  
 		</div>
 	</div>
