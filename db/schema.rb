@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111229074958) do
+ActiveRecord::Schema.define(:version => 20111229080040) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -62,11 +62,16 @@ ActiveRecord::Schema.define(:version => 20111229074958) do
   add_index "slugs", ["name", "sluggable_type", "sequence", "scope"], :name => "index_slugs_on_n_s_s_and_s", :unique => true
   add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
 
+  create_table "user_types", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", :force => true do |t|
     t.string   "username"
-    t.string   "password"
     t.string   "photo"
-    t.integer  "role_id"
     t.integer  "order_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -82,6 +87,10 @@ ActiveRecord::Schema.define(:version => 20111229074958) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.boolean  "debug",                                 :default => true
+    t.string   "country"
+    t.string   "city"
+    t.string   "website"
+    t.text     "introduction"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true
