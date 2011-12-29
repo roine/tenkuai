@@ -1,9 +1,13 @@
 <div id="user" class="wrap">
 	<div class="colLeft">
-	  <%= image_tag("test/santa.jpg", :alt => "Santa Claus", :id => "profilePic") %><h1 class="capitalize left"><%= @user.username %></h1>
-		
+		<%unless @user.photo_file_name.nil?%> 
+		<%= image_tag @user.photo.url(:small), :alt =>"#{@user.username}'s profile picture", :id => "profilePic"%>
+		<%else%>
+		<%= image_tag("test/santa.jpg", :alt => "Santa Claus", :id => "profilePic") %>
+		<%end%><h1 class="capitalize left"><%= @user.username %></h1>
+
 		<br class="clear">
-		
+
 		<div class="profileDetails">
 			<ul>
 				<li>
@@ -11,27 +15,27 @@
 					<div class="capitalize" class="right"><%= @user.username %></div> <!-- right -->
 					<div class="clear"></div>
 				</li>
-				
+
 				<li>
 					<div class="left">Location</div> <!-- left --> 
 					<%unless @user.country.nil? || @user.city.nil?%>
 					<div class="right">
-					
-						
-					<%unless @user.country.nil?%>
-					<%=@user.country%>
+
+
+						<%unless @user.country.nil?%>
+						<%=@user.country%>
 						<%if !@user.city.empty?%>
 						,
 						<%end%>
-					<%unless @user.city.nil?%>
-					<%=@user.city%>
-					<%end%>
-					<%end%>
+						<%unless @user.city.nil?%>
+						<%=@user.city%>
+						<%end%>
+						<%end%>
 					</div> <!-- right -->
 					<%end%>
 					<div class="clear"></div>
 				</li>
-				
+
 				<li>
 					<div class="left">Website</div> <!-- left --> 
 					<%unless @user.website.nil?%>
@@ -39,50 +43,50 @@
 					<%end%>
 					<div class="clear"></div>
 				</li>
-				
+
 				<li>
 					<div class="left">Member Since</div> <!-- left --> 
 					<div class="right"><% t =Time.at(@user.created_at.to_i)%>
 						<%=t.strftime('%d %b %Y')%>
-						</div> <!-- right -->
+					</div> <!-- right -->
 					<div class="clear"></div>
 				</li>
-				
+
 			</ul>
 			<p class="c888">Introduction</p>
 			<%unless @user.introduction.nil?%>
 			<p><%=@user.introduction%></p>
 			<%end%>
-			
+
 			<a id="contactUser">Send Message</a>
-		
+
 		</div> <!-- profileDetails -->
-		
+
 	</div> <!-- colLeft -->
-	
+
 	<div class="colMiddle">
-	
+
 		<%if user_signed_in?%>
-    <%if current_user.id == @user.id%>
-      <div id="colMiddleUl">
-		    <%=link_to 'Edit Account', edit_user_registration_path%>
-		  </div>
+		<%if current_user.id == @user.id%>
+		<div id="colMiddleUl">
+			<%=link_to 'Edit Account', edit_user_registration_path%>
+		</div>
 		<%end%>
 		<% else %>
 		hello
-    <%end%>
-		
+		<%end%>
+
 	</div> <!-- colMiddle -->
-	
+
 	<div class="colRight">
 		<div class="userWrap">
 			<h2><%= @user.username %>'s Shirs</h2>
-			
+
 			<div class="activityEntry">
 				<ul>
-						
-				  <% unless @shirs.nil? %>
-          <% @shirs.each do |s| %>
+
+					<% unless @shirs.nil? %>
+					<% @shirs.each do |s| %>
 					<li>
 						<p class="small">12th Dec 2011</p>
 						<div class="left"><%= image_tag("test/latestImg1.jpg", :alt => "Post Photo") %></div>
@@ -91,15 +95,15 @@
 						</div>
 						<div class="clear"></div>
 					</li>
-  				<% end %>
-  				<% end %>
-          
+					<% end %>
+					<% end %>
+
 				</ul>
 			</div> <!-- activityEntry -->
 			<p class="center"><span class="up"><%= image_tag("up.png", :alt => "Up") %></span> <span class="down"><%= image_tag("down.png", :alt => "Down") %></span></p>
-			
+
 		</div> <!-- userWrap -->
 	</div> <!-- colRight -->
-	
+
 	<div class="clear"></div>
 </div> <!-- wrap -->
