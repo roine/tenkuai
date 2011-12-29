@@ -134,7 +134,7 @@
 				<div class="pRow">
 					<div class="left">
 						<%unless @shir.category.nil?%>
-						<%=@shir.category.title%>
+						<%= link_to @shir.category.title, category_path(@shir.category) %>
 						<%end%>
 					</div>
 					<div class="right">-</div>
