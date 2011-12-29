@@ -121,7 +121,9 @@
 				
 				<div class="pRow">
 					<div class="left">
+						<%unless @shir.category.nil?%>
 						<%=@shir.category.title%>
+						<%end%>
 					</div>
 					<div class="right">-</div>
 					<div class="clear"></div>
