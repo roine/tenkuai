@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :username, :role_ids, :debug, 
                   :introduction, :website, :country, :city, :photo_file_name, :photo_content_type, 
-                  :photo_file_size, :photo
+                  :photo_file_size, :photo, :cached_slug
   
   #add the friendly id as username
   extend FriendlyId
