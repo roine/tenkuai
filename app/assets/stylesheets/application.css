@@ -155,7 +155,7 @@ a {text-decoration: none;}
 #footer .fCol {float: left; min-height: 120px; min-width: 100px; margin: 10px 10px 20px 10px; padding: 0 10px;}
 #footer #fCat {width: 290px;}
 #footer #fCat ul {position: relative; top: 10px; min-height: 160px;}
-#footer #fCat ul li {font-size: 12px; margin-left: 10px; list-style-position: inside; width: 45%; float: left;}
+#footer #fCat ul li {font-size: 12px; margin-left: 10px; list-style-position: inside; width: 45%; float: left;text-transform:capitalize;}
 #footer #fCat ul li a {text-decoration: none; color: #555;}
 #footer #fCat ul li a:hover, #footer #final ul li a:hover {color: #d13919;}
 #footer #fNewsletter {width: 350px;}

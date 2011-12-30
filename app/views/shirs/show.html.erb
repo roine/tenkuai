@@ -1,17 +1,17 @@
 <div id="shir" class="wrap">
 
 	<div class="colLeft">
-		<h1><%= @shir.title %></h1>
+		<h1><%= @shir.title.capitalize %></h1>
 		<%unless @shir.photo_file_name.nil?%>
 		<%= image_tag @shir.photo.url(:medium), :alt => @shir.title, :class=> "mainImg" %>
 		<%else%>
 		<%= image_tag("test/shirMainImg.jpg", :alt => @shir.title, :class=> "mainImg") %>
 		<%end%>
-		<p><%= @shir.description %></p>
+		<p><%= @shir.description.capitalize %></p>
 		
 		<h3>Instructions</h3>
 		
-		<p><%= @shir.instruction %></p>
+		<p><%= @shir.instruction.capitalize %></p>
 	</div> <!-- colLeft -->
 
 	<div class="colMiddle">
@@ -92,11 +92,9 @@
 
 				<div class="pRow">
 					<div class="c444 left">Delivery Time</div>
-					<%if @shir.days_to_complete.to_i%>
-					<div class="right"><%= @shir.days_to_complete %> days</div>
-					<%else%>
-					<div class="right"><%= @shir.days_to_complete %> day</div>
-					<%end%>
+					<div class="right">
+					<%=pluralize(@shir.days_to_complete, "day")%>
+					</div>
 					<div class="clear"></div>
 				</div>
 
