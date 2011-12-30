@@ -46,8 +46,8 @@
 
 				<li>
 					<div class="left">Member Since</div> <!-- left --> 
-					<div class="right"><% t =Time.at(@user.created_at.to_i)%>
-						<%=t.strftime('%d %b %Y')%>
+					<div class="right">
+						<%=@user_created_at.strftime('%d %b %Y')%>
 					</div> <!-- right -->
 					<div class="clear"></div>
 				</li>
@@ -97,7 +97,7 @@
 						<%= image_tag("test/latestImg1.jpg", :alt => "Post Photo") %>
 						<%end%>
 						<div class="activityEntryDesc">
-						<p class="small">20 Dec 2011</p>
+						<p class="small"><%= s.created_at.strftime('%d %b %Y')%></p>
 						<h4><%=link_to s.title, user_shir_path(@user, s) %></h4>
 						</div> <!-- activityEntryDesc -->
 						<div class="clear"></div>
