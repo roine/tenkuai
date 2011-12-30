@@ -37,6 +37,8 @@ gem 'devise'
 
 gem 'paperclip'
 
+gem 'acts-as-taggable-on'
+
 gem 'rspec-rails'
 gem 'inherited_resources'
 
