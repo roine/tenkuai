@@ -1,3 +1,4 @@
+<%title "#{@user.username.capitalize}"%>
 <div id="user" class="wrap">
 	<div class="colLeft">
 		<%unless @user.photo_file_name.nil?%> 
@@ -89,7 +90,7 @@
 				<ul>
 
 					<% unless @shirs.nil? %>
-					<% @shirs.each do |s| %>
+					<% @shirs.order('created_at desc').each do |s| %>
 					<li>
 						<%unless s.photo_file_name.nil?%>
 						<%= image_tag s.photo.url(:thumb), :alt =>"#{s.title}", :id => "profilePic"%>

@@ -1,3 +1,4 @@
+<%title "#{@users.count} Users #{@shirs_all.count} Shirs"%>
 <div class="wrap">
 	<div id="homeFeatured" class="homeCol">
 		<h2>Featured Shir</h2>
@@ -33,7 +34,7 @@
 	<div id="homeCat" class="homeCol">
 		
 		<div class="homeCatUl">
-		  <% Category.all.each do |c| %>
+		  <% @categories.each do |c| %>
 		  <%= link_to c.title, c %>
 			<% end %>
 		</div> <!-- categories -->
