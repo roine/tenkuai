@@ -15,13 +15,21 @@
 	</div> <!-- colLeft -->
 
 	<div class="colMiddle">
-
+		<%if user_signed_in?%>
+		<%unless current_user.id == @shir.user.id%>
 			<div class="orderMain">
 				<h2>buy this</h2>
 			</div> <!-- orderMain -->
 			
 			<a id="askQuestion" href="">Ask the seller a question</a>
+			<%end%>
+			<%else%>
+			<div class="orderMain">
+				<h2>buy this</h2>
+			</div> <!-- orderMain -->
 			
+			<a id="askQuestion" href="">Ask the seller a question</a>
+			<%end%>
 			<div id="feedback">
 				<h4>Latest Buyer Feedback</h4>
 				
