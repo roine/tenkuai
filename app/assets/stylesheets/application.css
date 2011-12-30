@@ -98,9 +98,11 @@ a {text-decoration: none;}
 .homeFeaturedOrg {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;  border: 2px solid #EEEEEE; display: inline-block; float: left; height: 112px; margin: 3px; width: 112px;}
 
 /* User and Shi'r Individual Page */
-#shir .orderMain {margin: 20px auto 0px auto; -moz-box-shadow: 0 0 3px #333; -webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333; text-shadow: none; cursor: pointer; padding: 15px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #00A8C6; font-family: RokkittRegular; text-transform: uppercase; text-align: center; width: auto; color: #fff;}
-#shir .orderMain h2 {font-size: 30px; word-spacing: 3px;}
-#shir .orderMain:hover {background: #e8401c;}
+#user .orderMain {margin-bottom: 35px;}
+.orderMain {font-size: 30px; word-spacing: 3px; margin: 20px auto 0px auto; -moz-box-shadow: 0 0 3px #333; -webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333; text-shadow: none; cursor: pointer; padding: 15px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #00A8C6; font-family: RokkittRegular; text-transform: uppercase; text-align: center; width: auto; color: #fff;}
+.orderMain a {color: #fff;}
+.orderMain h2 {font-size: 30px; word-spacing: 3px;}
+.orderMain:hover {background: #e8401c;}
 
 #user h1, #shir h1 {font-family: RokkittRegular; padding-right: 20px; color: #333; font-size: 30px; line-height :1.3em;}
 #user .mainImg, #shir .mainImg {-moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc;box-shadow: 0 0 3px #ccc; border:1px solid #ccc; width: 310px; margin: 20px 0 0 2px; height: 220px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
