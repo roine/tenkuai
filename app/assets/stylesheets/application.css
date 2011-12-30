@@ -137,7 +137,7 @@ a {text-decoration: none;}
 /* User */
 #user {font-size: 13px;}
 #user h2 {color: #555; font-family: RokkittRegular; font-size: 25px; font-weight: normal; text-transform: capitalize;}
-#user #profilePic {width: 100px; height: 100px; border: 5px solid #eee; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; float: left;}
+#user #profilePic {width: 100px; height: 100px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; float: left;}
 #user h1 {float: left; margin-left: 10px; width: 190px; line-height :1.3em; overflow: hidden; padding: 12px 0; height: auto; max-height: 100px;}
 #user .profileDetails {margin: 20px 0;}
 #user .profileDetails ul {margin: 10px 0;}
@@ -147,7 +147,7 @@ a {text-decoration: none;}
 #user .profileDetails p {line-height: 1.8em; font-size: 13px; padding: 5px;}
 #user .profileDetails ul li a, #user .activityEntry ul li a:hover {color: #d13919;}
 #user .profileDetails ul li a:hover, #user .activityEntry ul li a {color: #333;}
-#user #contactUser {cursor: pointer; display: block; width:45%; float: right; margin: 20px auto; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; text-align: center; background: #00A8C6; color: #fff;} 
+#user #contactUser {cursor: pointer; display: block; width:45%; margin: 20px auto; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; text-align: center; background: #00A8C6; color: #fff;} 
 #user #contactUser:hover {background: #e8401c;}
 #user .activityEntry ul li {display: block; list-style-type: none; border-bottom: 1px dotted #eee; background:#fff; padding: 10px; font-size: 13px;}
 #user .activityEntry ul li .small {padding-bottom: 8px;}
@@ -157,7 +157,6 @@ a {text-decoration: none;}
 #user .activityEntry ul li .right>.small {position: relative; top: 10px;}
 #user .activityEntry ul li .right>.small a, #user .activityEntry .small a {color: #d13919;}
 #user .activityEntry ul li .right>.small a:hover, #user .activityEntry .small a:hover {color: #555;}
-#user .activityEntry {}
 
 /* Ajaxful Rating */
 .ajaxful-rating, .ajaxful-rating a:hover, .ajaxful-rating a:active, .ajaxful-rating a:focus, .ajaxful-rating .show-value {background: url("../images/star.png") repeat-x scroll left -1000px transparent;}

@@ -3,7 +3,7 @@
 	<div class="colLeft">
 		<h1 class="capitalize"><%= @shir.title %></h1>
 		<%unless @shir.photo_file_name.nil?%>
-		<%= image_tag @shir.photo.url(:medium) %>
+		<%= image_tag @shir.photo.url(:medium), :alt => @shir.title, :class=> "mainImg" %>
 		<%else%>
 		<%= image_tag("test/shirMainImg.jpg", :alt => @shir.title, :class=> "mainImg") %>
 		<%end%>
@@ -138,7 +138,7 @@
 				<div class="pRow">
 					<div class="left">
 						<%unless @shir.category.nil?%>
-						<%=@shir.category.title%>
+						<%= link_to @shir.category.title, category_path(@shir.category) %>
 						<%end%>
 					</div>
 					<div class="right">-</div>

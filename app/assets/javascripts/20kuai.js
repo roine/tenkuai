@@ -9,7 +9,10 @@ $(document).ready(function() {
 	$(".activityEntry").jCarouselLite({
 	    btnNext: ".down",
 	    btnPrev: ".up",
-		vertical: true
+		vertical: true,
+		circular: false,
+		visible: 3,
+		start: 0
 	});
 	
 });
