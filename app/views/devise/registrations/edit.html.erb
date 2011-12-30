@@ -34,7 +34,7 @@
   <%= f.text_field :website %></div>
 <div><%= f.label :photo %><br />
 <%= f.file_field :photo%></div>
-<%= image_tag @user.photo.url %>
+<%= image_tag @user.photo.url(:thumb) %>
 
 
 
