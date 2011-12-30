@@ -2,7 +2,10 @@
 
 <%unless @category.shirs.nil?%>
 <%@category.shirs.each do |c|%>
-<%=c.title%><br />
+title<%=link_to c.title, user_shir_path(c.user, c)%><br />
+picture<%= image_tag c.photo(:thumb)%><br />
+user<%=link_to c.user.username, "/#{c.user.username.downcase}"%><br />
+<hr />
 <%end%>
 <%end%><br />
 
