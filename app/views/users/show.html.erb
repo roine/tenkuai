@@ -83,7 +83,7 @@
 
 	<div class="colRight">
 		<div class="userWrap">
-			<h2><%= @user.username %>'s Shirs</h2>
+			<h2><%= @user.username %>'s <%= pluralize(@user.shirs.count, 'Shir')%></h2>
 
 			<div class="activityEntry">
 				<ul>
@@ -107,7 +107,8 @@
 
 				</ul>
 			</div> <!-- activityEntry -->
-			<p class="center"><span class="up"><%= image_tag("up.png", :alt => "Up") %></span> <span class="down"><%= image_tag("down.png", :alt => "Down") %></span></p>
+			<%unless @shirs.count < 3%>
+			<p class="center"><span class="up"><%= image_tag("up.png", :alt => "Up") %></span> <span class="down"><%= image_tag("down.png", :alt => "Down") %></span></p><%end%>
 
 		</div> <!-- userWrap -->
 	</div> <!-- colRight -->
