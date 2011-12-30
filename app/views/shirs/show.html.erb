@@ -80,7 +80,7 @@
 
 				<div class="pRow">
 					<div class="c444 left">Delivery Time</div>
-					<%if @shir.days_to_complete.to_i > 1%>
+					<%if @shir.days_to_complete.to_i%>
 					<div class="right"><%= @shir.days_to_complete %> days</div>
 					<%else%>
 					<div class="right"><%= @shir.days_to_complete %> day</div>
