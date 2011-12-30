@@ -79,7 +79,11 @@
 
 				<div class="pRow">
 					<div class="c444 left">Delivery Time</div>
+					<%if @shir.days_to_complete > 1%>
 					<div class="right"><%= @shir.days_to_complete %> days</div>
+					<%else%>
+					<div class="right"><%= @shir.days_to_complete %> day</div>
+					<%end%>
 					<div class="clear"></div>
 				</div>
 
@@ -117,7 +121,31 @@
 
 				<div class="pRow">
 					<div class="c444 left">Created this Shir</div>
-					<div class="right">2 months ago</div>
+					<%if @since_in_sec < 60%>
+						<%unless @since_in_sec > 1%>
+							<div class="right"><%=@since_in_sec%> second ago</div>
+						<%else%>
+							<div class="right"><%=@since_in_sec%> seconds ago</div>
+						<%end%>
+					<%elsif @since_in_min < 60%>
+						<%unless @since_in_min > 1%>
+							<div class="right"><%=@since_in_min%> minute ago</div>
+						<%else%>
+							<div class="right"><%=@since_in_min%> minutes ago</div>
+						<%end%>
+					<%elsif @since_in_hour < 24%>
+						<%unless @since_in_hour > 1%>
+							<div class="right"><%=@since_in_hour%> hour ago</div>
+						<%else%>
+							<div class="right"><%=@since_in_hour%> hours ago</div>
+						<%end%>
+					<%elsif @since_in_day < 365%>
+						<%unless @since_in_day > 1%>
+							<div class="right"><%=@since_in_day%> day ago</div>
+						<%else%>
+							<div class="right"><%=@since_in_day%> days ago</div>
+						<%end%>
+					<%end%>
 					<div class="clear"></div>
 				</div>
 

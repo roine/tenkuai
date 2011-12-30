@@ -21,6 +21,10 @@ class ShirsController < ApplicationController
   def show
     @shir = Shir.find(params[:id])
     @user = @shir.user
+    @since_in_sec = (Time.now.to_i - @shir.created_at.to_i)
+    @since_in_min = @since_in_sec / (60)
+    @since_in_hour = @since_in_min / (60)
+    @since_in_day = @since_in_hour / (24)
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @shir }
