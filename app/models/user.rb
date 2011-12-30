@@ -28,8 +28,8 @@ class User < ActiveRecord::Base
   #conf for the profile pictures
   has_attached_file :photo,
       :styles => {
-        :thumb=> "100x100#",
-        :small  => "150x150#" }
+        :thumb=> "100x100!",
+        :small  => "150x150!" }
 
   #setup default role
   # def setup_role 
