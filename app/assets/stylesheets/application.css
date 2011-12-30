@@ -52,7 +52,7 @@ a {text-decoration: none;}
 .wrap {width: 960px; margin: 0 auto;}
 .section {padding: 10px 0; position: relative; min-width: 1024px;}
 
-#mainContent {min-height: 500px; padding-bottom: 35px; position: relative; height: auto;}
+#mainContent {min-height: 550px; padding-bottom: 35px; position: relative; height: auto;}
 .page404 {width: 100%; text-align: center;}
 .page404>h1 {font-size: 288px; margin-top: 245px; text-shadow: 1px 1px 1px #555; color: #fff; color: #d13919; display: block; clear: both; font-family: RokkittRegular;} 
 .page404>h2 {font-size: 35px; font-family: RokkittRegular; margin-top: 45px; color: #eee; text-shadow: 1px 1px 1px #ccc; text-transform: capitalize; clear:both; display: block;}
@@ -105,12 +105,11 @@ a {text-decoration: none;}
 #user h1, #shir h1 {font-family: RokkittRegular; padding-right: 20px; color: #333; font-size: 30px; line-height :1.3em;}
 #user .mainImg, #shir .mainImg {-moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc;box-shadow: 0 0 3px #ccc; border:1px solid #ccc; width: 310px; margin: 20px 0 0 2px; height: 220px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
 #user .colLeft p, #shir .colLeft p {font-size: 14px; text-align: justify; padding: 15px 30px 20px 0px;}
-#shir .colLeft h3 {font-size: 18px;}
 #user .colRight .userWrap, #shir .colRight .shirWrap {padding-left: 25px;}
 
 #shir #productMisc {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #F9F2E7; border: 1px solid #feecd4; padding: 10px 0 30px 0;}
 #shir #productMisc #editShir {position: relative; float: right; top: -18px;}
-#shir #productMisc h4 {color: #444; font-family: RokkittRegular; font-size: 22px; float: left; font-weight: normal; margin-top: -25px;}
+#shir #productMisc h4, #shir .colLeft h3 {color: #444; font-family: RokkittRegular; font-size: 22px; float: left; font-weight: normal; margin-top: -25px;}
 #shir #productMisc .pRow {padding: 5px; border-bottom: 1px solid #f3e2cc; font-size: 12px; margin: 0 15px;}
 #shir #productMisc .pRow .left {text-transform: capitalize;}
 
