@@ -122,31 +122,7 @@
 
 				<div class="pRow">
 					<div class="c444 left">Created this Shir</div>
-					<%if @since_in_sec < 60%>
-						<%unless @since_in_sec > 1%>
-							<div class="right"><%=@since_in_sec%> second ago</div>
-						<%else%>
-							<div class="right"><%=@since_in_sec%> seconds ago</div>
-						<%end%>
-					<%elsif @since_in_min < 60%>
-						<%unless @since_in_min > 1%>
-							<div class="right"><%=@since_in_min%> minute ago</div>
-						<%else%>
-							<div class="right"><%=@since_in_min%> minutes ago</div>
-						<%end%>
-					<%elsif @since_in_hour < 24%>
-						<%unless @since_in_hour > 1%>
-							<div class="right"><%=@since_in_hour%> hour ago</div>
-						<%else%>
-							<div class="right"><%=@since_in_hour%> hours ago</div>
-						<%end%>
-					<%elsif @since_in_day < 365%>
-						<%unless @since_in_day > 1%>
-							<div class="right"><%=@since_in_day%> day ago</div>
-						<%else%>
-							<div class="right"><%=@since_in_day%> days ago</div>
-						<%end%>
-					<%end%>
+				<div class="right"><%=@since%> ago</div>
 					<div class="clear"></div>
 				</div>
 
