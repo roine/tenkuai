@@ -37,7 +37,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 .colLeft {float: left; position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-right: 10px;}
 .colMiddle {float: left; position: relative; top: 90px; width: 245px; max-width: 245px;}
 .colRight {float: left; position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-left: 10px;}
-.c444 {color: #444;} .c888 {color: #888;}
+.c111 {color: #111;} .c444 {color: #444;} .c888 {color: #888;}
 .capitalize {text-transform: capitalize;}
 
 body {
@@ -70,28 +70,28 @@ a {text-decoration: none;}
 /* Homepage */
 .homeCol {float: left;}
 .homeCol a {color: #d13919;}
-.homeCol h2 {font-family: RokkittRegular; font-size: 25px; font-weight: normal; color: #555; padding-left: 15px; text-transform: capitalize;}
+.homeCol h2, #listings h2 {font-family: RokkittRegular; font-size: 25px; font-weight: normal; color: #555; padding-left: 15px; text-transform: capitalize;}
 #homeFeatured {position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-right: 10px;}
 #homeCat {position: relative; top: 110px; width: 245px; max-width: 245px;}
 .homeCatUl {position: relative; top: 0; text-align: center;}
 #colMiddleUl a, #homeCat .homeCatUl a {width: 100%; display:block; text-align: center;  font-family: RokkittRegular; font-size: 20px; border-bottom: 1px dotted #ccc; text-decoration: none; color: #333; padding: 5px 0;}
 #colMiddleUl a:hover, #homeCat .homeCatUl a:hover {background: #F9F2E7; color: #d13919;}
 #homeLatest {position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-left: 10px;}
-#homeLatest>h2 {padding-left: 30px;}
+#homeLatest>h2 {padding-left: 15px;}
 .homeShir {background: #fff; -webkit-border-radius: 5px; height: 270px; -moz-border-radius: 5px; border-radius: 5px; border: 3px solid #f5f5f5; width: 310px; margin: 10px auto 20px auto;}
 .homeShir>img {width: 306px; margin:2px; height: 132px; -webkit-border-top-left-radius: 3px; -webkit-border-top-right-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-topright: 3px; border-top-left-radius: 3px; border-top-right-radius: 3px;}
-#user .activityEntry ul li, .homeShirLatest {background: #fff; -webkit-border-radius: 5px; height: 101px; -moz-border-radius: 5px; border-radius: 5px; border: 3px solid #f5f5f5; width: 310px; margin: 10px auto 20px auto;}
-.desc {padding: 0 15px;}
+#listings .shirEntry ul li, #user .activityEntry ul li, .homeShirLatest {list-style-type: none; background: #fff; -webkit-border-radius: 5px; height: 101px; -moz-border-radius: 5px; border-radius: 5px; border: 3px solid #f5f5f5; width: 310px; margin: 10px auto 20px auto;}
+.desc, .ctit {padding: 0 15px;}
 .small {font-size: 11px; font-family: arial; color: #888;}
-#user .activityEntry ul li h4, .homeShirLatest h4, .homeShir h4 {overflow: hidden; max-height: 40px; height: auto; line-height: 1.3em; font-family: arial; font-size: 15px; font-weight: normal; margin: 8px 0;}
-#user .activityEntry ul li h4 a, .homeShirLatest h4 a, .homeShir h4 a {color: #333; text-decoration: none;} 
-#user .activityEntry ul li h4 a:hover, .homeShirLatest h4 a:hover, .homeShir h4 a:hover {color: #d13919;}
-#user .activityEntry ul li .small a, .homeShirLatest .small a {text-transform: capitalize;}
-.small a, #shir #feedback  a:hover;{color: #333; text-decoration: none;}
-#shir #feedback a, .small a:hover {color: #d13919; text-decoration: none;}
+#listings .shirEntry ul li h4, #user .activityEntry ul li h4, .homeShirLatest h4, .homeShir h4 {overflow: hidden; max-height: 40px; height: auto; line-height: 1.3em; font-family: arial; font-size: 15px; font-weight: normal; margin: 8px 0;}
+#listings .shirEntry ul li h4 a, #user .activityEntry ul li h4 a, .homeShirLatest h4 a, .homeShir h4 a {color: #333; text-decoration: none;} 
+#listings .shirEntry ul li h4 a:hover, #user .activityEntry ul li h4 a:hover, .homeShirLatest h4 a:hover, .homeShir h4 a:hover {color: #d13919;}
+#listings .shirEntry ul li h4 .small a, #user .activityEntry ul li .small a, .homeShirLatest .small a {text-transform: capitalize;}
+.small a, #shir #feedback  a:hover, #listings .shirEntry p.small a:hover {color: #333; text-decoration: none;}
+#shir #feedback a, .small a:hover, #listings .shirEntry p.small a {color: #d13919; text-decoration: none;}
 .homeShirLatest .shortDesc, .homeShir .shortDesc {line-height: 1.5em; height: auto; color: #555; max-height: 48px; overflow: hidden; font-size: 12px;}
-#user .activityEntry ul li img, #user .activityEntry ul li img#profilePic, .homeShirLatest>img {margin: 2px; float: left; position: relative; width: 97px; height: 97px;-webkit-border-top-left-radius: 3px; -webkit-border-bottom-left-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-bottomleft: 3px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border: 0;}
-.activityEntryDesc, .homeLatestDesc {padding: 9px 10px; float: left; position: relative; width: 185px; max-height: 77px;}
+#listings .shirEntry ul li img, #user .activityEntry ul li img, #user .activityEntry ul li img#profilePic, .homeShirLatest>img {margin: 2px; float: left; position: relative; width: 97px; height: 97px;-webkit-border-top-left-radius: 3px; -webkit-border-bottom-left-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-bottomleft: 3px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border: 0;}
+.shirEntryDesc, .activityEntryDesc, .homeLatestDesc {padding: 9px 10px; float: left; position: relative; width: 185px; max-height: 77px;}
 .activityEntryDesc h4, .homeLatestDesc h4 {font-size: 14px; max-height: 70px;}
 #homeFeaturedOrgs {position: relative; top: 30px; text-align: center;}
 #homeFeaturedOrgs h2, .homeCatUl h2 {padding: 0 0 8px 0;}
@@ -150,17 +150,8 @@ a {text-decoration: none;}
 #user #contactUser:hover {background: #e8401c;}
 #user #profilePic {border: 2px solid #eee; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; width: 98px; height: 98px; float: left;}
 
-/* Ajaxful Rating */
-.ajaxful-rating, .ajaxful-rating a:hover, .ajaxful-rating a:active, .ajaxful-rating a:focus, .ajaxful-rating .show-value {background: url("../images/star.png") repeat-x scroll left -1000px transparent;}
-.ajaxful-rating {list-style: none outside none; width: 125px; background-position: left top; height: 25px; list-style: none outside none; margin: 0; overflow: hidden; padding: 0; position: relative; top: -1px;}
-.ajaxful-rating .show-value {background-position: left center; z-index: 1;}
-.ajaxful-rating a, .ajaxful-rating span, .ajaxful-rating .show-value {border: medium none; height: 25px; left: 0; line-height: 25px; outline: medium none; overflow: hidden; position: absolute; text-indent: -1000em; top: 0;}
-.ajaxful-rating li {display: inline;}
-.ajaxful-rating .stars-1 {width: 20%; z-index: 6;}
-.ajaxful-rating .stars-2 {width: 40%; z-index: 5;}
-.ajaxful-rating .stars-3 {width: 60%; z-index: 4;}
-.ajaxful-rating .stars-4 {width: 80%; z-index: 3;}
-.ajaxful-rating .stars-5 {width: 100%; z-index: 2;}
+/* Listings */
+#listings {}
 
 /* Footer */
 #footer {position: relative; top: 50px; background: #eee; min-height: 120px; height: auto; -moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc; box-shadow: 0 0 3px #ccc;}

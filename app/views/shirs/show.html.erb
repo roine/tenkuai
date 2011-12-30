@@ -72,13 +72,7 @@
 				<div class="pRow">
 					<div class="c444 left">Shi'r Rating</div>
 					<div class="right"> 
-						<ul class="ajaxful-rating">
-							<li><span class="stars-1">4.0</span></li>
-							<li><span class="stars-2">4.0</span></li>
-							<li><span class="stars-3">4.0</span></li>
-							<li><span class="stars-4">4.0</span></li>
-							<li><span class="stars-5">4.0</span></li>
-						</ul>
+						
 					</div>
 					<div class="clear"></div>
 				</div>
@@ -150,13 +144,14 @@
 					<div class="right"></div>
 					<div class="clear"></div>
 				</div>
-				<% @shir.tags.each do |t|%>
+						
 				<div id="taggedAs">
+					<% @shir.tags.each do |t|%>
 					<a href=""><%=t.name%></a>
+    			<%end%>
 					<span class="clear"></span>
 				</div>
-				<%end%>
-
+        
 				<div class="clear"></div>
 				
         </div> <!-- shirWrap -->

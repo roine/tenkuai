@@ -1,20 +1,46 @@
-<p id="notice"><%= notice %></p>
+<div id="listings" class="wrap">
 
-<p>
-  <b>Title:</b>
-  <%= @category.title %>
-</p>
+	<div class="colLeft">
+	hi
+	</div> <!-- colLeft -->
 
-<p>
-  <b>Desc:</b>
-  <%= @category.desc %>
-</p>
+	<div class="colMiddle">
+    
+    <div id="colMiddleUl">
+		  <% Category.all.each do |c| %>
+		  <%= link_to c.title, c %>
+			<% end %>
+		</div> <!-- categories -->
+		
+	</div> <!-- colMiddle -->
 
-<p>
-  <b>Shir:</b>
-  <%= @category.shir_id %>
-</p>
+	<div class="colRight">
+	
+	<h2>Newest in : <span class="ctit c111"><%= @category.title %></span></h2>
+	
+	<div class="shirEntry">
+	  <ul>
+		
+	  <%unless @category.shirs.nil?%>
+    <%@category.shirs.each do |c|%>
+  
+      <li>
+  			<%= image_tag c.photo(:thumb), :alt =>"#{c.title}", :id => "profilePic" %>
+  			<div class="shirEntryDesc">
+  			<p class="small">For 20 kuai, <%=link_to c.user.username, "/#{c.user.username.downcase}", :class =>"capitalize" %> will..</p>
+  			<h4><%=link_to c.title, user_shir_path(c.user, c)%></h4>
+  			</div> <!-- shirEntryDesc -->
+  			<div class="clear"></div>
+  		</li>
+		
+    <%end%>
+    <%end%>
+    
+    </ul>
+  </div> <!-- shirEntry -->
+  
+	</div> <!-- colRight -->
 
-
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+	<div class="clear"></div>
+	
+</div> <!-- wrap -->
