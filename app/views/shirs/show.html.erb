@@ -150,11 +150,12 @@
 					<div class="right"></div>
 					<div class="clear"></div>
 				</div>
-
+				<% @shir.tags.each do |t|%>
 				<div id="taggedAs">
-					<a href="">ass</a>
+					<a href=""><%=t.name%></a>
 					<span class="clear"></span>
 				</div>
+				<%end%>
 
 				<div class="clear"></div>
 				

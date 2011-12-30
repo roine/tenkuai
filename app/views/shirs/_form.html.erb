@@ -37,16 +37,12 @@
 		<%= f.text_area :instruction %>
 	</div>
 	<div class="field">
-		<%= f.label :tag_id %><br />
-		<%= f.number_field :tag_id %>
+		<%= f.label :tag_list %><br />
+		<%= f.text_field :tag_list %>
 	</div>
 	<div class="field">
 		<%= f.label :days_to_complete %><br />
 		<%= f.number_field :days_to_complete %>
-	</div>
-	<div class="field">
-		<%= f.label :image %><br />
-		<%= f.text_field :image %>
 	</div>
 	<div class="field">
 		<%= f.label :shipping_required %><br />
@@ -55,10 +51,6 @@
 	<div class="field">
 		<%= f.label :shipping_id %><br />
 		<%= f.number_field :shipping_id %>
-	</div>
-	<div class="field">
-		<%= f.label :date_timestamp %><br />
-		<%= f.number_field :date_timestamp %>
 	</div>
 	<div class="field">
 		<%= f.label :photo %><br />
