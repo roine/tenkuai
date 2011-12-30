@@ -1,7 +1,7 @@
 <div id="shir" class="wrap">
 
 	<div class="colLeft">
-		<h1 class="capitalize"><%= @shir.title %></h1>
+		<h1><%= @shir.title %></h1>
 		<%unless @shir.photo_file_name.nil?%>
 		<%= image_tag @shir.photo.url(:medium), :alt => @shir.title, :class=> "mainImg" %>
 		<%else%>

@@ -80,19 +80,19 @@ a {text-decoration: none;}
 #homeLatest>h2 {padding-left: 30px;}
 .homeShir {background: #fff; -webkit-border-radius: 5px; height: 270px; -moz-border-radius: 5px; border-radius: 5px; border: 3px solid #f5f5f5; width: 310px; margin: 10px auto 20px auto;}
 .homeShir>img {width: 306px; margin:2px; height: 132px; -webkit-border-top-left-radius: 3px; -webkit-border-top-right-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-topright: 3px; border-top-left-radius: 3px; border-top-right-radius: 3px;}
-.homeShirLatest {background: #fff; -webkit-border-radius: 5px; height: 101px; -moz-border-radius: 5px; border-radius: 5px; border: 3px solid #f5f5f5; width: 310px; margin: 10px auto 20px auto;}
+#user .activityEntry ul li, .homeShirLatest {background: #fff; -webkit-border-radius: 5px; height: 101px; -moz-border-radius: 5px; border-radius: 5px; border: 3px solid #f5f5f5; width: 310px; margin: 10px auto 20px auto;}
 .desc {padding: 0 15px;}
 .small {font-size: 11px; font-family: arial; color: #888;}
-.homeShirLatest h4, .homeShir h4 {overflow: hidden; max-height: 40px; height: auto; line-height: 1.3em; font-family: arial; font-size: 15px; font-weight: normal; margin: 8px 0;}
-.homeShirLatest h4 a, .homeShir h4 a {color: #333; text-decoration: none;} 
-.homeShirLatest h4 a:hover, .homeShir h4 a:hover {color: #d13919;}
-.homeShirLatest .small a {text-transform: capitalize;}
+#user .activityEntry ul li h4, .homeShirLatest h4, .homeShir h4 {overflow: hidden; max-height: 40px; height: auto; line-height: 1.3em; font-family: arial; font-size: 15px; font-weight: normal; margin: 8px 0;}
+#user .activityEntry ul li h4 a, .homeShirLatest h4 a, .homeShir h4 a {color: #333; text-decoration: none;} 
+#user .activityEntry ul li h4 a:hover, .homeShirLatest h4 a:hover, .homeShir h4 a:hover {color: #d13919;}
+#user .activityEntry ul li .small a, .homeShirLatest .small a {text-transform: capitalize;}
 .small a, #shir #feedback  a:hover;{color: #333; text-decoration: none;}
 #shir #feedback a, .small a:hover {color: #d13919; text-decoration: none;}
 .homeShirLatest .shortDesc, .homeShir .shortDesc {line-height: 1.5em; height: auto; color: #555; max-height: 48px; overflow: hidden; font-size: 12px;}
-.homeShirLatest>img {margin: 2px; float: left; position: relative; width: 97px; height: 97px;-webkit-border-top-left-radius: 3px; -webkit-border-bottom-left-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-bottomleft: 3px; border-top-left-radius: 3px; border-bottom-left-radius: 3px;}
-.homeLatestDesc {padding: 9px 10px; float: left; position: relative; width: 185px; max-height: 77px;}
-.homeLatestDesc h4 {font-size: 14px; max-height: 70px;}
+#user .activityEntry ul li img, #user .activityEntry ul li img#profilePic, .homeShirLatest>img {margin: 2px; float: left; position: relative; width: 97px; height: 97px;-webkit-border-top-left-radius: 3px; -webkit-border-bottom-left-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-bottomleft: 3px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border: 0;}
+.activityEntryDesc, .homeLatestDesc {padding: 9px 10px; float: left; position: relative; width: 185px; max-height: 77px;}
+.activityEntryDesc h4, .homeLatestDesc h4 {font-size: 14px; max-height: 70px;}
 #homeFeaturedOrgs {position: relative; top: 30px; text-align: center;}
 #homeFeaturedOrgs h2, .homeCatUl h2 {padding: 0 0 8px 0;}
 .homeFeaturedOrg {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;  border: 2px solid #EEEEEE; display: inline-block; float: left; height: 112px; margin: 3px; width: 112px;}
@@ -115,8 +115,8 @@ a {text-decoration: none;}
 #shir #productMisc .pRow .left {text-transform: capitalize;}
 
 #shir #productMisc .pRowThick {padding: 5px; margin: 20px 15px 0px 15px; border-bottom: 3px solid #f3e2cc; font-size: 12px;} 
-#shir #productMisc #taggedAs {text-align: center; padding: 10px 0 15px 15px;}
-#shir #productMisc #taggedAs a {color: #333; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background: #f3e2cc; font-size: 12px; text-decoration: none; float: left; display: inline-block; padding: 3px 8px; margin: 5px;}
+#shir #productMisc #taggedAs {text-align: center; padding: 10px 0; display: inline-block;}
+#shir #productMisc #taggedAs a {color: #333; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px; background: #f3e2cc; font-size: 12px; text-decoration: none; float: left; padding: 3px 8px; margin: 5px 0 5px 15px;}
 #shir #productMisc a {cursor: pointer; color: #d13919;}
 #shir #productMisc a:hover {color: #333;}
 #shir #productMisc .bold {color: #555;}
@@ -137,7 +137,6 @@ a {text-decoration: none;}
 /* User */
 #user {font-size: 13px;}
 #user h2 {color: #555; font-family: RokkittRegular; font-size: 25px; font-weight: normal; text-transform: capitalize;}
-#user #profilePic {width: 100px; height: 100px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; float: left;}
 #user h1 {float: left; margin-left: 10px; width: 190px; line-height :1.3em; overflow: hidden; padding: 12px 0; height: auto; max-height: 100px;}
 #user .profileDetails {margin: 20px 0;}
 #user .profileDetails ul {margin: 10px 0;}
@@ -145,18 +144,11 @@ a {text-decoration: none;}
 #user .profileDetails ul li .left {color: #888; width: 35%;}
 #user .profileDetails ul li .right {width: 65%; text-align: left;}
 #user .profileDetails p {line-height: 1.8em; font-size: 13px; padding: 5px;}
-#user .profileDetails ul li a, #user .activityEntry ul li a:hover {color: #d13919;}
-#user .profileDetails ul li a:hover, #user .activityEntry ul li a {color: #333;}
+#user .profileDetails ul li a {color: #d13919;}
+#user .profileDetails ul li a:hover {color: #333;}
 #user #contactUser {cursor: pointer; display: block; width:45%; margin: 20px auto; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; text-align: center; background: #00A8C6; color: #fff;} 
 #user #contactUser:hover {background: #e8401c;}
-#user .activityEntry ul li {display: block; list-style-type: none; border-bottom: 1px dotted #eee; background:#fff; padding: 10px; font-size: 13px;}
-#user .activityEntry ul li .small {padding-bottom: 8px;}
-#user .activityEntry ul li .left  {margin: 2px; float: left; position: relative; width: 97px; height: 97px;-webkit-border-top-left-radius: 3px; -webkit-border-bottom-left-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-bottomleft: 3px; border-top-left-radius: 3px; border-bottom-left-radius: 3px;}
-#user .activityEntry ul li .right {width: 190px; padding: 8px 0;}
-#user .activityEntry ul li .right h4 {font-size: 14px; font-weight: normal; line-height: 1.4em;}
-#user .activityEntry ul li .right>.small {position: relative; top: 10px;}
-#user .activityEntry ul li .right>.small a, #user .activityEntry .small a {color: #d13919;}
-#user .activityEntry ul li .right>.small a:hover, #user .activityEntry .small a:hover {color: #555;}
+#user #profilePic {border: 2px solid #eee; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; width: 98px; height: 98px; float: left;}
 
 /* Ajaxful Rating */
 .ajaxful-rating, .ajaxful-rating a:hover, .ajaxful-rating a:active, .ajaxful-rating a:focus, .ajaxful-rating .show-value {background: url("../images/star.png") repeat-x scroll left -1000px transparent;}
