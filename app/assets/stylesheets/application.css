@@ -40,12 +40,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 .c111 {color: #111;} .c444 {color: #444;} .c888 {color: #888;}
 .capitalize {text-transform: capitalize;}
 
-body {
-	background: #fcfcfc;
-	font-family: arial;
-	font-size: 13px;
-	-webkit-text-size-adjust: 100%; /* Stops Mobile Safari from auto-adjusting font-sizes */
-}
+body { background: #fcfcfc; font-family: arial; font-size: 13px; -webkit-text-size-adjust: 100%; }
 
 a {text-decoration: none;}
 
@@ -87,8 +82,8 @@ a {text-decoration: none;}
 #listings .shirEntry ul li h4 a, #user .activityEntry ul li h4 a, .homeShirLatest h4 a, .homeShir h4 a {color: #333; text-decoration: none;} 
 #listings .shirEntry ul li h4 a:hover, #user .activityEntry ul li h4 a:hover, .homeShirLatest h4 a:hover, .homeShir h4 a:hover {color: #d13919;}
 #listings .shirEntry ul li h4 .small a, #user .activityEntry ul li .small a, .homeShirLatest .small a {text-transform: capitalize;}
-.small a, #shir #feedback  a:hover, #listings .shirEntry p.small a:hover {color: #333; text-decoration: none;}
-#shir #feedback a, .small a:hover, #listings .shirEntry p.small a {color: #d13919; text-decoration: none;}
+.small a, #shir #feedback  a:hover, #listings .shirEntry p.small a {color: #333; text-decoration: none;}
+#shir #feedback a, .small a:hover, #listings .shirEntry p.small a:hover {color: #d13919; text-decoration: none;}
 .homeShirLatest .shortDesc, .homeShir .shortDesc {line-height: 1.5em; height: auto; color: #555; max-height: 48px; overflow: hidden; font-size: 12px;}
 #listings .shirEntry ul li img, #user .activityEntry ul li img, #user .activityEntry ul li img#profilePic, .homeShirLatest>img {margin: 2px; float: left; position: relative; width: 97px; height: 97px;-webkit-border-top-left-radius: 3px; -webkit-border-bottom-left-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-bottomleft: 3px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border: 0;}
 .shirEntryDesc, .activityEntryDesc, .homeLatestDesc {padding: 9px 10px; float: left; position: relative; width: 185px; max-height: 77px;}
@@ -106,12 +101,13 @@ a {text-decoration: none;}
 
 #user h1, #shir h1 {font-family: RokkittRegular; padding-right: 20px; color: #333; font-size: 30px; line-height :1.3em;}
 #user .mainImg, #shir .mainImg {-moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc;box-shadow: 0 0 3px #ccc; border:1px solid #ccc; width: 310px; margin: 20px 0 0 2px; height: 220px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
-#user .colLeft p, #shir .colLeft p {font-size: 14px; text-align: justify; padding: 15px 30px 20px 0px;}
+#user .colLeft p, #shir .colLeft p {font-size: 13px; text-align: justify; padding: 15px 30px 20px 0px;}
 #user .colRight .userWrap, #shir .colRight .shirWrap {padding-left: 25px;}
 
 #shir #productMisc {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #F9F2E7; border: 1px solid #feecd4; padding: 10px 0 30px 0;}
 #shir #productMisc #editShir {position: relative; float: right; top: -18px;}
 #shir #productMisc h4, #shir .colLeft h3 {color: #444; font-family: RokkittRegular; font-size: 22px; float: left; font-weight: normal; margin-top: -25px;}
+ #shir .colLeft h3 {margin-top: 0; float: none;}
 #shir #productMisc .pRow {padding: 5px; border-bottom: 1px solid #f3e2cc; font-size: 12px; margin: 0 15px;}
 #shir #productMisc .pRow .left {text-transform: capitalize;}
 
