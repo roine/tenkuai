@@ -2,6 +2,7 @@ class Shir < ActiveRecord::Base
   #sql relation between tables
   belongs_to :user
   belongs_to :category
+  has_many :orders
   
   #tag to shirs
   acts_as_taggable
