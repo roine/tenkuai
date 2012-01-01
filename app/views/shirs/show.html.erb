@@ -19,7 +19,7 @@
 		<%if user_signed_in?%>
 		<%unless current_user.id == @shir.user.id%>
 			<div class="orderMain">
-				<h2>buy this</h2>
+				<h2><%=link_to "buy this", new_shir_order_path(@shir)%></h2>
 			</div> <!-- orderMain -->
 			
 			<a id="askQuestion" href="">Ask the seller a question</a>
