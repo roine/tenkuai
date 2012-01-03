@@ -11,7 +11,7 @@ class Shir < ActiveRecord::Base
   has_friendly_id :title, :use_slug => true
 
   #check validity of fields
-  validates :title, :presence=>true
+  validates :title, :presence=>true, :length => {:minimum =>20, :maximum => 80}
   
   #conf for the profile pictures
   has_attached_file :photo,

@@ -7,6 +7,9 @@ Tenkuai::Application.routes.draw do
   resources :users, :only=>[:show] do
     resources :shirs
   end
+ 
+ #  hide the controllers name
+  get "/:user_id/:id", :to => "shirs#show", :as => :shirs_user
   
   resources :shirs do
     resources :orders

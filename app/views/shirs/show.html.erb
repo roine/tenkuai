@@ -1,4 +1,5 @@
 <%title "#{@shir.title} by #{@shir.user.username}"%>
+ 
 <div id="shir" class="wrap">
 
 	<div class="colLeft">
@@ -16,6 +17,7 @@
 	</div> <!-- colLeft -->
 
 	<div class="colMiddle">
+	
 		<%if user_signed_in?%>
 		<%unless current_user.id == @shir.user.id%>
 			<div class="orderMain">
