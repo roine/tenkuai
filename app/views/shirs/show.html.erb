@@ -165,7 +165,7 @@
 						
 				<div id="taggedAs">
 					<% @shir.tags.each do |t|%>
-					<a href=""><%=t.name%></a>
+				<%=link_to t.name, "#{shirs_path}?tags=#{t.name}"%>
     			<%end%>
 					<span class="clear"></span>
 				</div>

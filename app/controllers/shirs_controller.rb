@@ -40,6 +40,9 @@ class ShirsController < ApplicationController
 
   def index
     @shirs = Shir.all
+    if params[:tags]
+      @shirs = Shir.tagged_with(params[:tags])
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @shirs }
@@ -49,11 +52,11 @@ class ShirsController < ApplicationController
   # GET /shirs/1
   # GET /shirs/1.json
   def show
-    if Shir.find(params[:id]).user.username != params[:user_id]
-      redirect_to 'google.com'
-    end
+   
     @shir = Shir.find(params[:id])
-    
+     if Shir.find(params[:id]).user.username.capitalize != params[:user_id].capitalize
+      @t = 'true'
+      end
     @user = @shir.user
     @since = since
     
