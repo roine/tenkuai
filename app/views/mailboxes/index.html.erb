@@ -1,0 +1,27 @@
+<h1>Listing mailboxes</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Subject</th>
+    <th>Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @mailboxes.each do |mailbox| %>
+  <tr>
+    <td><%= mailbox.user_id %></td>
+    <td><%= mailbox.subject %></td>
+    <td><%= mailbox.content %></td>
+    <td><%= link_to 'Show', mailbox %></td>
+    <td><%= link_to 'Edit', edit_mailbox_path(mailbox) %></td>
+    <td><%= link_to 'Destroy', mailbox, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Mailbox', new_mailbox_path %>
