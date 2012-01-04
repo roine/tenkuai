@@ -23,10 +23,20 @@
 				<div id="logo"><a href="home.html"><img src="img/logo.png"></a></div>
 				<ul class="nav right">
 					<li>
-						<span id="loginOver">log in</span>
-							<div id="loginShow">
-						
-							</div> <!-- loginShow -->
+						<span id="loginButton">log in</span>
+							<div id="loginBox">
+								<div id="loginForm">
+									<input type="text" id="user_email" placeholder="Email Address">
+									<input type="password" placeholder="Password">
+									<span id="forgotPswd">
+									<input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me"> 
+									<label for="user_remember_me">Remember me</label>
+									<br>
+									<a href="">Forgot your password?</a></span>
+									<input type="submit" class="right" value="Log In">
+									<span class="clear"></span>
+								</div> <!-- loginForm -->
+							</div> <!-- loginBox -->
 					</li>
 					<li><a class="signUp" href="">sign up</a></li>
 				</ul>

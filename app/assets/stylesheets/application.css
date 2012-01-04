@@ -87,7 +87,7 @@ a {text-decoration: none;}
 .homeShirLatest .shortDesc, .homeShir .shortDesc {line-height: 1.5em; height: auto; color: #555; max-height: 48px; overflow: hidden; font-size: 12px;}
 #listings .shirEntry ul li img, #user .activityEntry ul li img, #user .activityEntry ul li img#profilePic, .homeShirLatest>img {margin: 2px; float: left; position: relative; width: 97px; height: 97px;-webkit-border-top-left-radius: 3px; -webkit-border-bottom-left-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-bottomleft: 3px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border: 0;}
 .shirEntryDesc, .activityEntryDesc, .homeLatestDesc {padding: 9px 10px; float: left; position: relative; width: 185px; max-height: 77px;}
-.activityEntryDesc h4, .homeLatestDesc h4 {font-size: 14px; max-height: 70px;}
+.activityEntryDesc h4, .homeLatestDesc h4 {font-size: 13px; text-align:left; word-wrap: break-word; max-height: 58px; overflow: hidden;}
 #homeFeaturedOrgs {position: relative; top: 30px; text-align: center;}
 #homeFeaturedOrgs h2, .homeCatUl h2 {padding: 0 0 8px 0;}
 .homeFeaturedOrg {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;  border: 2px solid #EEEEEE; display: inline-block; float: left; height: 112px; margin: 3px; width: 112px;}

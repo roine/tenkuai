@@ -12,5 +12,6 @@ $(document).ready(function() {
 		vertical: true,
 		visible: 4
 	});
-	
+
 });
+

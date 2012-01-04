@@ -30,7 +30,13 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 .c444 {color: #444;} .c888 {color: #888;}
 
 /* Login */
-#loginShow {-webkit-border-bottom-right-radius: 5px; -webkit-border-bottom-left-radius: 5px; -moz-border-radius-bottomright: 5px; -moz-border-radius-bottomleft: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; position: absolute; margin-left: -145px; margin-top: 12px; padding: 15px; width: 282px; height: 100px; background: #aee239; }
+#loginBox {display: none; z-index: 9; -webkit-border-bottom-right-radius: 5px; -webkit-border-bottom-left-radius: 5px; -moz-border-radius-bottomright: 5px; -moz-border-radius-bottomleft: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; position: absolute; margin-left: -145px; top: 46px; padding: 15px; width: 282px; height: 135px; background: #aee239;}
+#loginBox input[type="text"], #loginBox input[type="password"] {margin: 3px; width: 260px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; font-size: 14px; color: #555; border: 1px solid #eee;}
+#loginBox #forgotPswd {float: left; margin-top: 5px; text-shadow: none; font-family: Arial; font-size: 12px; padding: 0; border-radius: 0;}
+#loginBox #forgotPswd a, #loginBox #forgotPswd a:hover {-moz-box-shadow: none;-webkit-box-shadow: none;box-shadow: none; padding: 0; border-radius: 0;}
+#loginBox input[type="submit"] {z-index: 9; margin-top: 9px; color: #fff; border: 0; font-family: RokkittRegular; padding: 5px; width: 70px; text-align: center; background: #d13919; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; font-size: 19px; cursor: pointer;}
+#loginBox input[type="submit"]:hover {background: #e8401c;}
+#loginBox label {text-shadow: none; font-family: Arial; font-size: 12px; color: #555;}
 
 body {
 	background: #fcfcfc;
