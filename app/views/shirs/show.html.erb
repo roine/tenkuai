@@ -1,4 +1,5 @@
 <%title "#{@shir.title} by #{@shir.user.username}"%>
+ 
 <div id="shir" class="wrap">
 
 	<div class="colLeft">
@@ -16,20 +17,21 @@
 	</div> <!-- colLeft -->
 
 	<div class="colMiddle">
+	
 		<%if user_signed_in?%>
 		<%unless current_user.id == @shir.user.id%>
 			<div class="orderMain">
 				<h2><%=link_to "buy this", new_shir_order_path(@shir)%></h2>
 			</div> <!-- orderMain -->
 			
-			<a id="askQuestion" href="">Ask the seller a question</a>
+			<%=link_to "Ask the seller a question", mailbox_user_path(@shir.user.username), :id => "askQuestion"%>
 			<%end%>
 			<%else%>
 			<div class="orderMain">
 				<h2>buy this</h2>
 			</div> <!-- orderMain -->
 			
-			<a id="askQuestion" href="">Ask the seller a question</a>
+		<%=link_to "Ask the seller a question", mailbox_user_path(@shir.user.id), :id => "askQuestion"%>
 			<%end%>
 			<div id="feedback">
 				<h4>Latest Buyer Feedback</h4>
@@ -163,7 +165,7 @@
 						
 				<div id="taggedAs">
 					<% @shir.tags.each do |t|%>
-					<a href=""><%=t.name%></a>
+				<%=link_to t.name, "#{shirs_path}?tags=#{t.name}"%>
     			<%end%>
 					<span class="clear"></span>
 				</div>

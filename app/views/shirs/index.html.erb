@@ -1,4 +1,4 @@
-<%title "#{@shirs.count} Shirs"%>
+<%title pluralize(@shirs.count, "Shir")%>
 <h1>Listing shirs</h1>
 
 <table>
@@ -36,7 +36,7 @@
 
 <%if can? :read, Shir%>
 
-    <td><%= link_to 'Show', user_shir_path(shir.user, shir) %></td>
+    <td><%= link_to 'Show', shirs_user_path(shir.user, shir) %></td>
 <%end%>
 <%if user_signed_in?%>
 <%if shir.user.id == current_user.id%>

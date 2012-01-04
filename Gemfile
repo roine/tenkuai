@@ -39,6 +39,8 @@ gem 'paperclip'
 
 gem 'acts-as-taggable-on'
 
+gem 'ajaxful_rating' 
+
 gem 'rspec-rails'
 gem 'inherited_resources'
 

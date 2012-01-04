@@ -1,13 +1,13 @@
 class ShirsController < ApplicationController
   # GET /shirs
   # GET /shirs.json
-  
+
   before_filter :get_categories
-  
+
   def get_categories
-  @categories = Category.all
+    @categories = Category.all
   end
-  
+
   def since
     @shir = Shir.find(params[:id])
     @since_in_sec = (Time.now.to_i - @shir.created_at.to_i)
@@ -35,11 +35,14 @@ class ShirsController < ApplicationController
     if @since.to_i > 1
       @since = @since.pluralize
     end
-      return @since
+    return @since
   end
-  
+
   def index
     @shirs = Shir.all
+    if params[:tags]
+      @shirs = Shir.tagged_with(params[:tags])
+    end
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @shirs }
@@ -49,14 +52,19 @@ class ShirsController < ApplicationController
   # GET /shirs/1
   # GET /shirs/1.json
   def show
+   
     @shir = Shir.find(params[:id])
+     if Shir.find(params[:id]).user.username.capitalize != params[:user_id].capitalize
+      @t = 'true'
+      end
     @user = @shir.user
     @since = since
-   
+    
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @shir }
     end
+    
   end
 
   # GET /shirs/new

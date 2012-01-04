@@ -84,7 +84,12 @@
 
 	<div class="colRight">
 		<div class="userWrap">
-			<h2><%= @user.username %>'s <%= pluralize(@user.shirs.count, 'Shir')%></h2>
+			<h2><%= @user.username %>'s
+				<%if @user.shirs.count > 1%>
+				<%= "Shirs (#{@user.shirs.count})"%>
+				<%else%>
+				<%= "Shir"%>
+				<%end%></h2>
 
 			<div class="activityEntry">
 				<ul>
@@ -99,7 +104,7 @@
 						<%end%>
 						<div class="activityEntryDesc">
 						<p class="small"><%= s.created_at.strftime('%d %b %Y')%></p>
-						<h4><%=link_to s.title, user_shir_path(@user, s) %></h4>
+						<h4><%=link_to s.title, shirs_user_path(@user, s) %></h4>
 						</div> <!-- activityEntryDesc -->
 						<div class="clear"></div>
 					</li>
