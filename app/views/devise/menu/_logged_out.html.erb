@@ -1,7 +1,25 @@
 <% unless user_signed_in?%>
   <li>
-   <%= link_to('Log In', new_user_session_path)  %>  
+   <%= link_to('TAKE THIS OUT', new_user_session_path)  %>  
    </li>
+   
+   <!-- HELLO!!! PLEASE IMPLEMENT THIS !!! KTHANXBAI! -->
+   <li>
+			<span id="loginButton">log in</span>
+				<div id="loginBox">
+						<input type="text" id="user_email" placeholder="Email Address">
+						<input type="password" placeholder="Password">
+						<span id="forgotPswd">
+						<input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me"> 
+						<label for="user_remember_me">Remember me</label>
+						<br>
+						<a href="">Forgot your password?</a></span>
+						<input type="submit" class="right" value="Log In">
+						<span class="clear"></span>
+				</div> <!-- loginBox -->
+		</li>
+    <!-- HELLO!!! PLEASE IMPLEMENT THIS !!! KTHANXBAI! -->
+  
    <li>
      <%= link_to 'Join', new_user_registration_path, :class => "signUp" %>
      </li>

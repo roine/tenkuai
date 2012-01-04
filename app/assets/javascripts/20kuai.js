@@ -14,5 +14,9 @@ $(document).ready(function() {
 		visible: 3,
 		start: 0
 	});
+		
+	$("#loginButton").click(function() {
+	  $('#loginBox').slideToggle();
+	});
 	
 });
