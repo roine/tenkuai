@@ -65,7 +65,7 @@ a {text-decoration: none;}
 /* Homepage */
 .homeCol {float: left;}
 .homeCol a {color: #d13919;}
-.homeCol h2, #listings h2 {font-family: RokkittRegular; font-size: 25px; font-weight: normal; color: #555; padding-left: 15px; text-transform: capitalize;}
+.homeCol h2, #listings h2, #loginSignup h2 {font-family: RokkittRegular; font-size: 25px; font-weight: normal; color: #555; padding-left: 15px; text-transform: capitalize;}
 #homeFeatured {position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-right: 10px;}
 #homeCat {position: relative; top: 110px; width: 245px; max-width: 245px;}
 .homeCatUl {position: relative; top: 0; text-align: center;}
@@ -87,10 +87,26 @@ a {text-decoration: none;}
 .homeShirLatest .shortDesc, .homeShir .shortDesc {line-height: 1.5em; height: auto; color: #555; max-height: 48px; overflow: hidden; font-size: 12px;}
 #listings .shirEntry ul li img, #user .activityEntry ul li img, #user .activityEntry ul li img#profilePic, .homeShirLatest>img {margin: 2px; float: left; position: relative; width: 97px; height: 97px;-webkit-border-top-left-radius: 3px; -webkit-border-bottom-left-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-bottomleft: 3px; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border: 0;}
 .shirEntryDesc, .activityEntryDesc, .homeLatestDesc {padding: 9px 10px; float: left; position: relative; width: 185px; max-height: 77px;}
-.activityEntryDesc h4, .homeLatestDesc h4 {font-size: 14px; max-height: 70px;}
+.activityEntryDesc h4, .homeLatestDesc h4 {font-size: 13px; text-align:left; word-wrap: break-word; max-height: 58px; overflow: hidden;}
 #homeFeaturedOrgs {position: relative; top: 30px; text-align: center;}
 #homeFeaturedOrgs h2, .homeCatUl h2 {padding: 0 0 8px 0;}
 .homeFeaturedOrg {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;  border: 2px solid #EEEEEE; display: inline-block; float: left; height: 112px; margin: 3px; width: 112px;}
+
+/* Login and Signup */
+#loginSignup .colRight h2 {padding-left: 15px;}
+#loginSignup h2 {padding-left: 0;}
+#error_explanation h2 {font-family: arial; font-size: 15px;}
+#error_explanation ul {margin-bottom: 20px; padding: 10px; width: 300px;}
+#error_explanation ul li {list-style-position: inside;}
+#loginBox {display: none; z-index: 9; -webkit-border-bottom-right-radius: 5px; -webkit-border-bottom-left-radius: 5px; -moz-border-radius-bottomright: 5px; -moz-border-radius-bottomleft: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; position: absolute; margin-left: -145px; top: 46px; padding: 15px; width: 282px; height: 135px; background: #aee239;}
+#loginSignup .colLeft input[type="password"], #loginSignup .colLeft input[type="email"], #loginSignup .colLeft input[type="text"], #loginBox input[type="email"], #loginBox input[type="text"], #loginBox input[type="password"] {margin: 3px; width: 260px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; font-size: 14px; color: #555; border: 1px solid #eee;}
+#loginSignup .colLeft input[type="password"], #loginSignup .colLeft input[type="email"], #loginSignup .colLeft input[type="text"] {border: 2px solid #EEEEEE; left: 0; margin: 5px 0; padding: 15px; position: relative; width: 280px;}
+#loginBox #forgotPswd {float: left; margin-top: 5px; text-shadow: none; font-family: Arial; font-size: 12px; padding: 0; border-radius: 0;}
+#loginBox #forgotPswd a, #loginBox #forgotPswd a:hover {-moz-box-shadow: none;-webkit-box-shadow: none;box-shadow: none; padding: 0; border-radius: 0;}
+#loginSignup .colLeft input[type="submit"], #loginBox input[type="submit"] {z-index: 9; margin-top: 9px; color: #fff; border: 0; font-family: RokkittRegular; padding: 5px; width: 70px; text-align: center; background: #d13919; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; font-size: 19px; cursor: pointer;}
+#loginSignup .colLeft input[type="submit"] {width: 90%; font-size: 22px; padding: 10px;}
+#loginSignup .colLeft input[type="submit"]:hover, #loginBox input[type="submit"]:hover {background: #e8401c;}
+#loginBox label {text-shadow: none; font-family: Arial; font-size: 12px; color: #555;}
 
 /* User and Shi'r Individual Page */
 #user .orderMain {margin-bottom: 35px;}
@@ -107,7 +123,7 @@ a {text-decoration: none;}
 #shir #productMisc {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #F9F2E7; border: 1px solid #feecd4; padding: 10px 0 30px 0;}
 #shir #productMisc #editShir {position: relative; float: right; top: -18px;}
 #shir #productMisc h4, #shir .colLeft h3 {color: #444; font-family: RokkittRegular; font-size: 22px; float: left; font-weight: normal; margin-top: -25px;}
- #shir .colLeft h3 {margin-top: 0; float: none;}
+#shir .colLeft h3 {margin-top: 0; float: none;}
 #shir #productMisc .pRow {padding: 5px; border-bottom: 1px solid #f3e2cc; font-size: 12px; margin: 0 15px;}
 #shir #productMisc .pRow .left {text-transform: capitalize;}
 
@@ -146,9 +162,6 @@ a {text-decoration: none;}
 #user #contactUser {cursor: pointer; display: block; width:45%; margin: 20px auto; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; text-align: center; background: #00A8C6; color: #fff;} 
 #user #contactUser:hover {background: #e8401c;}
 #user #profilePic {border: 2px solid #eee; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; width: 98px; height: 98px; float: left;}
-
-/* Listings */
-#listings {}
 
 /* Footer */
 #footer {position: relative; top: 50px; background: #eee; min-height: 120px; height: auto; -moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc; box-shadow: 0 0 3px #ccc;}

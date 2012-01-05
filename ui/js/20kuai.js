@@ -12,5 +12,10 @@ $(document).ready(function() {
 		vertical: true,
 		visible: 4
 	});
+
+	$("#loginButton").click(function() {
+	  $('#loginBox').slideToggle();
+	});
 	
 });
+
