@@ -7,18 +7,24 @@
    <li>
 			<span id="loginButton">log in</span>
 				<div id="loginBox">
-						<input type="text" id="user_email" placeholder="Email Address">
-						<input type="password" placeholder="Password">
-						<span id="forgotPswd">
-						<input type="checkbox" value="1" name="user[remember_me]" id="user_remember_me"> 
-						<label for="user_remember_me">Remember me</label>
-						<br>
-						<a href="">Forgot your password?</a></span>
-						<input type="submit" class="right" value="Log In">
+						<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+						  <div><%= f.label :email %><br />
+						  <%= f.email_field :email, :placeholder => "Email Address", :id => "user_email" %></div>
+
+						  <div><%= f.label :password %><br />
+						  <%= f.password_field :password, :placeholder => "Password" %></div>
+
+						  <% if devise_mapping.rememberable? %>
+						    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+						  <% end -%>
+
+						  <div><%= f.submit "Sign in" %></div>
+						<% end %>
+						<%= render :partial => "devise/shared/links" %>
 						<span class="clear"></span>
 				</div> <!-- loginBox -->
 		</li>
-    <!-- HELLO!!! PLEASE IMPLEMENT THIS !!! KTHANXBAI! -->
+    <!-- HELLO!!! PLEASE IMPLEMENT THIS !!! KTHANXBAI! K-->
   
    <li>
      <%= link_to 'Join', new_user_registration_path, :class => "signUp" %>

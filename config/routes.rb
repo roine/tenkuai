@@ -2,6 +2,8 @@ Tenkuai::Application.routes.draw do
   resources :orders
 
   devise_for :users, :path_names => { :sign_up => "join", :sign_in => "login"}
+  
+  
   resources :categories, :shirs, :roles
   #link the shirs with the users and only display the view show
   resources :users, :only=>[:show] do
