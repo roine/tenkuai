@@ -1,25 +1,24 @@
 Tenkuai::Application.routes.draw do
-  resources :mailboxes
-
   resources :orders
 
   devise_for :users, :path_names => { :sign_up => "join", :sign_in => "login"}
   resources :categories, :shirs, :roles
   #link the shirs with the users and only display the view show
   resources :users, :only=>[:show] do
-    resources :mailboxes
     resources :shirs
   end
- 
- #  hide the controllers name
+
+  #  hide the controllers name
   get "/:user_id/:id", :to => "shirs#show", :as => :shirs_user
-  get "/:user_id/mailbox/new", :to => "mailboxes#new", :as => :mailbox_user
-  
+
+  # add mailbox to the user
+  mailboxes_for :users, :user_object_name => "current_user", :user_display_attribute => "email"
+
   resources :shirs do
     resources :orders
   end
-  
-  
+
+
   get "home/index"
 
 

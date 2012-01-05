@@ -55,6 +55,9 @@ GEM
       multi_json (~> 1.0)
     friendly_id (3.3.1)
       babosa (~> 0.3.0)
+    has_mailbox (1.5.5)
+      jquery-rails
+      will_paginate
     has_scope (0.5.1)
     hike (1.2.1)
     i18n (0.6.0)
@@ -141,6 +144,7 @@ GEM
       multi_json (>= 1.0.2)
     warden (1.1.0)
       rack (>= 1.0)
+    will_paginate (3.0.2)
 
 PLATFORMS
   ruby
@@ -152,6 +156,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   devise
   friendly_id
+  has_mailbox
   inherited_resources
   jquery-rails
   json
@@ -161,3 +166,4 @@ DEPENDENCIES
   sass-rails (~> 3.1.5)
   sqlite3
   uglifier (>= 1.0.3)
+  will_paginate
