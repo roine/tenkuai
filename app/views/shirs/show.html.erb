@@ -24,14 +24,14 @@
 				<h2><%=link_to "buy this", new_shir_order_path(@shir)%></h2>
 			</div> <!-- orderMain -->
 			
-			<%=link_to "Ask the seller a question", new_mailboxes_path, :id => "askQuestion"%>
+			<%=link_to "Ask the seller a question", root_path, :id => "askQuestion"%>
 			<%end%>
 			<%else%>
 			<div class="orderMain">
 				<h2>buy this</h2>
 			</div> <!-- orderMain -->
 			
-		<%=link_to "Ask the seller a question", box_mailboxes_path, :id => "askQuestion"%>
+		<%=link_to "Ask the seller a question", root_path, :id => "askQuestion"%>
 			<%end%>
 			<div id="feedback">
 				<h4>Latest Buyer Feedback</h4>
