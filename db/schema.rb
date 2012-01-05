@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120104024106) do
+ActiveRecord::Schema.define(:version => 20111231111411) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -20,20 +20,6 @@ ActiveRecord::Schema.define(:version => 20120104024106) do
     t.datetime "updated_at"
     t.string   "cached_slug"
   end
-
-  create_table "messages", :force => true do |t|
-    t.integer  "received_messageable_id"
-    t.string   "received_messageable_type"
-    t.integer  "sender_id"
-    t.string   "subject"
-    t.text     "body"
-    t.boolean  "opened",                    :default => false
-    t.boolean  "deleted",                   :default => false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "messages", ["received_messageable_id", "sender_id"], :name => "inbox_idx"
 
   create_table "orders", :force => true do |t|
     t.integer  "shir_id"

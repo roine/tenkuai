@@ -13,8 +13,7 @@ Tenkuai::Application.routes.draw do
   #  hide the controllers name
   get "/:user_id/:id", :to => "shirs#show", :as => :shirs_user
 
-  # add mailbox to the user
-  mailboxes_for :users, :user_object_name => "current_user", :user_display_attribute => "email"
+
 
   resources :shirs do
     resources :orders
