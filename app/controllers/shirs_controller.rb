@@ -54,9 +54,6 @@ class ShirsController < ApplicationController
   def show
    
     @shir = Shir.find(params[:id])
-     if Shir.find(params[:id]).user.username.capitalize != params[:user_id].capitalize
-      @t = 'true'
-      end
     @user = @shir.user
     @since = since
     

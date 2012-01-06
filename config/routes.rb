@@ -14,7 +14,6 @@ Tenkuai::Application.routes.draw do
   get "/:user_id/:id", :to => "shirs#show", :as => :shirs_user
 
 
-
   resources :shirs do
     resources :orders
   end
