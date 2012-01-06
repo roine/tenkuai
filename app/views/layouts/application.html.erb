@@ -14,7 +14,7 @@
 	</head>
 	
 	<body>
-
+	
     <div id="header" class="section">
   		<div class="wrap">
   			<ul class="nav left">
@@ -30,6 +30,8 @@
   	</div> 
 	
   	<div id="mainContent" class="section">
+			<p class="notice"><%= notice %></p>
+			       <p class="alert"><%= alert %></p>
   	  <%= yield %> 
 <%=render 'layouts/debug'%>
   	</div> <!-- mainContent -->

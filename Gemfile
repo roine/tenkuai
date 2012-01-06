@@ -33,13 +33,23 @@ gem 'jquery-rails'
 
 gem 'friendly_id'
 
+# add registrations
 gem 'devise'
 
+# add picture upload
 gem 'paperclip'
 
+# add tags
 gem 'acts-as-taggable-on'
 
-gem 'ajaxful_rating' 
+# add rating
+gem 'ajaxful_rating'
+
+# add mailbox
+gem "has_mailbox"
+
+# paginate
+gem 'will_paginate'
 
 gem 'rspec-rails'
 gem 'inherited_resources'
