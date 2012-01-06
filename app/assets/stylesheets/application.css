@@ -94,10 +94,10 @@ a {text-decoration: none;}
 
 /* Login and Signup */
 #loginSignup .colRight h2 {padding-left: 15px;}
-#loginSignup h2 {padding-left: 0;}
-#error_explanation h2 {font-family: arial; font-size: 15px;}
+#loginSignup h2 {padding-left: 0; margin-bottom: 15px;}
+#error_explanation h2 {font-family: arial; font-size: 14px; padding: 0; margin-bottom: -10px;}
 #error_explanation ul {margin-bottom: 20px; padding: 10px; width: 300px;}
-#error_explanation ul li {list-style-position: inside;}
+#error_explanation ul li {list-style-position: inside; color: #555;}
 #loginBox {display: none; z-index: 9; -webkit-border-bottom-right-radius: 5px; -webkit-border-bottom-left-radius: 5px; -moz-border-radius-bottomright: 5px; -moz-border-radius-bottomleft: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; position: absolute; margin-left: -145px; top: 46px; padding: 15px; width: 282px; height: 135px; background: #aee239;}
 #loginSignup .colLeft input[type="password"], #loginSignup .colLeft input[type="email"], #loginSignup .colLeft input[type="text"], #loginBox input[type="email"], #loginBox input[type="text"], #loginBox input[type="password"] {margin: 3px; width: 260px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; font-size: 14px; color: #555; border: 1px solid #eee;}
 #loginSignup .colLeft input[type="password"], #loginSignup .colLeft input[type="email"], #loginSignup .colLeft input[type="text"] {border: 2px solid #EEEEEE; left: 0; margin: 5px 0; padding: 15px; position: relative; width: 280px;}
