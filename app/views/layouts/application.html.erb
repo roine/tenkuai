@@ -4,7 +4,7 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1" />
 	  <%= csrf_meta_tags %>
-	<title><%= yield(:title) || "Gig for 20 kuai" %> | 20kuai</title>
+	  <title><%= yield(:title) || "Gig for 20 kuai" %> | 20kuai</title>
 
 	
 		<!--[if lt IE 9]>
@@ -30,7 +30,15 @@
   	</div> 
 	
   	<div id="mainContent" class="section">
-			<p class="notice"><%= notice %></p>
+  	
+  	<script type="text/javascript">
+          $(document).showNotification({
+              message: "<%= notice %>",
+              autoClose: true,
+              duration: 2
+          });                
+    </script>
+                        
 			       <p class="alert"><%= alert %></p>
   	  <%= yield %> 
 <%=render 'layouts/debug'%>

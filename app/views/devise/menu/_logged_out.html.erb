@@ -1,30 +1,24 @@
 <% unless user_signed_in?%>
-  <li>
-   <%= link_to('TAKE THIS OUT', new_user_session_path)  %>  
-   </li>
-   
-   <!-- HELLO!!! PLEASE IMPLEMENT THIS !!! KTHANXBAI! -->
+
    <li>
 			<span id="loginButton">log in</span>
 				<div id="loginBox">
 						<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-						  <div><%= f.label :email %><br />
-						  <%= f.email_field :email, :placeholder => "Email Address", :id => "user_email" %></div>
-
-						  <div><%= f.label :password %><br />
-						  <%= f.password_field :password, :placeholder => "Password" %></div>
-
+						 
+						  <%= f.email_field :email, :placeholder => "Email Address", :id => "user_email" %>
+						  <%= f.password_field :password, :placeholder => "Password" %>
+              
+              <span id="forgotPswd">
 						  <% if devise_mapping.rememberable? %>
-						    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
+						    <%= f.check_box :remember_me %> <%= f.label :remember_me %>
 						  <% end -%>
-
-						  <div><%= f.submit "Sign in" %></div>
+						  </span>
+						  
+              <%= f.submit "Sign in", :class=>"right" %>
 						<% end %>
-						<%= render :partial => "devise/shared/links" %>
 						<span class="clear"></span>
 				</div> <!-- loginBox -->
 		</li>
-    <!-- HELLO!!! PLEASE IMPLEMENT THIS !!! KTHANXBAI! K-->
   
    <li>
      <%= link_to 'Join', new_user_registration_path, :class => "signUp" %>

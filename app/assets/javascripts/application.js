@@ -10,6 +10,7 @@
 //= require jquery-1.7.1.min
 //= require jquery.easing.1.3
 //= require jcarousellite_1.0.1.min
+//= require jquery_notification_v.1
 //= require 20kuai
 //= require_self
 
