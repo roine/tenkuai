@@ -8,7 +8,8 @@ class Shir < ActiveRecord::Base
   acts_as_taggable
 
   #use friendly id as title
-  has_friendly_id :title, :use_slug => true
+  extend FriendlyId
+  friendly_id :title, :use => :slugged
 
   #check validity of fields
   validates :title, :presence=>true, :length => {:minimum =>20, :maximum => 80}

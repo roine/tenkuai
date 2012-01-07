@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   
   #add the friendly id as username
   extend FriendlyId
-  has_friendly_id :username, :use_slug => true
+  friendly_id :username, :use => :slugged
   
   #sql relation between tables
   has_many :shirs

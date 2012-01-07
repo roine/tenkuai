@@ -3,5 +3,6 @@ class Category < ActiveRecord::Base
   has_many :shirs
   
   #use title for path
-  has_friendly_id :title, :use_slug => true
+  extend FriendlyId
+  friendly_id :title, :use => :slugged
 end
