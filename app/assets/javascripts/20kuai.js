@@ -16,7 +16,7 @@ $(document).ready(function() {
 	});
 		
 	$("#loginButton").click(function() {
-	  $('#loginBox').slideToggle();
+	$('#loginBox').slideToggle();
 	});
 	
 });
