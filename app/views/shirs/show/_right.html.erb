@@ -49,24 +49,16 @@
 						<%= link_to @user.username, @shir.user %>
 					</div>
 					<div class="right">
-						<%unless @user.city.nil?%>
-						<%=@user.city%>
-						,
-						<%end%>
-						<%unless @user.country.nil?%>
-						<%=@user.country%>
-						<%if !@user.city.empty?%>
+						<%=city @user.city, @user.country%>
+						<%=country @user.country%>
 
-						<%end%>
-
-						<%end%>
 					</div>
 					<div class="clear"></div>
 				</div>
 
 				<div class="pRow">
 					<div class="c444 left">Created this Shir</div>
-					<div class="right"><%=@since%> ago</div>
+					<div class="right"><%=since%> ago</div>
 					<div class="clear"></div>
 				</div>
 
