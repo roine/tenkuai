@@ -42,11 +42,8 @@ gem 'paperclip'
 # add tags
 gem 'acts-as-taggable-on'
 
-
 # paginate
 gem 'will_paginate'
 
-gem 'rspec-rails'
-gem 'inherited_resources'
-
+# acl
 gem "cancan"

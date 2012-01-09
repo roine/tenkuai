@@ -1,0 +1,11 @@
+	<h1><%= @shir.title.capitalize %></h1>
+		<%unless @shir.photo_file_name.nil?%>
+		<%= image_tag @shir.photo.url(:medium), :alt => @shir.title, :class=> "mainImg" %>
+		<%else%>
+		<%= image_tag("test/shirMainImg.jpg", :alt => @shir.title, :class=> "mainImg") %>
+		<%end%>
+		<p><%= @shir.description.capitalize %></p>
+		
+		<h3>Instructions</h3>
+		
+		<p><%= @shir.instruction.capitalize %></p>

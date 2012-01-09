@@ -12,7 +12,12 @@ class Shir < ActiveRecord::Base
   friendly_id :title, :use => :slugged
 
   #check validity of fields
-  validates :title, :presence=>true, :length => {:minimum =>20, :maximum => 80}
+  validates :title, :presence=>true, :length => {:minimum =>10, :maximum => 80}
+  validates :category, :presence => true
+  validates :description, :presence => true, :length => {:minimum => 40, :maximum => 255}
+  validates :instruction, :presence => true, :length => {:minimum => 40, :maximum => 255}
+  validates :tag_list, :presence => true
+  validates :photo_file_name, :presence => true
   
   #conf for the profile pictures
   has_attached_file :photo,
