@@ -18,4 +18,19 @@ module ApplicationHelper
      @devise_mapping ||= Devise.mappings[:user]
    end
   
+   def city(city, country)
+      unless city.empty?
+        if country.empty?
+          "#{city}"
+        else
+          "#{city},"
+        end
+      end
+    end
+
+    def country(country)
+      unless country.empty?
+        country
+      end
+    end
 end
