@@ -19,7 +19,7 @@ module ApplicationHelper
    end
   
    def city(city, country)
-      unless city.empty?
+      unless city.nil?
         if country.empty?
           "#{city}"
         else
@@ -29,7 +29,7 @@ module ApplicationHelper
     end
 
     def country(country)
-      unless country.empty?
+      unless country.nil?
         country
       end
     end
