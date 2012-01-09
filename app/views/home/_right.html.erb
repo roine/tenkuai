@@ -1,5 +1,5 @@
 <h2>Newest Shir</h2>
-<%unless @shirs.nil?%>
+<%unless @shirs.empty?%>
 <% @shirs.each do |s| %>
 <div class="homeShirLatest">
 	<%unless s.photo_file_name.nil?%>
@@ -9,7 +9,7 @@
 	<%end%>
 	<div class="homeLatestDesc">
 		<p class="small">For 20 kuai, <%= link_to s.user.username, username_path(s.user) %> will..</p>
-		<h4><%= link_to s.title.capitalize[0,82], user_shir_path(s.user.username, s) %></h4>
+		<h4><%= link_to s.title.capitalize[0,82], shirs_user_path(s.user.username, s) %></h4>
 	</div> <!-- homeLatestDesc -->	
 </div> <!-- homeShirLatest -->
 <%end%>

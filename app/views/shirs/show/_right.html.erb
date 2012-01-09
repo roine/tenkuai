@@ -46,7 +46,7 @@
 
 				<div class="pRow">
 					<div class="left">
-						<%= link_to @user.username, @shir.user %>
+						<%= link_to @user.username, username_path(@user.username) %>
 					</div>
 					<div class="right">
 						<%=city @user.city, @user.country%>
