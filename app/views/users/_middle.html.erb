@@ -1,0 +1,14 @@
+<%if user_signed_in?%>
+<%if current_user.id == @user.id%>
+<div class="orderMain">
+	<% if can? :create, Shir%>
+	<%= link_to 'Add New Shir', new_shir_path %>
+	<%end%>
+</div> <!-- orderMain -->
+<div id="colMiddleUl">
+	<%=link_to 'Account Settings', edit_user_registration_path %>
+</div>
+<%end%>
+<%end%>
+
+<div class="clear"><br></div>

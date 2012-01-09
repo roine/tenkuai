@@ -31,9 +31,7 @@ GEM
       multi_json (~> 1.0)
     acts-as-taggable-on (2.2.1)
       rails (~> 3.1)
-    ajaxful_rating (2.2.9)
     arel (2.2.1)
-    babosa (0.3.5)
     bcrypt-ruby (3.0.1)
     builder (3.0.0)
     cancan (1.6.7)
@@ -53,11 +51,7 @@ GEM
     erubis (2.7.0)
     execjs (1.2.12)
       multi_json (~> 1.0)
-    friendly_id (3.3.1)
-      babosa (~> 0.3.0)
-    has_mailbox (1.5.5)
-      jquery-rails
-      will_paginate
+    friendly_id (4.0.0)
     has_scope (0.5.1)
     hike (1.2.1)
     i18n (0.6.0)
@@ -151,12 +145,10 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on
-  ajaxful_rating
   cancan
   coffee-rails (~> 3.1.1)
   devise
   friendly_id
-  has_mailbox
   inherited_resources
   jquery-rails
   json

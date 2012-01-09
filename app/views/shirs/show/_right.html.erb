@@ -1,0 +1,107 @@
+<div id="share">
+			<span class='st_sina_button' displayText='Sina'></span><span class='st_twitter_button' displayText='Tweet'></span><span class='st_email_button' displayText='Email'></span><span  class='st_facebook_button' displayText='Facebook'></span>
+		</div> <!-- share -->
+
+		<div class="shirWrap">
+
+			<div id="productMisc">
+
+				<div class="pRowThick">
+					<h4>About this Shi'r</h4>
+					<%if user_signed_in?%>
+					<%if current_user.id == @shir.user.id%>
+					<%= link_to 'Edit Shir', edit_shir_path(@shir), :class=>"small", :id=>"editShir" %>
+					<%end%>
+					<%end%>
+					<span class="clear"></span>
+				</div>
+
+				<div class="pRow">
+					<div class="c444 left">Shi'r Rating</div>
+					<div class="right"> 
+
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="pRow">
+					<div class="c444 left">Delivery Time</div>
+					<div class="right">
+						<%=pluralize(@shir.days_to_complete, "day")%>
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="pRow">
+					<div class="c444 left">Orders in Queue</div>
+					<div class="right">0</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="pRowThick bold">
+					<div class="left">Seller : </div>
+					<div class="right"></div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="pRow">
+					<div class="left">
+						<%= link_to @user.username, @shir.user %>
+					</div>
+					<div class="right">
+						<%unless @user.city.nil?%>
+						<%=@user.city%>
+						,
+						<%end%>
+						<%unless @user.country.nil?%>
+						<%=@user.country%>
+						<%if !@user.city.empty?%>
+
+						<%end%>
+
+						<%end%>
+					</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="pRow">
+					<div class="c444 left">Created this Shir</div>
+					<div class="right"><%=@since%> ago</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="pRowThick bold">
+					<div class="left">Category : </div>
+
+					<div class="right"></div>
+					<div class="clear"></div>
+				</div>
+
+
+				<div class="pRow">
+					<div class="left">
+						<%unless @shir.category.nil?%>
+						<%= link_to @shir.category.title, category_path(@shir.category) %>
+						<%end%>
+					</div>
+					<div class="right">-</div>
+					<div class="clear"></div>
+				</div>
+
+				<div class="pRowThick bold">
+					<div class="left">Tagged as : </div>
+					<div class="right"></div>
+					<div class="clear"></div>
+				</div>
+
+				<div id="taggedAs">
+					<% @shir.tags.each do |t|%>
+					<%=link_to t.name, "#{shirs_path}?tags=#{t.name}"%>
+					<%end%>
+					<span class="clear"></span>
+				</div>
+
+				<div class="clear"></div>
+
+			</div> <!-- shirWrap -->
+		</div> <!-- productMisc -->

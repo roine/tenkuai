@@ -5,4 +5,6 @@ class Category < ActiveRecord::Base
   #use title for path
   extend FriendlyId
   friendly_id :title, :use => :slugged
+  
+  validates :title, :presence => true, :length =>{:minmum => 2, :maximum => 20}
 end

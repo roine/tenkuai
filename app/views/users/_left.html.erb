@@ -1,0 +1,59 @@
+<%unless @user.photo_file_name.nil?%> 
+<%= image_tag @user.photo.url(:small), :alt =>"#{@user.username}'s profile picture", :id => "profilePic"%>
+<%else%>
+<%= image_tag("test/santa.jpg", :alt => "Santa Claus", :id => "profilePic") %>
+<%end%><h1 class="capitalize left"><%= @user.username %></h1>
+
+<br class="clear">
+
+<div class="profileDetails">
+	<ul>
+		<li>
+			<div class="left">User</div> <!-- left --> 
+			<div class="capitalize" class="right"><%= @user.username %></div> <!-- right -->
+			<div class="clear"></div>
+		</li>
+
+		<li>
+			<div class="left">Location</div> <!-- left --> 
+			<%unless @user.country.nil? || @user.city.nil?%>
+			<div class="right">
+
+
+				<%unless @user.country.nil?%>
+				<%=@user.country%>
+				<%if !@user.city.empty?%>
+				,
+				<%end%>
+				<%unless @user.city.nil?%>
+				<%=@user.city%>
+				<%end%>
+				<%end%>
+			</div> <!-- right -->
+			<%end%>
+			<div class="clear"></div>
+		</li>
+
+		<li>
+			<div class="left">Website</div> <!-- left --> 
+			<%unless @user.website.nil?%>
+			<div class="right"><a href="http://<%=@user.website%>" target="_blank"><%=@user.website%></a></div> <!-- right -->
+			<%end%>
+			<div class="clear"></div>
+		</li>
+
+		<li>
+			<div class="left">Member Since</div> <!-- left --> 
+			<div class="right">
+				<%=@user_created_at.strftime('%d %b %Y')%>
+			</div> <!-- right -->
+			<div class="clear"></div>
+		</li>
+
+	</ul>
+	<p class="c888">Introduction</p>
+	<%unless @user.introduction.nil?%>
+	<p><%=@user.introduction%></p>
+	<%end%>
+
+</div>

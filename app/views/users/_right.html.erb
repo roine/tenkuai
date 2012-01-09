@@ -1,0 +1,34 @@
+<div class="userWrap">
+	<h2><%= @user.username %>'s
+		<%if @user.shirs.count > 1%>
+		<%= "Shirs (#{@user.shirs.count})"%>
+		<%else%>
+		<%= "Shir"%>
+		<%end%></h2>
+
+		<div class="activityEntry">
+			<ul>
+
+				<% unless @shirs.nil? %>
+				<% @shirs.order('created_at desc').each do |s| %>
+				<li>
+					<%unless s.photo_file_name.nil?%>
+					<%= image_tag s.photo.url(:thumb), :alt =>"#{s.title}", :id => "profilePic"%>
+					<%else%>
+					<%= image_tag("test/latestImg1.jpg", :alt => "Post Photo") %>
+					<%end%>
+					<div class="activityEntryDesc">
+						<p class="small"><%= s.created_at.strftime('%d %b %Y')%></p>
+						<h4><%=link_to s.title, shirs_user_path(@user, s) %></h4>
+					</div> <!-- activityEntryDesc -->
+					<div class="clear"></div>
+				</li>
+				<% end %>
+				<% end %>
+
+			</ul>
+		</div> <!-- activityEntry -->
+		<%unless @shirs.count < 3%>
+		<p class="center"><span class="up"><%= image_tag("up.png", :alt => "Up") %></span> <span class="down"><%= image_tag("down.png", :alt => "Down") %></span></p><%end%>
+
+	</div> <!-- userWrap -->
