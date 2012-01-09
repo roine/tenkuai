@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111231111411) do
+ActiveRecord::Schema.define(:version => 20120109065301) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -18,17 +18,34 @@ ActiveRecord::Schema.define(:version => 20111231111411) do
     t.integer  "shir_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "cached_slug"
+    t.string   "slug"
   end
 
-  create_table "orders", :force => true do |t|
-    t.integer  "shir_id"
-    t.integer  "user_id"
-    t.integer  "order_status_id"
-    t.integer  "buyer_feedback_id"
+  create_table "message_copies", :force => true do |t|
+    t.integer  "sent_messageable_id"
+    t.string   "sent_messageable_type"
+    t.integer  "recipient_id"
+    t.string   "subject"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "message_copies", ["sent_messageable_id", "recipient_id"], :name => "outbox_idx"
+
+  create_table "messages", :force => true do |t|
+    t.integer  "received_messageable_id"
+    t.string   "received_messageable_type"
+    t.integer  "sender_id"
+    t.string   "subject"
+    t.text     "body"
+    t.boolean  "opened",                    :default => false
+    t.boolean  "deleted",                   :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "messages", ["received_messageable_id", "sender_id"], :name => "inbox_idx"
 
   create_table "roles", :force => true do |t|
     t.string   "name"
@@ -56,7 +73,7 @@ ActiveRecord::Schema.define(:version => 20111231111411) do
     t.integer  "date_timestamp"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "cached_slug"
+    t.string   "slug"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
@@ -97,7 +114,7 @@ ActiveRecord::Schema.define(:version => 20111231111411) do
     t.integer  "order_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "cached_slug"
+    t.string   "slug"
     t.string   "email",                                 :default => "",   :null => false
     t.string   "encrypted_password",     :limit => 128, :default => "",   :null => false
     t.string   "reset_password_token"
