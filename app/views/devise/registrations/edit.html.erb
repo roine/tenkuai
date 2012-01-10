@@ -53,6 +53,15 @@
     <div id="colMiddleUl">
     	<%=link_to "Back to user dashboard", "/#{current_user.username.downcase}"%>
     </div>
+    
+    <div><%= f.label :role_id %><br />
+      <% Role.all.each do |role| %>
+        <label><%= role.name %>
+          <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
+        </label>
+      <% end %></div>
+    <div><%= f.label :debug %><br />
+      <%= f.check_box :debug %></div>
   </div> <!-- colMiddle -->
 
   <div class="colRight">
