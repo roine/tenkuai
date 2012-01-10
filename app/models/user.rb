@@ -17,8 +17,19 @@ class User < ActiveRecord::Base
   has_many :shirs
   has_and_belongs_to_many :roles
   has_many :orders
+  has_many :sent_messages, :class_name => "Message", :foreign_key => "author_id"
+  has_many :received_messages, :class_name => "MessageCopy", :foreign_key => "recipient_id"
+  has_many :folders
   
-  before_save :setup_role
+  before_create :setup_role, :build_inbox
+  
+  def inbox
+  folders.find_by_name("Inbox")
+  end
+  
+  def build_inbox
+    folders.build(:name =>"Inbox")
+  end
 
   #allow to save the edit form without typing password
   def update_with_password(params={})
