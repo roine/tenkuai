@@ -1,0 +1,6 @@
+<h2><%= @message.subject%></h2>
+<p><b>From: </b><%= @message.author.username%></p>
+<p><b>To: </b><%= @message.recipients.map(&:username).to_sentence%></p>
+<p><b>Received: </b><%= @message.created_at.to_s(:long)%></p>
+
+<pre><%= @message.body%></pre>

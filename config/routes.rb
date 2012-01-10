@@ -1,4 +1,8 @@
 Tenkuai::Application.routes.draw do
+  resources :sent, :messages, :mailbox
+  
+  match "inbox" => "mailbox#index"
+
   resources :orders
 
   devise_for :users, :path_names => { :sign_up => "join", :sign_in => "login"}

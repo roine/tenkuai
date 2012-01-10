@@ -1,11 +1,16 @@
 Memolane
 ========
+V 0.2
+-----
+- Added the Mail
+
 V 0.1.1
 -----
 - upgraded to friendly_id 4.0.0
 - totally removed has_mailbox gem
 - added some validations on the forms
 - Views cleaned with explicit names for renders
+
  
 V 0.1.0
 -----

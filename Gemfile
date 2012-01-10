@@ -47,3 +47,5 @@ gem 'will_paginate'
 
 # acl
 gem "cancan"
+
+gem 'acts_as_tree'
