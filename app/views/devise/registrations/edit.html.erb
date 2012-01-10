@@ -54,13 +54,13 @@
     	<%=link_to "Back to user dashboard", "/#{current_user.username.downcase}"%>
     </div>
     
-    <div><%= f.label :role_id %><br />
+    <div style="margin-top: 100px; text-align: center;"><%= f.label :role_id, :class=>"bold" %><br />
       <% Role.all.each do |role| %>
         <label><%= role.name %>
           <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
         </label>
       <% end %></div>
-    <div><%= f.label :debug %><br />
+    <div class="center"><%= f.label :debug, :class=>"bold" %><br />
       <%= f.check_box :debug %></div>
   </div> <!-- colMiddle -->
 
