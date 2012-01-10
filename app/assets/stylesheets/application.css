@@ -23,6 +23,7 @@ body { font: 16px/24px Arial, sans-serif; }
 img::selection 		{background: transparent;}
 img::-moz-selection	{background: transparent;}
 body {-webkit-tap-highlight-color: rgb(255,255,158);}
+.capitalize {text-transform: capitalize;}
 
 /* Chrome Safari Hack */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -65,7 +66,7 @@ a {text-decoration: none;}
 /* Homepage */
 .homeCol {float: left;}
 .homeCol a {color: #d13919;}
-.homeCol h2, #listings h2, #loginSignup h2 {font-family: RokkittRegular; font-size: 25px; font-weight: normal; color: #555; padding-left: 15px; text-transform: capitalize;}
+.homeCol h2, #listings h2, #loginSignup h2, #userRegistration h2 {font-family: RokkittRegular; font-size: 25px; font-weight: normal; color: #555; padding-left: 15px; text-transform: capitalize;}
 #homeFeatured {position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-right: 10px;}
 #homeCat {position: relative; top: 110px; width: 245px; max-width: 245px;}
 .homeCatUl {position: relative; top: 0; text-align: center;}
@@ -101,21 +102,24 @@ a {text-decoration: none;}
 #error_explanation ul li {list-style-position: inside; color: #555;}
 #loginButton {cursor: pointer;}
 #loginBox {display: none; z-index: 9; -webkit-border-bottom-right-radius: 5px; -webkit-border-bottom-left-radius: 5px; -moz-border-radius-bottomright: 5px; -moz-border-radius-bottomleft: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; position: absolute; margin-left: -145px; top: 46px; padding: 15px; width: 282px; height: 135px; background: #aee239;}
-#loginSignup .colLeft input[type="password"], #loginSignup .colLeft input[type="email"], #loginSignup .colLeft input[type="text"], #loginBox input[type="email"], #loginBox input[type="text"], #loginBox input[type="password"] {margin: 3px; width: 260px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; font-size: 14px; color: #555; border: 1px solid #eee;}
-#loginSignup .colLeft input[type="password"], #loginSignup .colLeft input[type="email"], #loginSignup .colLeft input[type="text"] {border: 2px solid #EEEEEE; left: 0; margin: 5px 0; padding: 15px; position: relative; width: 280px;}
+#userRegistration .colMiddle input[type="password"], .colWrap textarea, .colWrap input[type="email"], .colWrap input[type="password"], .colWrap input[type="text"], #loginSignup .colLeft input[type="password"], #loginSignup .colLeft input[type="email"], #loginSignup .colLeft input[type="text"], #loginBox input[type="email"], #loginBox input[type="text"], #loginBox input[type="password"] {margin: 3px; width: 260px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; font-size: 14px; color: #555; border: 1px solid #eee;}
+#userRegistration .colMiddle input[type="password"] {width: 224px; marign: 0; margin-left: -2px;}
+.colWrap textarea, .colWrap input[type="email"], .colWrap input[type="password"], .colWrap input[type="text"], #loginSignup .colLeft input[type="password"], #loginSignup .colLeft input[type="email"], #loginSignup .colLeft input[type="text"] {border: 2px solid #EEEEEE; left: 0; margin: 5px 0; padding: 15px; position: relative; width: 280px;}
 #loginBox #forgotPswd {float: left; margin-top: 5px; text-shadow: none; font-family: Arial; font-size: 12px; padding: 0; border-radius: 0;}
 #loginBox #forgotPswd a, #loginBox #forgotPswd a:hover {-moz-box-shadow: none;-webkit-box-shadow: none;box-shadow: none; padding: 0; border-radius: 0;}
 #loginSignup .colLeft input[type="submit"], #loginBox input[type="submit"] {z-index: 9; margin-top: 9px; color: #fff; border: 0; font-family: RokkittRegular; padding: 5px; width: 70px; text-align: center; background: #d13919; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; font-size: 19px; cursor: pointer;}
 #loginSignup .colLeft input[type="submit"] {width: 90%; font-size: 22px; padding: 10px;}
 #loginSignup .colLeft input[type="submit"]:hover, #loginBox input[type="submit"]:hover {background: #e8401c;}
 #loginBox label {text-shadow: none; font-family: Arial; font-size: 12px; color: #555;}
+.colWrap textarea {font-size: 15px; color: #555; font-family: Lucida Grande; height: 350px;}
 
 /* User and Shi'r Individual Page */
 #user .orderMain {margin-bottom: 35px;}
-.orderMain {font-size: 30px; word-spacing: 3px; margin: 20px auto 0px auto; -moz-box-shadow: 0 0 3px #333; -webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333; text-shadow: none; cursor: pointer; padding: 15px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #00A8C6; font-family: RokkittRegular; text-transform: uppercase; text-align: center; width: auto; color: #fff;}
+.orderMain, #updateSettings {font-size: 30px; word-spacing: 3px; margin: 20px auto 0px auto; -moz-box-shadow: 0 0 3px #333; -webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333; text-shadow: none; cursor: pointer; padding: 15px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #00A8C6; font-family: RokkittRegular; text-transform: uppercase; text-align: center; width: auto; color: #fff;}
 .orderMain a {color: #fff;}
 .orderMain h2 {font-size: 30px; word-spacing: 3px;}
-.orderMain:hover {background: #e8401c;}
+.orderMain:hover, #updateSettings:hover {background: #e8401c;}
+#updateSettings {margin-bottom: 35px; border: 0; width: 242px; text-transform: capitalize; font-size: 28px;}
 
 #user h1, #shir h1 {font-family: RokkittRegular; padding-right: 20px; color: #333; font-size: 30px; line-height :1.3em;}
 #user .mainImg, #shir .mainImg {-moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc;box-shadow: 0 0 3px #ccc; border:1px solid #ccc; width: 310px; margin: 20px 0 0 2px; height: 220px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
@@ -163,7 +167,11 @@ a {text-decoration: none;}
 #user .profileDetails ul li a:hover {color: #333;}
 #user #contactUser {cursor: pointer; display: block; width:45%; margin: 20px auto; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; text-align: center; background: #00A8C6; color: #fff;} 
 #user #contactUser:hover {background: #e8401c;}
-#user #profilePic {border: 2px solid #eee; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; width: 98px; height: 98px; float: left;}
+#user #profilePic, .avatar {border: 2px solid #eee; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; width: 98px; height: 98px; float: left;}
+#userRegistration .colLeft p, #userRegistration .colRight p {font-size: 13px; padding-bottom: 10px;}
+#userRegistration .colWrap {padding: 15px;}
+.colWrap label {font-weight: bold; color: #555; padding-left: 5px; line-height: 2.5em;}
+#user_edit {margin: 10px 0;}
 
 /* Footer */
 #footer {position: relative; top: 50px; background: #eee; min-height: 120px; height: auto; -moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc; box-shadow: 0 0 3px #ccc;}
@@ -187,7 +195,6 @@ a {text-decoration: none;}
 #footer #final ul {text-align: center;}
 #footer #final ul li {display: inline; float: left; list-style-type: none; margin: 0 10px;}
 #footer #final ul li a {color: #888; text-decoration: none;}
-
 
 /* jQuery Notifications */
 #info_message{ display: none; width: 100%; height: 51px; position: absolute; top: 0; position: fixed; z-index: 50000; margin: 0; padding: 0; }

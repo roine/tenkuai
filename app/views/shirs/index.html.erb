@@ -1,59 +1,32 @@
-<%title pluralize(@shirs.count, "Shir")%>
-<h1>Listing shirs</h1>
-
-<table>
-  <tr>
-    <th>User</th>
-    <th>Title</th>
-    <th>Category</th>
-    <th>Description</th>
-    <th>Instruction</th>
-    <th>Tag</th>
-    <th>Days to complete</th>
-    <th>Image</th>
-    <th>Shipping required</th>
-    <th>Shipping</th>
-    <th>Date timestamp</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @shirs.each do |shir| %>
-  <tr>
-    <td><%= shir.user.username %></td>
-    <td><%= shir.title %></td>
-    <td><%= shir.category_id %></td>
-    <td><%= shir.description %></td>
-    <td><%= shir.instruction %></td>
-    <td><%= shir.tag_id %></td>
-    <td><%= shir.days_to_complete %></td>
-    <td><%= shir.image %></td>
-    <td><%= shir.shipping_required %></td>
-    <td><%= shir.shipping_id %></td>
-    <td><%= shir.date_timestamp %></td>
-
-
-<%if can? :read, Shir%>
-
-    <td><%= link_to 'Show', shirs_user_path(shir.user, shir) %></td>
-<%end%>
-<%if user_signed_in?%>
-<%if shir.user.id == current_user.id%>
-<%if can? :edit, Shir%>
-    <td><%= link_to 'Edit', edit_shir_path(shir) %></td>
-<%end%>
-<%if can? :destroy, Shir%>
-    <td><%= link_to 'Destroy', shir, :confirm => 'Are you sure?', :method => :delete %></td>
-<%end%>
-  </tr>
-<% end %>
-<%end%>
-<%end%>
-</table>
-
-<br />
-<% if can? :create, Shir%>
-<%= link_to 'New Shir', new_shir_path %>
-
-<%end%>
+<div id="listings" class="wrap">
+  <div class="colLeft">
+    <h2>Latest Shirs</h2>
+    <% @shirs.each do |shir| %>
+      <div class="shirEntry">
+        <ul>
+          <li>
+      			<%= image_tag shir.photo(:thumb), :alt =>"#{shir.title}", :id => "profilePic" %>
+      			<div class="shirEntryDesc">
+      			<p class="small">For 20 kuai, <%=link_to shir.user.username, "/#{shir.user.username.downcase}", :class =>"capitalize" %> will..</p>
+      			<h4><%=link_to shir.title, user_shir_path(shir.user, shir)%></h4>
+      			</div> <!-- shirEntryDesc -->
+      			<div class="clear"></div>
+      		</li>
+      	</ul> 
+    	</div> <!-- shirEntry -->
+    <%end%>
+  </div> <!-- colLeft -->
+  
+  <div class="colMiddle">
+    <div id="colMiddleUl">
+		  <% Category.all.each do |c| %>
+		  <%= link_to c.title, c %>
+			<% end %>
+		</div> <!-- categories -->
+  </div> <!-- colMiddle -->
+  
+  <div class="colRight">
+  </div> <!-- colRight -->
+  
+  <div class="clear"></div>
+</div> <!-- wrap -->

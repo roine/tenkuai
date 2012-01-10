@@ -1,49 +1,86 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div id="userRegistration" class="wrap">
+  
+  <div class="colLeft">
+  
+    <h2>Account Settings</h2>
+    
+    <div class="colWrap">
+      <p>Hello <span class="capitalize"><%= @user.username %></span> !</p>
+      <p>Here, you'll be able to change various settings related to your user account. You'll only need to modify the fields you want changing, the rest could be left alone.</p>
+      <%= form_for(resource, :id=> "editRegistration" , :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :multipart => true }) do |f| %>
+        
+        <p>
+          <label>Your current avatar :</label><br>
+            <%= image_tag @user.photo.url(:thumb), :class =>"avatar" %>
+            <div class="clear"></div>
+          </p>
 
-<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :multipart => true }) do |f| %>
-  <%= devise_error_messages! %>
+        <p>
+          <label>Update your avatar</label>
+          <%= f.file_field :photo %>
+        </p>
+        
+        <p>
+          <%= f.label :username %><br>
+          <%= f.text_field :username %>
+        </p>
+        
+        <p>
+          <%= f.label :email %><br>
+          <%= f.email_field :email %>
+        </p>
+        
+        <p>
+          <label>New Password</label> <span class="c888">(+ password confirmation)</span><br>
+          <%= f.password_field :password %><br>
+          <%= f.password_field :password_confirmation %>
+        </p>
+        
+      
+    </div> <!-- colWrap -->
+    
+  </div> <!-- colLeft -->
+  
+  <div class="colMiddle">
+    
+    <p class="center">
+      <span class="small">Type in current password to confirm changes</span><br>
+      <%= f.password_field :current_password %>
+    </p>
+    
+    <%= f.submit "Update Settings", :id=>"updateSettings" %>
+  
+    <div id="colMiddleUl">
+    	<%=link_to "Back to user dashboard", "/#{current_user.username.downcase}"%>
+    </div>
+  </div> <!-- colMiddle -->
 
-<div><%= f.label :username %><br />
-  <%= f.text_field :username %></div>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
-
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-  <%= f.password_field :password %></div>
-
-  <div><%= f.label :password_confirmation %><br />
-  <%= f.password_field :password_confirmation %></div>
-
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-  <%= f.password_field :current_password %></div>
-<div><%= f.label :role_id %><br />
-  <% Role.all.each do |role| %>
-    <label><%= role.name %>
-      <%= check_box_tag "user[role_ids][]", role.id, @user.roles.include?(role) %>
-    </label>
-  <% end %></div>
-<div><%= f.label :debug %><br />
-  <%= f.check_box :debug %></div>
-<div><%= f.label :introduction %><br />
-  <%= f.text_area :introduction %></div>
-<div><%= f.label :country %><br />
-  <%= f.text_field :country %></div>
-<div><%= f.label :city %><br />
-  <%= f.text_field :city %></div>
-<div><%= f.label :website %><br />
-  <%= f.text_field :website %></div>
-<div><%= f.label :photo %><br />
-<%= f.file_field :photo%></div>
-<%= image_tag @user.photo.url(:thumb) %>
-
-
-
-
-  <div><%= f.submit "Update" %></div>
-<% end %>
-
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete %>.</p>
-
-<%= link_to "Back", :back %>
+  <div class="colRight">
+    <h2>User Information</h2>
+    <div class="colWrap">
+    
+      <p>
+        <label>Where are you currently located ?</label> <span class="c888">(Country + City)</span><br>
+        <%= f.text_field :country %><br>
+        <%= f.text_field :city %>
+      </p>
+      
+      <p>
+        <%= f.label :website %><br>
+        <%= f.text_field :website %>
+      </p>
+      
+      <p>
+        <%= f.label :introduction %><br>
+        <%= f.text_area :introduction %>
+      </p>
+      
+      <p><%= link_to "Cancel my account", registration_path(resource_name), :class=>"small right" , :confirm => "Are you sure?", :method => :delete %></p>
+    </div> <!-- colWrap -->
+    
+  </div> <!-- colRight -->
+  
+  <% end %>
+  <div class="clear"></div>
+  
+</div> <!-- wrap -->
