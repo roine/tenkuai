@@ -8,7 +8,7 @@
       			<%= image_tag shir.photo(:thumb), :alt =>"#{shir.title}", :id => "profilePic" %>
       			<div class="shirEntryDesc">
       			<p class="small">For 20 kuai, <%=link_to shir.user.username, "/#{shir.user.username.downcase}", :class =>"capitalize" %> will..</p>
-      			<h4><%=link_to shir.title, user_shir_path(shir.user, shir)%></h4>
+      			<h4><%=link_to shir.title,shirs_user_path(shir.user, shir)%></h4>
       			</div> <!-- shirEntryDesc -->
       			<div class="clear"></div>
       		</li>

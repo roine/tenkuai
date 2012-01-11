@@ -1,4 +1,4 @@
-<%= @folder.name%><br />
+<%= @folder.name%>(<%= @messages.count%>)<br />
 
 <%for message in @messages%>
 <%= message.author.username%>
