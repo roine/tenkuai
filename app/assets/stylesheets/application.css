@@ -115,7 +115,7 @@ a {text-decoration: none;}
 
 /* User and Shi'r Individual Page */
 #user .orderMain {margin-bottom: 35px;}
-.orderMain, #updateSettings {font-size: 30px; word-spacing: 3px; margin: 20px auto 0px auto; -moz-box-shadow: 0 0 3px #333; -webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333; text-shadow: none; cursor: pointer; padding: 15px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #00A8C6; font-family: RokkittRegular; text-transform: uppercase; text-align: center; width: auto; color: #fff;}
+.orderMain, #updateSettings {font-size: 30px; word-spacing: 3px; margin: 20px auto 0px auto; -moz-box-shadow: 0 0 3px #333; -webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333; text-shadow: none; cursor: pointer; padding: 15px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #00A8C6; font-family: RokkittRegular; text-transform: capitalize; text-align: center; width: auto; color: #fff;}
 .orderMain a {color: #fff;}
 .orderMain h2 {font-size: 30px; word-spacing: 3px;}
 .orderMain:hover, #updateSettings:hover {background: #e8401c;}
