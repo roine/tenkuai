@@ -40,6 +40,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 .colRight {float: left; position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-left: 10px;}
 .c111 {color: #111;} .c444 {color: #444;} .c888 {color: #888;}
 .capitalize {text-transform: capitalize;}
+.hide {display: none;}
 
 body { background: #fcfcfc; font-family: arial; font-size: 13px; -webkit-text-size-adjust: 100%; }
 
@@ -66,7 +67,7 @@ a {text-decoration: none;}
 /* Homepage */
 .homeCol {float: left;}
 .homeCol a {color: #d13919;}
-.homeCol h2, #listings h2, #loginSignup h2, #userRegistration h2 {font-family: RokkittRegular; font-size: 25px; font-weight: normal; color: #555; padding-left: 15px; text-transform: capitalize;}
+.default h2, .homeCol h2, #listings h2, #loginSignup h2, #userRegistration h2 {font-family: RokkittRegular; font-size: 25px; font-weight: normal; color: #555; padding-left: 15px; text-transform: capitalize;}
 #homeFeatured {position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-right: 10px;}
 #homeCat {position: relative; top: 110px; width: 245px; max-width: 245px;}
 .homeCatUl {position: relative; top: 0; text-align: center;}
@@ -115,7 +116,7 @@ a {text-decoration: none;}
 #loginSignup .colRight input[type="submit"], #loginSignup .colLeft input[type="submit"] {width: 90%; font-size: 22px; padding: 10px;}
 #loginSignup .colRight input[type="submit"]:hover, #loginSignup .colLeft input[type="submit"]:hover, #loginBox input[type="submit"]:hover {background: #e8401c;}
 #loginBox label {text-shadow: none; font-family: Arial; font-size: 12px; color: #555;}
-.colWrap textarea {font-size: 15px; color: #555; font-family: Lucida Grande; height: 350px;}
+.colWrap textarea {font-size: 14px; color: #555; font-family: Lucida Grande; height: 350px;}
 #loginSignup h2.alert {color: #e8401c;font-family: arial;font-size: 14px;margin-bottom:0; margin-left: -15px;}
 
 /* User and Shi'r Individual Page */
