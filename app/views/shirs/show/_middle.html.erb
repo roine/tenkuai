@@ -1,17 +1,18 @@
 	<%if user_signed_in?%>
 		<%unless current_user.id == @shir.user.id%>
 			<div class="orderMain">
-				<h2><%=link_to "buy this", new_shir_order_path(@shir)%></h2>
+				<%=link_to "buy this", new_shir_order_path(@shir)%>
 			</div> <!-- orderMain -->
 			
 			<%=link_to "Ask the seller a question", root_path, :id => "askQuestion"%>
 			<%end%>
 			<%else%>
 			<div class="orderMain">
-				<h2>buy this</h2>
+				<%=link_to "buy ass", new_user_registration_path %>
 			</div> <!-- orderMain -->
 			
-		<%=link_to "Ask the seller a question", root_path, :id => "askQuestion"%>
+		<%=link_to "Ask the seller a question!", new_user_registration_path, :id => "askQuestion"%>
+		
 			<%end%>
 			<div id="feedback">
 				<h4>Latest Buyer Feedback</h4>

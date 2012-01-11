@@ -102,14 +102,18 @@ a {text-decoration: none;}
 #error_explanation ul li {list-style-position: inside; color: #555;}
 #loginButton {cursor: pointer;}
 #loginBox {display: none; z-index: 9; -webkit-border-bottom-right-radius: 5px; -webkit-border-bottom-left-radius: 5px; -moz-border-radius-bottomright: 5px; -moz-border-radius-bottomleft: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; position: absolute; margin-left: -145px; top: 46px; padding: 15px; width: 282px; height: 135px; background: #aee239;}
-#userRegistration .colMiddle input[type="password"], .colWrap textarea, .colWrap input[type="email"], .colWrap input[type="password"], .colWrap input[type="text"], #loginSignup .colLeft input[type="password"], #loginSignup .colLeft input[type="email"], #loginSignup .colLeft input[type="text"], #loginBox input[type="email"], #loginBox input[type="text"], #loginBox input[type="password"] {margin: 3px; width: 260px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; font-size: 14px; color: #555; border: 1px solid #eee;}
+#loginSignup .colRight input[type="password"], #loginSignup .colRight input[type="email"], #loginSignup .colRight input[type="text"], #userRegistration .colMiddle input[type="password"], .colWrap textarea, .colWrap input[type="email"], .colWrap input[type="password"], .colWrap input[type="text"], #loginSignup .colLeft input[type="password"], #loginSignup .colLeft input[type="email"], #loginSignup .colLeft input[type="text"], #loginBox input[type="email"], #loginBox input[type="text"], #loginBox input[type="password"] {margin: 3px; width: 260px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; font-size: 14px; color: #555; border: 1px solid #eee;}
 #userRegistration .colMiddle input[type="password"] {width: 224px; marign: 0; margin-left: -2px;}
+#loginSignup .colRight input[type="password"], #loginSignup .colRight input[type="email"], #loginSignup .colRight input[type="text"] {border: 2px solid #EEEEEE; left: 30px; margin: 5px 0; padding: 15px; position: relative; width: 280px;}
+#loginSignup .colRight h2 {margin-left: 20px;}
+#loginSignup .colRight .colWrap {margin-left: 30px;}
+#loginSignup #forgotPswd {margin-left: 30px; margin-bottom: 20px;}
 .colWrap textarea, .colWrap input[type="email"], .colWrap input[type="password"], .colWrap input[type="text"], #loginSignup .colLeft input[type="password"], #loginSignup .colLeft input[type="email"], #loginSignup .colLeft input[type="text"] {border: 2px solid #EEEEEE; left: 0; margin: 5px 0; padding: 15px; position: relative; width: 280px;}
-#loginBox #forgotPswd {float: left; margin-top: 5px; text-shadow: none; font-family: Arial; font-size: 12px; padding: 0; border-radius: 0;}
+#loginBox #forgotPswd, #loginSignup #forgotPswd {float: left; margin-top: 5px; text-shadow: none; font-family: Arial; font-size: 12px; padding: 0; border-radius: 0;}
 #loginBox #forgotPswd a, #loginBox #forgotPswd a:hover {-moz-box-shadow: none;-webkit-box-shadow: none;box-shadow: none; padding: 0; border-radius: 0;}
-#loginSignup .colLeft input[type="submit"], #loginBox input[type="submit"] {z-index: 9; margin-top: 9px; color: #fff; border: 0; font-family: RokkittRegular; padding: 5px; width: 70px; text-align: center; background: #d13919; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; font-size: 19px; cursor: pointer;}
-#loginSignup .colLeft input[type="submit"] {width: 90%; font-size: 22px; padding: 10px;}
-#loginSignup .colLeft input[type="submit"]:hover, #loginBox input[type="submit"]:hover {background: #e8401c;}
+#loginSignup .colRight input[type="submit"], #loginSignup .colLeft input[type="submit"], #loginBox input[type="submit"] {z-index: 9; margin-top: 9px; color: #fff; border: 0; font-family: RokkittRegular; padding: 5px; width: 70px; text-align: center; background: #d13919; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; font-size: 19px; cursor: pointer;}
+#loginSignup .colRight input[type="submit"], #loginSignup .colLeft input[type="submit"] {width: 90%; font-size: 22px; padding: 10px;}
+#loginSignup .colRight input[type="submit"]:hover, #loginSignup .colLeft input[type="submit"]:hover, #loginBox input[type="submit"]:hover {background: #e8401c;}
 #loginBox label {text-shadow: none; font-family: Arial; font-size: 12px; color: #555;}
 .colWrap textarea {font-size: 15px; color: #555; font-family: Lucida Grande; height: 350px;}
 
@@ -168,10 +172,10 @@ a {text-decoration: none;}
 #user #contactUser {cursor: pointer; display: block; width:45%; margin: 20px auto; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; text-align: center; background: #00A8C6; color: #fff;} 
 #user #contactUser:hover {background: #e8401c;}
 #user #profilePic, .avatar {border: 2px solid #eee; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; width: 98px; height: 98px; float: left;}
-#userRegistration .colLeft p, #userRegistration .colRight p {font-size: 13px; padding-bottom: 10px;}
+#loginSignup .colLeft p, #userRegistration .colLeft p, #userRegistration .colRight p {font-size: 13px; padding-bottom: 10px;}
 #userRegistration .colWrap {padding: 15px;}
 .colWrap label {font-weight: bold; color: #555; padding-left: 5px; line-height: 2.5em;}
-#user_edit {margin: 10px 0;}
+#user_edit, #user_new {margin: 10px 0;}
 
 /* Footer */
 #footer {position: relative; top: 50px; background: #eee; min-height: 120px; height: auto; -moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc; box-shadow: 0 0 3px #ccc;}
