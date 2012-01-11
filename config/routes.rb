@@ -6,12 +6,15 @@ Tenkuai::Application.routes.draw do
   resources :orders
 
   devise_for :users, :path_names => { :sign_up => "join", :sign_in => "login"}
+  match 'dashboard' => 'users#show', :as => 'user_root'
   
+ 
   
   resources :categories, :shirs, :roles
   #link the shirs with the users and only display the view show
   resources :users, :only=>[:show] do
     resources :shirs
+    resources :mailbox
   end
 
   #  hide the controllers name
