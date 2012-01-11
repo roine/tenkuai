@@ -1,24 +1,64 @@
-<h2>Sign in</h2>
+<div id="loginSignup" class="wrap">
 
-<%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-  <div><%= f.label :email %><br />
-  <%= f.email_field :email %></div>
+	<div class="colLeft">
+	<h2>Sign up with 20 Kuai!</h2>
+	
+	<div class="colWrap">
+	  <p>Here is a short paragraph to entice the public to join us.</p>
+	</div> <!-- colWrap -->
+  
+  <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
 
-  <div><%= f.label :password %><br />
-  <%= f.password_field :password %></div>
+    <%= f.text_field :username, :placeholder=> "Username" %>
+    <%= f.email_field :email, :placeholder=> "Email" %>
+    <%= f.password_field :password, :placeholder=> "Password" %>
+    <%= f.password_field :password_confirmation, :placeholder=> "Confirm Password" %>
 
-  <% if devise_mapping.rememberable? %>
-    <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>
-  <% end -%>
+    <%= f.submit "Sign up" %>
+  <% end %>
+  
+	</div> <!-- colLeft -->
 
-  <div><%= f.submit "Sign in" %></div>
-<% end %>
+	<div class="colMiddle">
+    
+    <div id="colMiddleUl">
+		  <% Category.all.each do |c| %>
+		  <%= link_to c.title, c %>
+			<% end %>
+		</div> <!-- categories -->
+		
+	</div> <!-- colMiddle -->
 
-<%= render :partial => "devise/shared/links" %>
-<%=resource%>
+	<div class="colRight">
+	 <h2>Log In</h2>
+	 
+	 <div class="colWrap">
+	  <p>If you already have an account, please log in to access members-only features.</p>
+	  
+	  <h2 class="alert"><%= alert %></h2>
+	  
+	 </div> <!-- colWrap -->
+	 
+    <% unless user_signed_in?%>
+      
+      <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+			 
+			  <%= f.email_field :email, :placeholder => "Email Address", :id => "user_email" %>
+			  <%= f.password_field :password, :placeholder => "Password" %>
+        
+        <div id="forgotPswd">
+			  <% if devise_mapping.rememberable? %>
+			    <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+			  <% end -%>
+			  </div>
+			  
+        <%= f.submit "Log In", :class=>"right" %>
+			<% end %>
+    <%end%>
+    
+	</div> <!-- colRight -->
 
-<script>
-$(function(){
-	$('#user_email').focus()
-});
-</script>
+	<div class="clear"></div>
+	
+</div> <!-- wrap -->

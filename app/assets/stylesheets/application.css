@@ -97,8 +97,8 @@ a {text-decoration: none;}
 /* Login and Signup */
 #loginSignup .colRight h2 {padding-left: 15px;}
 #loginSignup h2 {padding-left: 0; margin-bottom: 15px;}
-#error_explanation h2 {font-family: arial; font-size: 14px; padding: 0; margin-bottom: -10px;}
-#error_explanation ul {margin-bottom: 20px; padding: 10px; width: 300px;}
+#error_explanation h2 {font-family: arial; font-size: 14px; padding: 0; color: #e8401c; margin-bottom: -10px;}
+#error_explanation ul {margin-bottom: 20px; padding: 10px; width: 300px; }
 #error_explanation ul li {list-style-position: inside; color: #555;}
 #loginButton {cursor: pointer;}
 #loginBox {display: none; z-index: 9; -webkit-border-bottom-right-radius: 5px; -webkit-border-bottom-left-radius: 5px; -moz-border-radius-bottomright: 5px; -moz-border-radius-bottomleft: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; position: absolute; margin-left: -145px; top: 46px; padding: 15px; width: 282px; height: 135px; background: #aee239;}
@@ -116,6 +116,7 @@ a {text-decoration: none;}
 #loginSignup .colRight input[type="submit"]:hover, #loginSignup .colLeft input[type="submit"]:hover, #loginBox input[type="submit"]:hover {background: #e8401c;}
 #loginBox label {text-shadow: none; font-family: Arial; font-size: 12px; color: #555;}
 .colWrap textarea {font-size: 15px; color: #555; font-family: Lucida Grande; height: 350px;}
+#loginSignup h2.alert {color: #e8401c;font-family: arial;font-size: 14px;margin-bottom:0; margin-left: -15px;}
 
 /* User and Shi'r Individual Page */
 #user .orderMain {margin-bottom: 35px;}
