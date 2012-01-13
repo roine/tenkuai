@@ -94,6 +94,7 @@ a {text-decoration: none;}
 #homeFeaturedOrgs {position: relative; top: 30px; text-align: center;}
 #homeFeaturedOrgs h2, .homeCatUl h2 {padding: 0 0 8px 0;}
 .homeFeaturedOrg {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;  border: 2px solid #EEEEEE; display: inline-block; float: left; height: 112px; margin: 3px; width: 112px;}
+.default .colRight h2 {margin-left: 20px;}
 
 /* Login and Signup */
 #loginSignup .colRight h2 {padding-left: 15px;}
@@ -103,13 +104,13 @@ a {text-decoration: none;}
 #error_explanation ul li {list-style-position: inside; color: #555;}
 #loginButton {cursor: pointer;}
 #loginBox {display: none; z-index: 9; -webkit-border-bottom-right-radius: 5px; -webkit-border-bottom-left-radius: 5px; -moz-border-radius-bottomright: 5px; -moz-border-radius-bottomleft: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; position: absolute; margin-left: -145px; top: 46px; padding: 15px; width: 282px; height: 135px; background: #aee239;}
-#loginSignup .colRight input[type="password"], #loginSignup .colRight input[type="email"], #loginSignup .colRight input[type="text"], #userRegistration .colMiddle input[type="password"], .colWrap textarea, .colWrap input[type="email"], .colWrap input[type="password"], .colWrap input[type="text"], #loginSignup .colLeft input[type="password"], #loginSignup .colLeft input[type="email"], #loginSignup .colLeft input[type="text"], #loginBox input[type="email"], #loginBox input[type="text"], #loginBox input[type="password"] {margin: 3px; width: 260px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; font-size: 14px; color: #555; border: 1px solid #eee;}
+.default select, #loginSignup .colRight input[type="password"], #loginSignup .colRight input[type="email"], #loginSignup .colRight input[type="text"], #userRegistration .colMiddle input[type="password"], .colWrap textarea, .colWrap input[type="email"], .colWrap input[type="password"], .colWrap input[type="text"], #loginSignup .colLeft input[type="password"], #loginSignup .colLeft input[type="email"], #loginSignup .colLeft input[type="text"], #loginBox input[type="email"], #loginBox input[type="text"], #loginBox input[type="password"], .default input[type="text"], .default input[type="file"], .default input[type="number"], .default input[type="password"], .default textarea {margin: 3px; width: 260px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; padding: 8px; font-size: 14px; color: #555; border: 1px solid #eee;}
 #userRegistration .colMiddle input[type="password"] {width: 224px; marign: 0; margin-left: -2px;}
 #loginSignup .colRight input[type="password"], #loginSignup .colRight input[type="email"], #loginSignup .colRight input[type="text"] {border: 2px solid #EEEEEE; left: 30px; margin: 5px 0; padding: 15px; position: relative; width: 280px;}
 #loginSignup .colRight h2 {margin-left: 20px;}
-#loginSignup .colRight .colWrap {margin-left: 30px;}
+#loginSignup .colRight .colWrap, .default .colRight .colWrap {margin-left: 30px;}
 #loginSignup #forgotPswd {margin-left: 30px; margin-bottom: 20px;}
-.colWrap textarea, .colWrap input[type="email"], .colWrap input[type="password"], .colWrap input[type="text"], #loginSignup .colLeft input[type="password"], #loginSignup .colLeft input[type="email"], #loginSignup .colLeft input[type="text"] {border: 2px solid #EEEEEE; left: 0; margin: 5px 0; padding: 15px; position: relative; width: 280px;}
+.default select, .default textarea, .default input[type="text"], .default input[type="password"], .default input[type="file"], .default input[type="number"], .colWrap textarea, .colWrap input[type="email"], .colWrap input[type="password"], .colWrap input[type="text"], #loginSignup .colLeft input[type="password"], #loginSignup .colLeft input[type="email"], #loginSignup .colLeft input[type="text"] {border: 2px solid #EEEEEE; left: 0; margin: 5px 0; padding: 15px; position: relative; width: 280px;}
 #loginBox #forgotPswd, #loginSignup #forgotPswd {float: left; margin-top: 5px; text-shadow: none; font-family: Arial; font-size: 12px; padding: 0; border-radius: 0;}
 #loginBox #forgotPswd a, #loginBox #forgotPswd a:hover {-moz-box-shadow: none;-webkit-box-shadow: none;box-shadow: none; padding: 0; border-radius: 0;}
 #loginSignup .colRight input[type="submit"], #loginSignup .colLeft input[type="submit"], #loginBox input[type="submit"] {z-index: 9; margin-top: 9px; color: #fff; border: 0; font-family: RokkittRegular; padding: 5px; width: 70px; text-align: center; background: #d13919; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; font-size: 19px; cursor: pointer;}
@@ -117,20 +118,23 @@ a {text-decoration: none;}
 #loginSignup .colRight input[type="submit"]:hover, #loginSignup .colLeft input[type="submit"]:hover, #loginBox input[type="submit"]:hover {background: #e8401c;}
 #loginBox label {text-shadow: none; font-family: Arial; font-size: 12px; color: #555;}
 .colWrap textarea {font-size: 14px; color: #555; font-family: Lucida Grande; height: 350px;}
+.default textarea {height: 200px; font-size: 14px; color: #555; font-family: Lucida Grande;}
 #loginSignup h2.alert {color: #e8401c;font-family: arial;font-size: 14px;margin-bottom:0; margin-left: -15px;}
 
 /* User and Shi'r Individual Page */
 #user .orderMain {margin-bottom: 35px;}
-.orderMain, #updateSettings {font-size: 30px; word-spacing: 3px; margin: 20px auto 0px auto; -moz-box-shadow: 0 0 3px #333; -webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333; text-shadow: none; cursor: pointer; padding: 15px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #00A8C6; font-family: RokkittRegular; text-transform: capitalize; text-align: center; width: auto; color: #fff;}
+#editShir .colMiddle input[type="submit"], .orderMain, #updateSettings {font-size: 30px; word-spacing: 3px; margin: 20px auto 0px auto; -moz-box-shadow: 0 0 3px #333; -webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333; text-shadow: none; cursor: pointer; padding: 15px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #00A8C6; font-family: RokkittRegular; text-transform: capitalize; text-align: center; width: auto; color: #fff;}
 .orderMain a {color: #fff;}
 .orderMain h2 {font-size: 30px; word-spacing: 3px;}
-.orderMain:hover, #updateSettings:hover {background: #e8401c;}
-#updateSettings {margin-bottom: 35px; border: 0; width: 242px; text-transform: capitalize; font-size: 28px;}
+.orderMain:hover, #updateSettings:hover, #editShir .colMiddle input[type="submit"]:hover {background: #e8401c;}
+#updateSettings, #editShir .colMiddle input[type="submit"] {margin-bottom: 35px; border: 0; width: 242px; text-transform: capitalize; font-size: 28px;}
 
 #user h1, #shir h1 {font-family: RokkittRegular; padding-right: 20px; color: #333; font-size: 30px; line-height :1.3em;}
-#user .mainImg, #shir .mainImg {-moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc;box-shadow: 0 0 3px #ccc; border:1px solid #ccc; width: 310px; margin: 20px 0 0 2px; height: 220px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
+#user .mainImg, #shir .mainImg, .mainImg {-moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc;box-shadow: 0 0 3px #ccc; border:1px solid #ccc; width: 310px; margin: 20px 0 0 2px; height: 220px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
 #user .colLeft p, #shir .colLeft p {font-size: 13px; text-align: justify; padding: 15px 30px 20px 0px;}
 #user .colRight .userWrap, #shir .colRight .shirWrap {padding-left: 25px;}
+#editShir .mainImg {margin-top: 5px;}
+#editShir>.colLeft>h2 {padding-left: 0;}
 
 #shir #productMisc {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #F9F2E7; border: 1px solid #feecd4; padding: 10px 0 30px 0;}
 #shir #productMisc #editShir {position: relative; float: right; top: -18px;}
@@ -176,7 +180,7 @@ a {text-decoration: none;}
 #user #profilePic, .avatar {border: 2px solid #eee; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; width: 98px; height: 98px; float: left;}
 #loginSignup .colLeft p, #userRegistration .colLeft p, #userRegistration .colRight p {font-size: 13px; padding-bottom: 10px;}
 #userRegistration .colWrap {padding: 15px;}
-.colWrap label {font-weight: bold; color: #555; padding-left: 5px; line-height: 2.5em;}
+.colWrap label, .default label {font-weight: bold; color: #555; padding-left: 5px; line-height: 2.5em;}
 #user_edit, #user_new {margin: 10px 0;}
 
 /* Footer */
