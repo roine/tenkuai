@@ -9,10 +9,11 @@
 <div id="colMiddleUl">
 	<%=link_to 'Account Settings', edit_user_registration_path %>
 </div>
-<%end%>
+<%else%>
   <div class="orderMain">
     <%= link_to 'Message User', new_sent_path %>
   </div> <!-- orderMain -->
+<%end%>
 <%end%>
 
 <div class="clear"><br></div>
