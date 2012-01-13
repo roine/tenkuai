@@ -123,18 +123,18 @@ a {text-decoration: none;}
 
 /* User and Shi'r Individual Page */
 #user .orderMain {margin-bottom: 35px;}
-#editShir .colMiddle input[type="submit"], .orderMain, #updateSettings {font-size: 30px; word-spacing: 3px; margin: 20px auto 0px auto; -moz-box-shadow: 0 0 3px #333; -webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333; text-shadow: none; cursor: pointer; padding: 15px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #00A8C6; font-family: RokkittRegular; text-transform: capitalize; text-align: center; width: auto; color: #fff;}
+#sendMessage .colMiddle input[type="submit"], #editShir .colMiddle input[type="submit"], .orderMain, #updateSettings {font-size: 30px; word-spacing: 3px; margin: 20px auto 0px auto; -moz-box-shadow: 0 0 3px #333; -webkit-box-shadow: 0 0 3px #333;box-shadow: 0 0 3px #333; text-shadow: none; cursor: pointer; padding: 15px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #00A8C6; font-family: RokkittRegular; text-transform: capitalize; text-align: center; width: auto; color: #fff;}
 .orderMain a {color: #fff;}
 .orderMain h2 {font-size: 30px; word-spacing: 3px;}
-.orderMain:hover, #updateSettings:hover, #editShir .colMiddle input[type="submit"]:hover {background: #e8401c;}
-#updateSettings, #editShir .colMiddle input[type="submit"] {margin-bottom: 35px; border: 0; width: 242px; text-transform: capitalize; font-size: 28px;}
+.orderMain:hover, #updateSettings:hover, #sendMessage .colMiddle input[type="submit"]:hover, #editShir .colMiddle input[type="submit"]:hover {background: #e8401c;}
+#updateSettings, #editShir .colMiddle input[type="submit"], #sendMessage .colMiddle input[type="submit"] {margin-bottom: 35px; border: 0; width: 242px; text-transform: capitalize; font-size: 28px;}
 
 #user h1, #shir h1 {font-family: RokkittRegular; padding-right: 20px; color: #333; font-size: 30px; line-height :1.3em;}
 #user .mainImg, #shir .mainImg, .mainImg {-moz-box-shadow: 0 0 3px #ccc; -webkit-box-shadow: 0 0 3px #ccc;box-shadow: 0 0 3px #ccc; border:1px solid #ccc; width: 310px; margin: 20px 0 0 2px; height: 220px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;}
 #user .colLeft p, #shir .colLeft p {font-size: 13px; text-align: justify; padding: 15px 30px 20px 0px;}
 #user .colRight .userWrap, #shir .colRight .shirWrap {padding-left: 25px;}
 #editShir .mainImg {margin-top: 5px;}
-#editShir>.colLeft>h2 {padding-left: 0;}
+#editShir>.colLeft>h2, #sendMessage>.colLeft>h2 {padding-left: 0;}
 
 #shir #productMisc {-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; background: #F9F2E7; border: 1px solid #feecd4; padding: 10px 0 30px 0;}
 #shir #productMisc #editShir {position: relative; float: right; top: -18px;}

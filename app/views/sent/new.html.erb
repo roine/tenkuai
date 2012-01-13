@@ -1,16 +1,41 @@
+<div class="default wrap" id="sendMessage">
 
-<%= form_for :message, :url => {:controller => "sent", :action => "create"} do |f| %>
-To:
-<select name="message[to][]">
-	<%= options_from_collection_for_select(User.all, :id, :username, @message.to)%>
-</select>
-<p>
-	Subject:<%= f.text_field :subject %>
-</p>
-<p>
-	Body: <%= f.text_area :body%>
-</p>
-<p>
-	<%= submit_tag "Send"%>
-</p>
-<%end%>
+  <div class="colLeft">
+ 
+  <h2>Send (Username) a message</h2>
+    
+  <%= form_for :message, :url => {:controller => "sent", :action => "create"} do |f| %>
+ 
+    <div class="hide">To:
+      <select name="message[to][]">
+      	<%= options_from_collection_for_select(User.all, :id, :username, @message.to)%>
+      </select>
+    </div> <!-- hide -->
+  
+  <p>
+  	<label>Subject</label><br>
+  	<%= f.text_field :subject %>
+  </p>
+  
+  <p>
+  	<label>Your message</label><br>
+  	<%= f.text_area :body%>
+  </p>
+
+  </div> <!-- colLeft -->
+  
+  <div class="colMiddle">
+    
+    <%= submit_tag "Send"%>
+    <%end%>
+    
+    <div id="colMiddleUl">
+      <%= link_to 'Back', :back %>
+    </div> <!-- colMiddleUl -->
+    
+  </div> <!-- colMiddle -->
+  
+  <div class="colRight">
+  </div> <!-- colRight -->
+
+</div> <!-- wrap -->
