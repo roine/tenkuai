@@ -2,16 +2,13 @@
 
   <div class="colLeft">
  
-  <h2>Send (Username) a message</h2>
+  <h2>Send <%=@message.to%> a message</h2>
     
   <%= form_for :message, :url => {:controller => "sent", :action => "create"} do |f| %>
  
-    <div class="hide">To:
-      <select name="message[to][]">
-      	<%= options_from_collection_for_select(User.all, :id, :username, @message.to)%>
-      </select>
-    </div> <!-- hide -->
-  
+   
+	<%= f.text_field :to, :type => 'hidden', :value => User.find(params[:user_id]).id %>
+   
   <p>
   	<label>Subject</label><br>
   	<%= f.text_field :subject %>

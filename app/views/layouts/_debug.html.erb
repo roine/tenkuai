@@ -8,6 +8,8 @@
 		<%if user_signed_in?%>
 			Username =><%=current_user.username%><br />
 			id =><%=current_user.id%><br />
+			Last Message sent's subject =><%=Message.last.subject%><br/>
+			To => <%=MessageCopy.last.folder.user.username%><br />
 			Type =>
 			<%i = 0%>
 				<%current_user.roles.each do |t|%>
