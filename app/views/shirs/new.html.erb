@@ -1,5 +1,96 @@
-<h1>New shir</h1>
+<%title "Create a Shir and start earning! "%>
+<div class="default wrap" id="editShir">
+  <div class="colLeft">
+    <h2>For 20 kuai, I will..</h2>
+      
+    <%= form_for @shir, :html => { :multipart => true } do |f| %>
+    	<% if @shir.errors.any? %>
+    	  <div id="error_explanation">
+      		<h2><%= pluralize(@shir.errors.count, "error") %> prohibited this shir from being saved:</h2>
+  	      <ul>
+      			<% @shir.errors.full_messages.each do |msg| %>
+      			<li><%= msg %></li>
+      			<% end %>
+      		</ul>
+      	</div> <!-- error_explanation -->
+     	<% end %>
+    	
+    	<%if user_signed_in?%>
+    		<%= f.number_field :user_id, :value => current_user.id, :class=>"hide" %>
+    	<%end%>
+    	
+    	<p>
+    		<%= f.text_field :title %>
+    	</p>
+    	
+    	
+    	<p>
+    		<%= f.label :description %><br />
+    		<%= f.text_area :description, :placeholder => "A description of what you are offering" %>
+    	</p>
+    	
+    	<p>
+    		<%= f.label :instruction %><br />
+    		<%= f.text_area :instruction, :placeholder => "How will this work?" %>
+    	</p>
+    	
+    	
+  </div> <!-- colLeft -->
+  
+  <div class="colMiddle">
+    <%= f.submit %>
+    
+    <div id="colMiddleUl">
+      <%= link_to 'Back', :back %>
+    </div> <!-- colMiddleUl -->
+    
+  </div> <!-- colMiddle -->
+  
+  <div class="colRight">
+    <h2>Shir Details</h2>
+    <div class="colWrap">
+  	
+    	<p>
+    		<label>Upload Image</label><br />
+    		<%= f.file_field :photo%>
+    	</p>
+    
+      <p>
+    		<%= f.label :category_id %><br />
+    		<select name='shir[category_id]'>
+    			<option value="">Choose a category</option>
+    			<%@categories.each do |c|%>
+    			<option value="<%=c.id%>"><%=c.title%></option>
+    			<%end%>
+    		</select>
+    	</p>
+  	
+      <p>
+    		<%= f.label :tag_list %><br />
+    		<%= f.text_field :tag_list %>
+    	</p>
+  	
+    	<p>
+    		<%= f.label :days_to_complete %><br />
+    		<%= f.number_field :days_to_complete %>
+    	</p>
+  	
+    	<div id="editShirShipping" class="hide">
+    	  <p>
+      		<%= f.label :shipping_required %><br />
+      		<%= f.check_box :shipping_required %>
+      	</p>
+  	
+      	<p>
+      		<%= f.label :shipping_id %><br />
+      		<%= f.number_field :shipping_id %>
+      	</p>
+    	</div> <!-- editShirShipping -->
+  
+    	<% end %>
+    </div> <!-- colWrap -->
+  </div> <!-- colRight -->
+  
+  <div class="clear"></div>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', shirs_path %>
+</div> <!-- wrap -->
