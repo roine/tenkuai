@@ -10,20 +10,13 @@
 		</ul>
 	</div>
 	<% end %>
-	<%if user_signed_in?%>
-	<div class="field">
-		<%= f.number_field :user_id, :value => current_user.id %>
-	</div>
-	<%end%>
 	<div class="field">
 		<%= f.label :title %><br />
 		<%= f.text_field :title %>
 	</div>
 	<div class="field">
 		<%= f.label :category_id %><br />	
-		<!-- <%= f.number_field :category_id %>-->
 		<select name='shir[category_id]'>
-			<option value="">Choose a category</option>
 			<%@categories.each do |c|%>
 			<option value="<%=c.id%>"><%=c.title%></option>
 			<%end%>

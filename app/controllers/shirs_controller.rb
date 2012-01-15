@@ -49,6 +49,7 @@ class ShirsController < ApplicationController
   def edit
     @categories = Category.all
     @shir = Shir.find(params[:id])
+    @user = current_user
     authorize! :edit, @shir
   end
 
@@ -56,7 +57,7 @@ class ShirsController < ApplicationController
   # POST /shirs.json
   def create
     @shir = Shir.new(params[:shir])
-
+    @shir.user_id = current_user.id
     respond_to do |format|
       if @shir.save
         format.html { redirect_to @shir, :notice => 'Shir was successfully created.' }

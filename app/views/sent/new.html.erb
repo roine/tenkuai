@@ -1,9 +1,6 @@
 
 <%= form_for :message, :url => {:controller => "sent", :action => "create"} do |f| %>
-To:
-<select name="message[to][]">
-	<%= options_from_collection_for_select(User.all, :id, :username, @message.to)%>
-</select>
+
 <p>
 	Subject:<%= f.text_field :subject %>
 </p>
@@ -14,3 +11,4 @@ To:
 	<%= submit_tag "Send"%>
 </p>
 <%end%>
+<%=@receiver%>

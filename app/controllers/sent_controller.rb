@@ -9,11 +9,12 @@ class SentController < ApplicationController
 
   def new
     @message = current_user.sent_messages.build
+    @receiver = User.find(params[:user_id]).username
   end
   
   def create
     @message = current_user.sent_messages.build(params[:message])
-    
+    @message.to = User.find(params[:user_id]).id
     if @message.save
       flash[:notice] = "Message sent"
       redirect_to :action => "index"
