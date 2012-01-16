@@ -52,5 +52,5 @@ class User < ActiveRecord::Base
 
 
   #check the username field
-  validates :username, :presence=>true,:uniqueness=>true
+  validates :username, :presence=>true,:uniqueness=>true, :format => {:with => /^[A-Za-z0-9_\.@]+$/}, :length => {:minimum => 3, :maximum => 20}
 end
