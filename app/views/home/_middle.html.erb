@@ -1,6 +1,6 @@
 <div class="homeCatUl">
 	<% @categories.each do |c| %>
-	<%= link_to c.title, c %>
+	<%= link_to c.title.capitalize, c %>
 	<% end %>
 </div> <!-- categories -->
 

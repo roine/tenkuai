@@ -60,7 +60,7 @@
     		<select name='shir[category_id]'>
     			<option value="">Choose a category</option>
     			<%@categories.each do |c|%>
-    			<option value="<%=c.id%>"><%=c.title%></option>
+    			<option value="<%=c.id%>"><%=c.title.capitalize%></option>
     			<%end%>
     		</select>
     	</p>

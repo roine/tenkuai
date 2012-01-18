@@ -1,16 +1,12 @@
 <div class="userWrap">
 	<h2><%= @user.username %>'s
-		<%if @user.shirs.count > 1%>
-		<%= "Shirs (#{@user.shirs.count})"%>
-		<%else%>
-		<%= "Shir"%>
-		<%end%></h2>
+		<%=pluralize_shir @user.shirs.count%>
 
 		<div class="activityEntry">
 			<ul>
 
 				<% unless @shirs.nil? %>
-				<% @shirs.order('created_at desc').each do |s| %>
+				<% @shirs.each do |s| %>
 				<li>
 					<%unless s.photo_file_name.nil?%>
 					<%= image_tag s.photo.url(:thumb), :alt =>"#{s.title}", :id => "profilePic"%>

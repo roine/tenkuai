@@ -10,7 +10,7 @@ class ShirsController < ApplicationController
 
 
   def index
-    @shirs = Shir.all
+    @shirs = Shir.order('created_at desc')
     if params[:tags]
       @shirs = Shir.tagged_with(params[:tags])
     end
@@ -92,7 +92,7 @@ class ShirsController < ApplicationController
     @shir.destroy
 
     respond_to do |format|
-      format.html { redirect_to shirs_url }
+      format.html { redirect_to username_url(@shir.user.username.downcase) }
       format.json { head :ok }
     end
   end

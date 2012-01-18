@@ -1,19 +1,23 @@
 <%if user_signed_in?%>
-  
+
 <%if current_user.id == @user.id%>
-	<% if can? :create, Shir%>
-	  <div class="orderMain">
-	    <%= link_to 'Add New Shir', new_shir_path %>
-	  </div> <!-- orderMain -->
-	<%end%>
+<% if can? :create, Shir%>
+<div class="orderMain">
+	<%= link_to 'Add New Shir', new_shir_path %>
+</div> <!-- orderMain -->
+<%end%>
 <div id="colMiddleUl">
 	<%=link_to 'Edit Account Settings', edit_user_registration_path %>
 </div>
 <%else%>
-  <div class="orderMain">
-    <%= link_to 'Message User', new_user_sent_path(@user) %>
-  </div> <!-- orderMain -->
+<div class="orderMain">
+	<%= link_to 'Message User', new_user_sent_path(@user) %>
+</div> <!-- orderMain -->
 <%end%>
+<%else%>
+<div class="orderMain">
+	<%= link_to 'Message User', new_user_registration_path %>
+</div> 
 <%end%>
 
 <div class="clear"><br></div>

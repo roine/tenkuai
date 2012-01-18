@@ -8,10 +8,8 @@
 
 				<div class="pRowThick">
 					<h4>About this Shi'r</h4>
-					<%if user_signed_in?%>
-					<%if current_user.id == @shir.user.id%>
+					<%if user_signed_in? && current_user.id == @shir.user.id%>
 					<%= link_to 'Edit Shir', edit_shir_path(@shir), :class=>"small", :id=>"editShir" %>
-					<%end%>
 					<%end%>
 					<span class="clear"></span>
 				</div>
@@ -58,7 +56,7 @@
 
 				<div class="pRow">
 					<div class="c444 left">Created this Shir</div>
-					<div class="right"><%=since%> ago</div>
+					<div class="right"><%=time_ago_in_words(@shir.created_at.to_time)%> ago</div>
 					<div class="clear"></div>
 				</div>
 

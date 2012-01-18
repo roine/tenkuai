@@ -1,7 +1,7 @@
 <div id="listings" class="wrap">
   <div class="colLeft">
     <h2>Latest Shirs</h2>
-    <% @shirs.each do |shir| %>
+    <% @shirs.find(:all, :order =>'created_at desc').each do |shir| %>
       <div class="shirEntry">
         <ul>
           <li>
