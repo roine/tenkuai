@@ -11,6 +11,7 @@
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<%= stylesheet_link_tag "application" %>
+		<%= javascript_include_tag "application" %>
 	</head>
 	
 	<body>
@@ -32,7 +33,7 @@
   	<div id="mainContent" class="section">
   	
   	<script type="text/javascript">
-          $(document).showNotification({
+          showNotification({
               message: "<%= notice %>",
               autoClose: true,
               duration: 2
@@ -109,7 +110,6 @@
     	</div> <!-- wrap-->
     </div> <!-- footer -->
     
-	  <%= javascript_include_tag "application" %>
 	  
   </body>
 </html>
