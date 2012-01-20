@@ -1,3 +1,0 @@
-def lsa
-Dir["*"]
-end

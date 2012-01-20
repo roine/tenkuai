@@ -1,11 +1,50 @@
 <h2>Featured Shir</h2>
+<div class="dupleix">
+<div class="ribbon-wrapper">
+	<div class="ribbon-front">
+		Featured Shir
+	</div>
+	<div class="ribbon-edge-topleft"></div>
+	<div class="ribbon-edge-topright"></div>
+</div>
+</div>
 <%@featured_shir.each do |f|%>
 <div class="homeShir">
-	<%= image_tag("test/featuredImg1.jpg", :alt => "title of shir") %>
+
+	<%= image_tag(f.photo.url(:small), :alt => f.title) %>
+	
 	<div class="desc">
 		<p class="small">For 20 kuai, <%=link_to f.user.username, username_path(f.user.username.downcase)%> will..</p>
 		<h4><%=link_to f.title, f%></h4>
 		<p class="shortDesc"><%=clean_split f.description, 100%></p>
 	</div> <!-- desc -->
+	
 </div> <!-- homeShir -->
+
 <%end%>
+<div id='lastFeatured'></div>
+
+<h2>Recent Shir</h2>
+<div class="dupleix">
+<div class="ribbon-wrapper1">
+	<div class="ribbon-front1">
+		Recent Shir
+	</div>
+	<div class="ribbon-edge-topleft1"></div>
+	<div class="ribbon-edge-topright1"></div>
+</div>
+</div>
+<%@recent_shir.order('created_at DESC').each do |f|%>
+<div class="homeShir">
+	<%= image_tag(f.photo.url(:small), :alt => f.title) %>
+	
+	<div class="desc">
+		<p class="small">For 20 kuai, <%=link_to f.user.username, username_path(f.user.username.downcase)%> will..</p>
+		<h4><%=link_to f.title, f%></h4>
+		<p class="shortDesc"><%=clean_split f.description, 100%></p>
+	</div> <!-- desc -->
+	
+</div> <!-- homeShir -->
+
+<%end%>
+<div id='lastFeatured1'></div>

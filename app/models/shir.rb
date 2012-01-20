@@ -5,6 +5,7 @@ class Shir < ActiveRecord::Base
   has_many :orders
   
   scope :featured, :conditions => {:featured => true}
+  scope :recent, where('created_at>= ?', Time.now-1.week)
   #tag to shirs
   acts_as_taggable
 

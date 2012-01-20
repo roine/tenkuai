@@ -1,7 +1,7 @@
 /*
- * This is a manifest file that'll automatically include all the stylesheets available in this directory
- * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
- * the top of the compiled file, but it's generally better to create a new file per style scope.
+* This is a manifest file that'll automatically include all the stylesheets available in this directory
+* and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+* the top of the compiled file, but it's generally better to create a new file per style scope.
 
 */
 
@@ -24,6 +24,7 @@ img::selection 		{background: transparent;}
 img::-moz-selection	{background: transparent;}
 body {-webkit-tap-highlight-color: rgb(255,255,158);}
 .capitalize {text-transform: capitalize;}
+
 
 /* Chrome Safari Hack */
 @media screen and (-webkit-min-device-pixel-ratio:0) {
@@ -228,3 +229,123 @@ a {text-decoration: none;}
 .clearboth{ clear: both; }
 .info_more_descrption{ display: none; width: 950px; height: 300px; background: #fff; margin: 0 auto; padding: 10px; background: #fbfbfb; overflow: auto; }
 .succ_bg .info_more_descrption{ -moz-box-shadow: 0 0 5px #56a25e; -webkit-box-shadow: 0 0 5px #56a25e; box-shadow: 0 0 5px #56a25e; }
+
+
+/* ribbon */
+/* ribbon style */
+
+.ribbon-wrapper {
+	position: relative;
+	top:40px;
+	-moz-transition:top 1s ease-in-out;
+}
+.ribbon-front {
+	background-image: -moz-linear-gradient(#8FBE00, #789901);
+	color: white;
+	left: -20px;
+	position: relative;
+	text-align: center;
+	width: 350px;
+	border-radius:3px;
+	z-index: 2;
+	border: 1px solid #7EA100;
+	text-shadow: 0 1px rgba(0, 0, 0, 0.8);
+	font-size:20px;
+	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;
+	-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;
+	-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;
+	-o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;
+}
+
+.ribbon-edge-topleft,
+.ribbon-edge-topright {
+	position: absolute;
+	z-index: 1;
+	border-style:solid;
+	height:0px;
+	width:0px;
+}
+
+.ribbon-edge-topleft,
+.ribbon-edge-topright {
+}
+
+.ribbon-edge-topleft {
+	left: -20px;
+	border-color: transparent #6B8901 transparent transparent;
+}
+
+.ribbon-edge-topleft, .ribbon-edge-topleft1 {
+	top: -10px;
+	border-width: 10px 20px 0 0;
+}
+
+.ribbon-edge-topright{
+	left: 310px;
+	border-color: transparent transparent transparent #6B8901;
+}
+
+.ribbon-edge-topright, .ribbon-edge-topright1  {
+	top: -10px;
+	border-width: 10px 0 0 20px;
+}
+
+
+/* ribbon2*/
+
+
+.ribbon-wrapper1 {
+	position: relative;
+	top:40px;
+	-moz-transition:top 1s ease-in-out;
+}
+.ribbon-front1 {
+	background-image: -moz-linear-gradient(#C43715, #A32D12);
+	color: white;
+	left: -20px;
+	position: relative;
+	text-align: center;
+	width: 350px;
+	z-index: 2
+	border-radius:3px;
+	border: 1px solid #A32D12;
+	text-shadow: 0px 1px rgba(0, 0, 0, 0.8);
+	font-size:20px;
+	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;
+	-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;
+	-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;
+	-o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;
+}
+
+.ribbon-edge-topleft1,
+.ribbon-edge-topright1 {
+	position: absolute;
+	z-index: 1;
+	border-style:solid;
+	height:0px;
+	width:0px;
+}
+
+.ribbon-edge-topleft1,
+.ribbon-edge-topright1 {
+}
+
+.ribbon-edge-topleft1 {
+	left: -20px;
+	border-color: transparent #771E0C transparent transparent;
+}
+
+.ribbon-edge-topright1{
+	left: 310px;
+	border-color: transparent transparent transparent #771E0C;
+}
+
+.fixed{position:fixed;top:20px;}
+
+.dupleix{
+	position:relative;
+	margin: 10px auto 20px;
+	width: 310px;
+	height:0;
+
+}
