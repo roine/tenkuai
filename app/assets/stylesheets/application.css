@@ -235,14 +235,14 @@ a {text-decoration: none;}
 /* ribbon style reorganized, it's almost art now */
 
 .ribbon-wrapper, 
-.ribbon-wrapper1 {position: relative;top:40px;-moz-transition:all .5s ease-in-out;-webkit-transition:all 1s ease-in-out;}
+.ribbon-wrapper1 {position: relative;top:20px;-moz-transition:all .5s ease-in-out;-webkit-transition:all 1s ease-in-out;}
 .ribbon-wrapper:hover, 
 .ribbon-wrapper1:hover{opacity:.1;}
 
 .ribbon-front, 
 .ribbon-front1{color: white;left: -23px;padding:15px 0;position: relative;text-align: center;width: 355px;z-index: 2;border-radius:3px;text-shadow: 0px 1px rgba(0, 0, 0, 0.8);font-size:20px;}
-.ribbon-front {background-image: -moz-linear-gradient(#8FBE00, #789901);border: 1px solid #7EA100;-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;-o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;}
-.ribbon-front1 {background-image: -moz-linear-gradient(#C43715, #A32D12);border: 1px solid #A32D12;-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;-o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;}
+.ribbon-front {background-image: -moz-linear-gradient(#8FBE00, #789901);background-image: -webkit-linear-gradient(#8FBE00, #789901);border: 1px solid #7EA100;-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;-o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;}
+.ribbon-front1 {background-image: -moz-linear-gradient(#C43715, #A32D12);background-image: -webkit-linear-gradient(#C43715, #A32D12);border: 1px solid #A32D12;-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;-o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;}
 
 .ribbon-edge-topleft,
 .ribbon-edge-topright, 
@@ -257,7 +257,7 @@ a {text-decoration: none;}
 .ribbon-edge-topright{border-color: transparent transparent transparent #6B8901;}
 .ribbon-edge-topright1{border-color: transparent transparent transparent #771E0C;}
 
-.fixed{position:fixed;top:10px; opacity:.9;padding:0px;-moz-transform:scale(1);height:10px;}
-.padding{padding:5px 0;}
+.fixed{position:fixed; opacity:.9;padding:0px;top:10px;}
+.padding{padding:5px 0;font-weight:bold;}
 
-.dupleix{position:relative;margin: 10px auto 20px;width: 310px;height:0;}
+.dupleix{position:relative;margin: 0px auto;width: 310px;height:0;}

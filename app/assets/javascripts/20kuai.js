@@ -31,16 +31,16 @@ $(document).ready(function() {
 			$('.ribbon-wrapper, .ribbon-wrapper1').css({
 				'z-index': '200'
 			});
-
+$('.ribbon-wrapper').text(y)
 			var y = $(this).scrollTop();
-			if (y >= top-30 && y < top_last-50) {
+			if (y >= top-30 && y < top_last-30) {
 				$('.ribbon-wrapper').addClass('fixed');
 				$('.ribbon-front').addClass('padding');
 			} else{
 				$('.ribbon-wrapper').removeClass('fixed');
 				$('.ribbon-front').removeClass('padding');
 			}
-			if (y >= top1-30 && y < top_last1-50) {
+			if (y >= top1-30 && y < top_last1-30) {
 				$('.ribbon-wrapper1').addClass('fixed');
 				$('.ribbon-front1').addClass('padding');
 			} else{
