@@ -11,6 +11,7 @@ class ShirsController < ApplicationController
 
   def index
     @shirs = Shir.order('created_at desc')
+    
     if params[:tags]
       @shirs = Shir.tagged_with(params[:tags])
     end

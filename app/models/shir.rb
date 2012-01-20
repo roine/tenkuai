@@ -3,7 +3,8 @@ class Shir < ActiveRecord::Base
   belongs_to :user
   belongs_to :category
   has_many :orders
-
+  
+  scope :featured, :conditions => {:featured => true}
   #tag to shirs
   acts_as_taggable
 
@@ -18,7 +19,6 @@ class Shir < ActiveRecord::Base
   validates :instruction, :presence => true, :length => {:minimum => 40, :maximum => 555}
   validates :tag_list, :presence => true
   validates :photo_file_name, :presence => true
-
 
   #conf for the profile pictures
   has_attached_file :photo,

@@ -7,6 +7,7 @@ class HomeController < ApplicationController
     @created_at = @last.created_at.+8.hours
     @categories = Category.all
     @shirs = Shir.order('created_at desc').limit(6)
+    @featured_shir = Shir.featured.order('created_at DESC')
     end
   end
 end

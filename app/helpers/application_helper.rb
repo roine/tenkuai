@@ -34,4 +34,9 @@ module ApplicationHelper
       country
     end
   end
+  
+  def clean_split(string, number)
+  last_space = string[0,number].rindex(/ /)
+  return string[0, last_space]<<'...'
+  end
 end
