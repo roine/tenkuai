@@ -212,17 +212,17 @@ a {text-decoration: none;}
 #info_message .message_area{ float: left; width: 98%; }
 #info_message .message_area span.link_ribbon{ color: #999999; text-decoration: underline; cursor: pointer; }
 #info_message .button_area{ float: left; width: 11px; height: 10px; margin-top: 3px; }
-.error_bg{ background: url('../images/jn/error_bg.png') 0 0 repeat-x; }
+.error_bg{ background: url('jn/error_bg.png') 0 0 repeat-x; }
 .error_bg .message_area{ font:bold 14px arial; color: #a20510; text-shadow: 0 1px 0 #fff; }
 .error_bg .button_area{ background: url('../images/jn/error_close.png') 0 0 no-repeat; cursor: pointer; }
 .error_bg .info_more_descrption{ -moz-box-shadow: 0 0 5px #b2495b; -webkit-box-shadow: 0 0 5px #b2495b; box-shadow: 0 0 5px #b2495b; }
-.succ_bg{ background: url('../images/jn/succ_bg.png') 0 0 repeat-x; }
+.succ_bg{ background: url('jn/succ_bg.png') 0 0 repeat-x; }
 .succ_bg .message_area{ font:bold 14px arial; color: #2f7c00; text-shadow: 0 1px 0 #fff; }
 .succ_bg .button_area{ background: url('../images/jn/succ_close.png') 0 0 no-repeat; cursor: pointer; }
-.info_bg{ background: url('../images/jn/info_bg.png') 0 0 repeat-x; }
+.info_bg{ background: url('jn/info_bg.png') 0 0 repeat-x; }
 .info_bg .message_area{ font:bold 14px arial; color: #0d9a95; text-shadow: 0 1px 0 #fff; }
 .info_bg .button_area{ background: url('../images/jn/info_close.png') 0 0 no-repeat; cursor: pointer; }
-.warn_bg{ background: url('../images/jn/warn_bg.png') 0 0 repeat-x; }
+.warn_bg{ background: url('jn/warn_bg.png') 0 0 repeat-x; }
 .warn_bg .message_area{ font:bold 14px arial; color: #a39709; text-shadow: 0 1px 0 #fff; }
 .warn_bg .button_area{ background: url('../images/jn/warn_close.png') 0 0 no-repeat; cursor: pointer; }
 .clearboth{ clear: both; }

@@ -5,7 +5,7 @@ Tenkuai::Application.routes.draw do
 
   resources :orders
 
-  devise_for :users, :path_names => { :sign_up => "join", :sign_in => "login"}
+  devise_for :users, :path_names => { :sign_up => "join", :sign_in => "login"}, :controllers =>{:registrations => 'users/registrations'}
   
  
   
@@ -82,6 +82,7 @@ Tenkuai::Application.routes.draw do
 
   match ':id' => "users#show", :as => :username
   match '*a', :to => 'errors#routing'
+  
   #match '/:username' => 'users#show'
   # See how all your routes lay out with "rake routes"
 

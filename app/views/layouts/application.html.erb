@@ -11,7 +11,7 @@
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<%= stylesheet_link_tag "application" %>
-		<%= javascript_include_tag "application" %>
+	
 	</head>
 	
 	<body>
@@ -31,14 +31,6 @@
   	</div> 
 	
   	<div id="mainContent" class="section">
-  	
-  	<script type="text/javascript">
-          showNotification({
-              message: "<%= notice %>",
-              autoClose: true,
-              duration: 2
-          });                
-    </script>
                         
 			       
   	  <%= yield %> 
@@ -110,6 +102,13 @@
     	</div> <!-- wrap-->
     </div> <!-- footer -->
     
-	  
+	  	<%= javascript_include_tag "application" %>
+		<script type="text/javascript">
+	          showNotification({
+	              message: "<%= notice %>",
+	              autoClose: true,
+	              duration: 2
+	          });                
+	    </script>
   </body>
 </html>
