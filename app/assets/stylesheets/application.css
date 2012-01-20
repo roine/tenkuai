@@ -221,10 +221,10 @@ a {text-decoration: none;}
 .succ_bg .button_area{ background: url('jn/succ_close.png') 0 0 no-repeat; cursor: pointer; }
 .info_bg{ background: url('jn/info_bg.png') 0 0 repeat-x; }
 .info_bg .message_area{ font:bold 14px arial; color: #0d9a95; text-shadow: 0 1px 0 #fff; }
-.info_bg .button_area{ background: url('../images/jn/info_close.png') 0 0 no-repeat; cursor: pointer; }
+.info_bg .button_area{ background: url('jn/info_close.png') 0 0 no-repeat; cursor: pointer; }
 .warn_bg{ background: url('jn/warn_bg.png') 0 0 repeat-x; }
 .warn_bg .message_area{ font:bold 14px arial; color: #a39709; text-shadow: 0 1px 0 #fff; }
-.warn_bg .button_area{ background: url('../images/jn/warn_close.png') 0 0 no-repeat; cursor: pointer; }
+.warn_bg .button_area{ background: url('jn/warn_close.png') 0 0 no-repeat; cursor: pointer; }
 .clearboth{ clear: both; }
 .info_more_descrption{ display: none; width: 950px; height: 300px; background: #fff; margin: 0 auto; padding: 10px; background: #fbfbfb; overflow: auto; }
 .succ_bg .info_more_descrption{ -moz-box-shadow: 0 0 5px #56a25e; -webkit-box-shadow: 0 0 5px #56a25e; box-shadow: 0 0 5px #56a25e; }
