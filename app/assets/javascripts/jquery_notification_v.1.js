@@ -25,7 +25,7 @@ function showNotification(params){
     }; 
     // Extending array from params
     $.extend(true, options, params);
-    
+    if(options['message']){
     var msgclass = 'succ_bg'; // default success message will shown
     if(options['type'] == 'error'){
         msgclass = 'error_bg'; // over write the message to error message
@@ -61,7 +61,7 @@ function showNotification(params){
     $('.link_notification').live('click', function(){
         $('.info_more_descrption').html(options['description']).slideDown('fast');
     });
-    
+}
 }
 // function to close notification message
 // slideUp the message
