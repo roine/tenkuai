@@ -49,9 +49,14 @@ module ApplicationHelper
   end
   
   def message_received
-    if user_signed_in?
+      box =  Folder.find_by_user_id(current_user.id).id
+      return messages = MessageCopy.where(:status => 1, :folder_id => box).count
+  end
+  
+  def new_message?
       box =  Folder.find_by_user_id(current_user.id).id
       messages = MessageCopy.where(:status => 1, :folder_id => box).count
-    end
+      return messages > 0 ? true : false
   end
+  
 end

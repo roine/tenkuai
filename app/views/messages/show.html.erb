@@ -4,3 +4,4 @@
 <p><b>Received: </b><%= @message.created_at.to_s(:long)%></p>
 
 <pre><%= @message.body%></pre>
+<%=link_to 'back to Mailbox', mailbox_index_path%>

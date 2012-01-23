@@ -3,7 +3,8 @@
 <%for message in @messages%>
 <%= message.author.username%>
 <%= link_to message.subject, message_path(message)%>
-<%= distance_of_time_in_words(message.created_at, Time.now)%> ago<br />
+<%= distance_of_time_in_words(message.created_at, Time.now)%> ago
+<%=status_to_word message.status%><br />
 <%end%>
 
 <%= will_paginate @messages%>
