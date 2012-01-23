@@ -1,12 +1,10 @@
-	<%if user_signed_in?%>
-		<%unless current_user.id == @shir.user.id%>
+		<%if not_own_by? @user%>
 			<div class="orderMain">
 				<%=link_to "buy this", new_shir_order_path(@shir)%>
 			</div> <!-- orderMain -->
 			
 			<%=link_to "Ask the seller a question", root_path, :id => "askQuestion"%>
-			<%end%>
-			<%else%>
+			<%elsif !user_signed_in?%>
 			<div class="orderMain">
 				<%=link_to "buy ass", new_user_registration_path %>
 			</div> <!-- orderMain -->

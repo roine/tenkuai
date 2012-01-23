@@ -34,9 +34,24 @@ module ApplicationHelper
       country
     end
   end
-  
+
   def clean_split(string, number)
-  last_space = string[0,number].rindex(/ /)
-  return string[0, last_space]<<'...'
+    last_space = string[0,number].rindex(/ /)
+    return string[0, last_space]<<'...'
+  end
+
+  def own_by?(user)
+    return user_signed_in? && current_user.id == user.id
+  end
+  
+  def not_own_by?(user)
+    return user_signed_in? && current_user.id != user.id
+  end
+  
+  def message_received
+    if user_signed_in?
+      box =  Folder.find_by_user_id(current_user.id).id
+      messages = MessageCopy.where(:status => 1, :folder_id => box).count
+    end
   end
 end

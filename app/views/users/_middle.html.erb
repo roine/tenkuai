@@ -1,5 +1,5 @@
 <%if user_signed_in?%>
-<%if current_user.id == @user.id%>
+<%if own_by? @user%>
 <% if can? :create, Shir%>
 <div class="orderMain">
 	<%= link_to 'Add New Shir', new_shir_path%>

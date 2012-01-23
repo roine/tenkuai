@@ -9,9 +9,12 @@ class UsersController < ApplicationController
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-    @shirs = @user.shirs.order('created_at DESC')
+    @shirs = @user.shirs ? @user.shirs.order('created_at DESC') : {}
     @user_created_at = Time.at(@user.created_at.to_i)
-    
+    @introduction = @user.introduction ? @user.introduction : ''
+    @website = @user.website ? @user.website : ''
+    @photo = @user.photo_file_name ? @user.photo.url(:small) : 'test/santa.jpg'
+    @username = @user.username
 
       respond_to do |format|
         format.html # show.html.erb

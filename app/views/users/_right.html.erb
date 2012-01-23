@@ -5,7 +5,6 @@
 		<div class="activityEntry">
 			<ul>
 
-				<% unless @shirs.nil? %>
 				<% @shirs.each do |s| %>
 				<li>
 					<%unless s.photo_file_name.nil?%>
@@ -20,11 +19,17 @@
 					<div class="clear"></div>
 				</li>
 				<% end %>
-				<% end %>
-
 			</ul>
 		</div> <!-- activityEntry -->
-		<%unless @shirs.count < 3%>
-		<p class="center"><span class="up"><%= image_tag("up.png", :alt => "Up") %></span> <span class="down"><%= image_tag("down.png", :alt => "Down") %></span></p><%end%>
+		<%unless @shirs.count < 4%>
+		<p class="center">
+			<span class="up">
+				<%= image_tag("up.png", :alt => "Up") %>
+			</span> 
+			<span class="down">
+				<%= image_tag("down.png", :alt => "Down") %>
+			</span>
+		</p>
+		<%end%>
 
 	</div> <!-- userWrap -->

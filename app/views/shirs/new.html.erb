@@ -15,10 +15,6 @@
       	</div> <!-- error_explanation -->
      	<% end %>
     	
-    	<%if user_signed_in?%>
-    		<%= f.number_field :user_id, :value => current_user.id, :class=>"hide" %>
-    	<%end%>
-    	
     	<p>
     		<%= f.text_field :title %>
     	</p>

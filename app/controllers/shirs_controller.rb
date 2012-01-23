@@ -10,8 +10,8 @@ class ShirsController < ApplicationController
 
 
   def index
-    @shirs = Shir.order('created_at desc')
-    
+    @shirs = Shir.count > 0 ? Shir.order('created_at desc') : {}
+    @categories = Category.all
     if params[:tags]
       @shirs = Shir.tagged_with(params[:tags])
     end
@@ -27,7 +27,8 @@ class ShirsController < ApplicationController
    
     @shir = Shir.find(params[:id])
     @user = @shir.user
-    
+    @photo = @shir.photo_file_name ? @shir.photo.url(:medium) : 'test/shirMainImg.jpg'
+    @category = @shir.category ? @shir.category : ''
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @shir }
@@ -74,7 +75,7 @@ class ShirsController < ApplicationController
   # PUT /shirs/1.json
   def update
     @shir = Shir.find(params[:id])
-
+    @shir.user_id = current_user.id
     respond_to do |format|
       if @shir.update_attributes(params[:shir])
         format.html { redirect_to @shir, :notice => 'Shir was successfully updated.' }

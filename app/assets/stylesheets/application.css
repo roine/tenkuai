@@ -235,7 +235,7 @@ a {text-decoration: none;}
 /* ribbon style reorganized, it's almost art now */
 
 .ribbon-wrapper, 
-.ribbon-wrapper1 {position: relative;top:20px;-moz-transition:all .5s ease-in-out;-webkit-transition:all 1s ease-in-out;}
+.ribbon-wrapper1 {position: relative;top:30px;-moz-transition:all .5s ease-in-out;-webkit-transition:all 1s ease-in-out;}
 .ribbon-wrapper:hover, 
 .ribbon-wrapper1:hover{opacity:.1;}
 
@@ -257,7 +257,14 @@ a {text-decoration: none;}
 .ribbon-edge-topright{border-color: transparent transparent transparent #6B8901;}
 .ribbon-edge-topright1{border-color: transparent transparent transparent #771E0C;}
 
+.couture{border-bottom: 1px dashed #5B7401;border-top: 1px dashed #5B7401;box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2), 0 -1px 7px rgba(0, 0, 0, 0.2);padding: 10px 111px;}
+.couture1{border-bottom: 1px dashed #6D1D0B;border-top: 1px dashed #6D1D0B;box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2), 0 -1px 7px rgba(0, 0, 0, 0.2);padding: 10px 119px;}
+
 .fixed{position:fixed; opacity:.9;padding:0px;top:10px;}
-.padding{padding:5px 0;font-weight:bold;}
+.padding{padding:0;}
+.couture-none{border:none;box-shadow:none;}
 
 .dupleix{position:relative;margin: 0px auto;width: 310px;height:0;}
+
+/*New message style*/
+.newMessage{background-image: -moz-linear-gradient(#C43715, #7F210C);border-radius: 2px 2px 2px 2px;font-size: 13px;left: -21px;padding: 1px 4px;position: relative;top: 10px;}

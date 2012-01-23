@@ -1,7 +1,7 @@
 <div id="listings" class="wrap">
   <div class="colLeft">
     <h2>Latest Shirs</h2>
-    <% @shirs.find(:all, :order =>'created_at desc').each do |shir| %>
+    <% @shirs.each do |shir| %>
       <div class="shirEntry">
         <ul>
           <li>
@@ -19,7 +19,7 @@
   
   <div class="colMiddle">
     <div id="colMiddleUl">
-		  <% Category.all.each do |c| %>
+		  <% @categories.each do |c| %>
 		  <%= link_to c.title, c %>
 			<% end %>
 		</div> <!-- categories -->

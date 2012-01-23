@@ -8,7 +8,7 @@
 
 				<div class="pRowThick">
 					<h4>About this Shi'r</h4>
-					<%if user_signed_in? && current_user.id == @shir.user.id%>
+					<%if can? :edit, @shir%>
 					<%= link_to 'Edit Shir', edit_shir_path(@shir), :class=>"small", :id=>"editShir" %>
 					<%end%>
 					<span class="clear"></span>
@@ -70,8 +70,8 @@
 
 				<div class="pRow">
 					<div class="left">
-						<%unless @shir.category.nil?%>
-						<%= link_to @shir.category.title, category_path(@shir.category) %>
+						<%if @category != ''%>
+						<%= link_to @category.title, category_path(@category) %>
 						<%end%>
 					</div>
 					<div class="right">-</div>

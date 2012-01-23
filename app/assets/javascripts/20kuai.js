@@ -36,16 +36,20 @@ $('.ribbon-wrapper').text(y)
 			if (y >= top-30 && y < top_last-30) {
 				$('.ribbon-wrapper').addClass('fixed');
 				$('.ribbon-front').addClass('padding');
+				$('.couture').addClass('couture-none');
 			} else{
 				$('.ribbon-wrapper').removeClass('fixed');
 				$('.ribbon-front').removeClass('padding');
+				$('.couture').removeClass('couture-none');
 			}
 			if (y >= top1-30 && y < top_last1-30) {
 				$('.ribbon-wrapper1').addClass('fixed');
 				$('.ribbon-front1').addClass('padding');
+				$('.couture1').addClass('couture-none');
 			} else{
 				$('.ribbon-wrapper1').removeClass('fixed');
 				$('.ribbon-front1').removeClass('padding');
+				$('.couture1').removeClass('couture-none');
 			}
 		});
 	}

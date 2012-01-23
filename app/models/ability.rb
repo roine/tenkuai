@@ -7,8 +7,7 @@ class Ability
     user ||= User.new # guest user (not logged in)
     user.roles.each do |c|
       if c.name == 'mod'
-        can :read, :all
-        can :edit, :all
+        can :read, :edit, :all
       elsif c.name == 'admin'
         can :manage, :all
       elsif c.name == 'user'
