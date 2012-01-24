@@ -1,4 +1,7 @@
-<%= @folder.name%>(<%= @messages.where(:status => 1).count%>/<%= @messages.count%>)<br />
+
+<%= @folder.name%>
+<%if @messages%>
+(<%= @messages.where(:status => 1).count%>/<%= @messages.count%>)<br />
 <%@messages.each do |message|%>
 
 <%#next if has_already_sent? message.author.username%>
@@ -8,6 +11,7 @@
 <%=status_to_word message.status %>
 <br />
 
+<%end%>
 <%end%>
 
 <%= will_paginate @messages%>

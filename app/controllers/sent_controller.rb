@@ -10,8 +10,12 @@ class SentController < ApplicationController
   def new
     if params[:id]
       redirect_to root_path unless own_message?
+
       @previous_message = Message.find(MessageCopy.find(params[:id]).message_id)
     end
+    redirect_to root_path if current_user.username == params[:user_id]
+    to_message = params[:id] ? MessageCopy.find(params[:id]).message_id : {}
+    @title = params[:id] ? Message.find(to_message).subject : {}
     @message = current_user.sent_messages.build
     @message_to = User.find(params[:user_id]).username
   end
