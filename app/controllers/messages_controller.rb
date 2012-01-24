@@ -9,7 +9,7 @@ class MessagesController < ApplicationController
     query = MessageCopy.where("sender = #{user}  AND recipient_id =  #{corresponding} OR sender = #{corresponding}  AND recipient_id =  #{user}")
     count = query.count
     @common_messages = query
-    query.each do |q|
+    MessageCopy.where("sender = #{corresponding} AND recipient_id = #{user}").each do |q|
       q.update_attributes(:status => 2)
     end
   end

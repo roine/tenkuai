@@ -18,11 +18,11 @@ class SentController < ApplicationController
     @title = params[:id] ? Message.find(to_message).subject : {}
     @message = current_user.sent_messages.build
     @message_to = User.find(params[:user_id]).username
+    @to = User.find(params[:user_id]).id
   end
 
   def create
     params[:message][:from] = current_user.id
-
     @message = current_user.sent_messages.build(params[:message])
     if @message.save
       flash[:notice] = "Message sent"
