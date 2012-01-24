@@ -4,15 +4,12 @@ class Message < ActiveRecord::Base
   has_many :recipients, :through => :message_copies
   before_create :prepare_copies
 
-  attr_accessor :to
-  attr_accessible :subject, :body, :to
+  attr_accessor :to, :from
+  attr_accessible :subject, :body, :to, :from
 
   def prepare_copies
     return if to.blank?
-
-    to.each do |r|
-      r = User.find(r)
-      message_copies.build(:recipient_id => r.id, :folder_id =>r.inbox.id)
-    end
+      receiver = User.find(to)
+      message_copies.build(:recipient_id => receiver.id, :folder_id =>receiver.inbox.id, :sender => from)
   end
 end

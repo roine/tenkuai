@@ -2,7 +2,7 @@
 
 <li><%=link_to current_user.username, username_path(current_user.username.downcase)%>
 	<%if new_message?%>
-	<span class='newMessage'><%=message_received%><span>
+	<%=link_to message_received, mailbox_index_path, :class => 'newMessage'%>
 		<%end%>	
 	</li>
 	<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>

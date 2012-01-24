@@ -2,13 +2,13 @@
 
   <div class="colLeft">
  
-  <h2>Send <%=@message.to%> a message</h2>
+  <h2>Send <%=@message_to%> a message</h2>
     
   <%= form_for :message, :url => {:controller => "sent", :action => "create"} do |f| %>
  
    
 	<%= f.text_field :to, :type => 'hidden', :value => User.find(params[:user_id]).id %>
-   
+   <%= f.text_field :from, :type => 'hidden', :value => "" %>
   <p>
   	<label>Subject</label><br>
   	<%= f.text_field :subject %>
@@ -33,6 +33,10 @@
   </div> <!-- colMiddle -->
   
   <div class="colRight">
+	<%if params[:id]%>
+	<%=@previous_message.subject%><br />
+	<%=@previous_message.body%>
+	<%end%>
   </div> <!-- colRight -->
 
 </div> <!-- wrap -->

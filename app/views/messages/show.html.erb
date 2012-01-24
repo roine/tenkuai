@@ -1,7 +1,24 @@
-<h2><%= @message.subject%></h2>
+<style>
+hr{border:1px solid rgba(0,0,0,.8);}
+</style>
+<%if @common_messages%>
+<%@common_messages.each do |m|%>
+<div id="<%=m.id%>">
+<%=Message.find(m.message_id).subject%><br />
+<%=Message.find(m.message_id).body%><br />
+<%=time_ago_in_words(Message.find(m.message_id).created_at.to_time)%><br />
+From: <%=Message.find(m.message_id).author.username%><br />
+</div>
+<hr>
+<%end%>
+<%end%>
+<!-- <h3><%= @message.subject%></h3>
 <p><b>From: </b><%= @message.author.username%></p>
-<p><b>To: </b><%= @message.recipients.map(&:username).to_sentence%></p>
-<p><b>Received: </b><%= @message.created_at.to_s(:long)%></p>
-
+<p><b>Received: </b><%= @message.created_at.to_s(:long)%> (<%=distance_of_time_in_words(@message.created_at, Time.now)%>)</p>
+Subject: <%=@message.subject%>
 <pre><%= @message.body%></pre>
+<hr> -->
+
+
+<%=link_to "Reply", user_mailbox_sent_path(@message.author.username.downcase, params[:id])%><br />
 <%=link_to 'back to Mailbox', mailbox_index_path%>

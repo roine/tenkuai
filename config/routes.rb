@@ -9,17 +9,19 @@ Tenkuai::Application.routes.draw do
   
  
   
-  resources :categories, :shirs, :roles
+  resources :categories, :roles
   #link the shirs with the users and only display the view show
   resources :users, :only=>[:show] do
     resources :shirs
     resources :sent
-    resources :mailbox
+    resources :mailbox do
+      resources :sent
+    end
   end
 
   #  hide the controllers name
   get "/:user_id/:id", :to => "shirs#show", :as => :shirs_user
-
+  get "/:user_id/message/:id/sent/new", :to => "sent#new", :as => :user_mailbox_sent
 
   resources :shirs do
     resources :orders
@@ -81,7 +83,7 @@ Tenkuai::Application.routes.draw do
   root :to => 'home#index'
 
   match ':id' => "users#show", :as => :username
-  match '*a', :to => 'errors#routing'
+  # match '*a', :to => 'errors#routing'
   
   #match '/:username' => 'users#show'
   # See how all your routes lay out with "rake routes"
