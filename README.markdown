@@ -1,5 +1,16 @@
 Memolane
 ========
+V 0.3.1(future)
+-------
+- User can delete his own messages
+
+V 0.3
+-------
+- User can see if he have new message on the top menu
+- Users can see the history of their own email exchange(only with the new messages)
+- Added the Features on the homepage
+- Fix some bugs
+
 V 0.2
 -----
 - Added the Mail
