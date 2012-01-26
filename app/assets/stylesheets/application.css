@@ -34,7 +34,7 @@ body {-webkit-tap-highlight-color: rgb(255,255,158);}
 
 /* Default */
 @font-face {font-family: 'RokkittRegular'; src: url('Rokkitt-webfont.eot'); src: url('Rokkitt-webfont.eot?#iefix') format('embedded-opentype'), url('Rokkitt-webfont.woff') format('woff'), url('Rokkitt-webfont.ttf') format('truetype'), url('Rokkitt-webfont.svg#RokkittRegular') format('svg'); font-weight: normal; font-style: normal;}
-.right {float: right;} .left {float: left;} .clear {clear: both;} .center {text-align: center;}
+.right {float: right;} .left, .homeCol {float: left;} .clear {clear: both;} .center {text-align: center;}
 .bold {font-weight: bold;}
 .colLeft {float: left; position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-right: 10px;}
 .colMiddle {float: left; position: relative; top: 90px; width: 245px; max-width: 245px;}
@@ -66,11 +66,10 @@ a {text-decoration: none;}
 .nav li a.signUp:hover {color: #fff; text-shadow: 1px 1px 1px #555; background: #e8401c;}
 
 /* Homepage */
-.homeCol {float: left;}
 .homeCol a {color: #d13919;}
 .default h2, .homeCol h2, #listings h2, #loginSignup h2, #userRegistration h2 {font-family: RokkittRegular; font-size: 25px; font-weight: normal; color: #555; padding-left: 15px; text-transform: capitalize;}
 #homeFeatured {position: relative; top: 10px; width: 345px; max-width: 345.6px; margin-right: 10px;}
-#homeCat {position: relative; top: 110px; width: 245px; max-width: 245px;}
+#homeCat {position: relative; min-height: 820px; height: auto; top: 110px; width: 245px; max-width: 245px;}
 .homeCatUl {position: relative; top: 0; text-align: center;}
 #colMiddleUl a, #homeCat .homeCatUl a {width: 100%; display:block; text-align: center;text-transform:capitalize; font-family: RokkittRegular; font-size: 20px; border-bottom: 1px dotted #ccc; text-decoration: none; color: #333; padding: 5px 0;}
 #colMiddleUl a:hover, #homeCat .homeCatUl a:hover {background: #F9F2E7; color: #d13919;}
@@ -79,6 +78,7 @@ a {text-decoration: none;}
 .homeShir {background: #fff; -webkit-border-radius: 5px; height: 270px; -moz-border-radius: 5px; border-radius: 5px; border: 3px solid #f5f5f5; width: 310px; margin: 10px auto 20px auto;}
 .homeShir>img {width: 306px; margin:2px; height: 132px; -webkit-border-top-left-radius: 3px; -webkit-border-top-right-radius: 3px; -moz-border-radius-topleft: 3px; -moz-border-radius-topright: 3px; border-top-left-radius: 3px; border-top-right-radius: 3px;}
 #listings .shirEntry ul li, #user .activityEntry ul li, .homeShirLatest {list-style-type: none; background: #fff; -webkit-border-radius: 5px; height: 101px; -moz-border-radius: 5px; border-radius: 5px; border: 3px solid #f5f5f5; width: 310px; margin: 10px auto 20px auto;}
+.homeShirLatest {position: relative; left: 8px;}
 .desc, .ctit {padding: 0 15px;}
 .small {font-size: 11px; font-family: arial; color: #888;}
 .homeShir h4 {overflow: hidden; max-height: 40px; height: auto; line-height: 1.3em; font-family: arial; font-size: 15px; font-weight: normal; margin: 8px 0;}
@@ -96,6 +96,26 @@ a {text-decoration: none;}
 #homeFeaturedOrgs h2, .homeCatUl h2 {padding: 0 0 8px 0;}
 .homeFeaturedOrg {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;  border: 2px solid #EEEEEE; display: inline-block; float: left; height: 112px; margin: 3px; width: 112px;}
 .default .colRight h2 {margin-left: 20px;}
+
+/* Jon's wonderful ribbon art */
+
+.homeRibbonWrap {position: relative; width: 322px; top:30px; margin-bottom: 55px; -moz-transition:all .5s ease-in-out; -webkit-transition:all 1s ease-in-out;}
+.homeRibbonWrap .ribbonEdge {position: absolute; top: -9px; z-index: 1; border-style:solid;}
+.homeRibbonWrap .ribbonEdgeLeft {border-width: 10px 20px 0 0;left:0;}
+.homeRibbonWrap .ribbonEdgeRight {border-width: 10px 0 0 20px;left: 302px;}
+.homeRibbonWrap .ribbonFront {font-family: RokkittRegular; font-size: 25px; color: #fff; left: 0; padding:15px 0; position: relative; text-align: center; width: 320px; z-index: 2; border-radius:3px; text-shadow: 0px 1px rgba(0, 0, 0, 0.8);}
+
+#leftRibbon {position: relative; left: 15px;}
+#leftRibbon .ribbonEdgeLeft {border-color: transparent #6B8901 transparent transparent;}
+#leftRibbon .ribbonEdgeRight {border-color: transparent transparent transparent #6B8901;}
+#leftRibbon .ribbonFront {background-image: -moz-linear-gradient(#8FBE00, #789901);background-image: -webkit-linear-gradient(#8FBE00, #789901);border: 1px solid #7EA100;-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;-o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;}
+#leftRibbon .ribbonFront>span {border-bottom: 1px dashed #5B7401; border-top: 1px dashed #5B7401; box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2), 0 -1px 7px rgba(0, 0, 0, 0.2); height: 30px; margin-left: 1px; padding: 10px 88px; position: relative; top: 0px;}
+
+#rightRibbon {position: relative; left: 20px;}
+#rightRibbon .ribbonEdgeLeft {border-color: transparent #771E0C transparent transparent;}
+#rightRibbon .ribbonEdgeRight {border-color: transparent transparent transparent #771E0C;}
+#rightRibbon .ribbonFront {background-image: -moz-linear-gradient(#C43715, #A32D12);background-image: -webkit-linear-gradient(#C43715, #A32D12);border: 1px solid #A32D12;-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;-o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;}
+#rightRibbon .ribbonFront>span {border-bottom: 1px dashed #6D1D0B;border-top: 1px dashed #6D1D0B;box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2), 0 -1px 7px rgba(0, 0, 0, 0.2);padding: 10px 96px;}
 
 /* Login and Signup */
 #loginSignup .colRight h2 {padding-left: 15px;}
@@ -230,41 +250,18 @@ a {text-decoration: none;}
 .info_more_descrption{ display: none; width: 950px; height: 300px; background: #fff; margin: 0 auto; padding: 10px; background: #fbfbfb; overflow: auto; }
 .succ_bg .info_more_descrption{ -moz-box-shadow: 0 0 5px #56a25e; -webkit-box-shadow: 0 0 5px #56a25e; box-shadow: 0 0 5px #56a25e; }
 
-
 /* ribbon */
 /* ribbon style reorganized, it's almost art now */
 
-.ribbon-wrapper, 
-.ribbon-wrapper1 {position: relative;top:30px;-moz-transition:all .5s ease-in-out;-webkit-transition:all 1s ease-in-out;}
-.ribbon-wrapper:hover, 
-.ribbon-wrapper1:hover{opacity:.1;}
-
-.ribbon-front, 
-.ribbon-front1{color: white;left: -23px;padding:15px 0;position: relative;text-align: center;width: 355px;z-index: 2;border-radius:3px;text-shadow: 0px 1px rgba(0, 0, 0, 0.8);font-size:20px;}
-.ribbon-front {background-image: -moz-linear-gradient(#8FBE00, #789901);background-image: -webkit-linear-gradient(#8FBE00, #789901);border: 1px solid #7EA100;-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;-o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #8AB601 inset;}
-.ribbon-front1 {background-image: -moz-linear-gradient(#C43715, #A32D12);background-image: -webkit-linear-gradient(#C43715, #A32D12);border: 1px solid #A32D12;-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;-khtml-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;-o-box-shadow: 0px 0px 4px rgba(0,0,0,0.55), 0 0 0 1px #C43715 inset;}
-
-.ribbon-edge-topleft,
-.ribbon-edge-topright, 
-.ribbon-edge-topleft1,
-.ribbon-edge-topright1 {position: absolute;z-index: 1;border-style:solid;height:0px;width:0px;}	
-.ribbon-edge-topleft, 
-.ribbon-edge-topleft1 {top: -9px;border-width: 10px 20px 0 0;left:-23px;}
-.ribbon-edge-topright, 
-.ribbon-edge-topright1  {top: -9px;border-width: 10px 0 0 20px;left: 314px;}
-.ribbon-edge-topleft {border-color: transparent #6B8901 transparent transparent;}
-.ribbon-edge-topleft1 {border-color: transparent #771E0C transparent transparent;}
-.ribbon-edge-topright{border-color: transparent transparent transparent #6B8901;}
-.ribbon-edge-topright1{border-color: transparent transparent transparent #771E0C;}
-
-.couture{border-bottom: 1px dashed #5B7401;border-top: 1px dashed #5B7401;box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2), 0 -1px 7px rgba(0, 0, 0, 0.2);padding: 10px 111px;}
-.couture1{border-bottom: 1px dashed #6D1D0B;border-top: 1px dashed #6D1D0B;box-shadow: 0 1px 7px rgba(0, 0, 0, 0.2), 0 -1px 7px rgba(0, 0, 0, 0.2);padding: 10px 119px;}
+/**
+---------------------------- 
+what are these for ?? 
+----------------------------
 
 .fixed{position:fixed; opacity:.9;padding:0px;top:10px;}
 .padding{padding:0;}
 .couture-none{border:none;box-shadow:none;}
-
-.dupleix{position:relative;margin: 0px auto;width: 310px;height:0;}
+**/
 
 /*New message style*/
 .nav li a.newMessage{background-image: -moz-linear-gradient(#C43715, #7F210C);background-image:-webkit-gradient(linear, center top, center bottom,color-stop(0.13, #BA3414),color-stop(0.79, #8A250E));border-radius: 2px 2px 2px 2px;font-size: 13px;padding: 10px 4px;position: relative;box-shadow: 0 0 1px 2px #C43715 inset;}

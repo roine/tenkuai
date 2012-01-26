@@ -1,12 +1,16 @@
-<div class="dupleix">
-<div class="ribbon-wrapper">
-	<div class="ribbon-front">
-	<span class='couture'>	Featured Shirs</span>
-	</div>
-	<div class="ribbon-edge-topleft"></div>
-	<div class="ribbon-edge-topright"></div>
-</div>
-</div>
+<div class="homeRibbonWrap" id="leftRibbon">
+	
+	<div class="ribbonFront">
+	  <span>Featured Shirs</span>
+	</div> <!-- #leftRibbon .ribbonFront -->
+	
+	<div class="ribbonEdge ribbonEdgeLeft"></div>
+	<div class="ribbonEdge ribbonEdgeRight"></div>
+	
+</div> <!-- leftRibbon -->
+
+<div class="clear"></div>
+
 <%@featured_shir.each do |f|%>
 <div class="homeShir">
 
@@ -21,17 +25,10 @@
 </div> <!-- homeShir -->
 
 <%end%>
-<div id='lastFeatured'></div>
 
-<div class="dupleix">
-<div class="ribbon-wrapper1">
-	<div class="ribbon-front1">
-		<span class='couture1'>	Recent Shirs</span>
-	</div>
-	<div class="ribbon-edge-topleft1"></div>
-	<div class="ribbon-edge-topright1"></div>
-</div>
-</div>
+<!-- WHATS THIS? 
+<div id='lastFeatured'></div> -->
+
 <%@recent_shir.order('created_at DESC').each do |f|%>
 <div class="homeShir">
 	<%= image_tag(f.photo.url(:small), :alt => f.title) %>
@@ -45,4 +42,6 @@
 </div> <!-- homeShir -->
 
 <%end%>
-<div id='lastFeatured1'></div>
+
+<!-- WHAT'S THIS!? 
+<div id='lastFeatured1'></div> -->
