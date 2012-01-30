@@ -1,17 +1,43 @@
+<div id="inbox" class="default wrap">
+  
+  <div class="colLeft">
+  
+    <h2><%= @folder.name%> <%if @messages%>
+    (<%= @messages.where(:status => 1).count%>/<%= @messages.count%>)</h2>
+  
+    <%@messages.each do |message|%>
+      <div class="shirEntry">
+        <ul>
+          <li>
+  					<%= image_tag("test/latestImg1.jpg", :alt => "Post Photo") %>
+      			<div class="shirEntryDesc">
+      			<p class="small"><%next if has_already_sent? message.author.username%><%=link_to message.author.username, "/#{message.author.username.downcase}", :class =>"capitalize" %> sent</p>
+      			<h4><%= link_to message.subject, message_path(message, :anchor => message.id)%></h4>
+      			<p class="small"><%= distance_of_time_in_words(message.created_at, Time.now)%> ago
+            <%=status_to_word message.status %></p>
+      			</div> <!-- shirEntryDesc -->
+      			<div class="clear"></div>
+      		</li>
+      	</ul> 
+    	</div> <!-- shirEntry -->
+    <%end%>
+    <%end%>
 
-<%= @folder.name%>
-<%if @messages%>
-(<%= @messages.where(:status => 1).count%>/<%= @messages.count%>)<br />
-<%@messages.each do |message|%>
+    <%= will_paginate @messages%>    
+    
+  </div> <!-- colLeft -->
+  
+  <div class="colMiddle">
+    <div id="colMiddleUl">
+      <%= link_to 'Back', :back %>
+    </div> <!-- colMiddleUl -->
+  </div> <!-- colMiddle -->
+  
+  <div class="colRight">
+    <h2>Sent Messages</h2>
+  </div> <!-- colRight -->
+  
+  <div class="clear"></div>
+  
+</div>
 
-<%#next if has_already_sent? message.author.username%>
-<%=message.author.username%>
-<%= link_to message.subject, message_path(message, :anchor => message.id)%>
-<%= distance_of_time_in_words(message.created_at, Time.now)%> ago
-<%=status_to_word message.status %>
-<br />
-
-<%end%>
-<%end%>
-
-<%= will_paginate @messages%>
