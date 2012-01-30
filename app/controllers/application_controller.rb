@@ -13,6 +13,9 @@ class ApplicationController < ActionController::Base
   #      render :file => "#{Rails.root}/public/404.html", :status => 404, :layout => false
   #    end
   #    
+  def get_categories
+     @categories = Category.all
+   end
   def own_message?
     return MessageCopy.find(params[:id]).recipient_id == current_user.id 
   end

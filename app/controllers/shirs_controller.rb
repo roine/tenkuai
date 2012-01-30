@@ -4,14 +4,9 @@ class ShirsController < ApplicationController
 
   before_filter :get_categories
 
-  def get_categories
-    @categories = Category.all
-  end
-
 
   def index
     @shirs = Shir.count > 0 ? Shir.order('created_at desc') : {}
-    @categories = Category.all
     if params[:tags]
       @shirs = Shir.tagged_with(params[:tags])
     end

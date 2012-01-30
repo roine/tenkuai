@@ -1,32 +1,26 @@
 Tenkuai::Application.routes.draw do
-  resources :sent, :messages, :mailbox
-  
+  resources :sent, :messages, :mailbox, :roles, :categories, :orders
+
   match "inbox" => "mailbox#index"
 
-  resources :orders
-
   devise_for :users, :path_names => { :sign_up => "join", :sign_in => "login"}, :controllers =>{:registrations => 'users/registrations'}
-  
- 
-  
-  resources :categories, :roles
+
   #link the shirs with the users and only display the view show
   resources :users, :only=>[:show] do
-    resources :shirs
+    resources :shirs 
     resources :sent
     resources :mailbox do
       resources :sent
     end
   end
+  resources :shirs do 
+    resources :orders
+  end
 
   #  hide the controllers name
   get "/:user_id/:id", :to => "shirs#show", :as => :shirs_user
   get "/:user_id/message/:id/sent/new", :to => "sent#new", :as => :user_mailbox_sent
-
-  resources :shirs do
-    resources :orders
-  end
-
+  # get "/:shir_id/order-it", :to => "orders#new", :as => :user_shir_order
 
   get "home/index"
 
@@ -83,8 +77,9 @@ Tenkuai::Application.routes.draw do
   root :to => 'home#index'
 
   match ':id' => "users#show", :as => :username
+  # match ':shir_id' => "shirs#show", :as => :shir
   # match '*a', :to => 'errors#routing'
-  
+
   #match '/:username' => 'users#show'
   # See how all your routes lay out with "rake routes"
 

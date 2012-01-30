@@ -1,3 +1,6 @@
-class RolesController < InheritedResources::Base
+class RolesController < ApplicationController
   @categories = Category.all
+  def index
+  end
+  
 end
