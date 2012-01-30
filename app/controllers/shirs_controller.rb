@@ -7,6 +7,7 @@ class ShirsController < ApplicationController
 
   def index
     @shirs = Shir.count > 0 ? Shir.order('created_at desc') : {}
+    @recent_shir = Shir.recent
     if params[:tags]
       @shirs = Shir.tagged_with(params[:tags])
     end

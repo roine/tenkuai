@@ -26,6 +26,30 @@
   </div> <!-- colMiddle -->
   
   <div class="colRight">
+	
+	<div class="dupleix">
+	<div class="ribbon-wrapper1">
+		<div class="ribbon-front1">
+			<span class='couture1'>	Recent Shirs</span>
+		</div>
+		<div class="ribbon-edge-topleft1"></div>
+		<div class="ribbon-edge-topright1"></div>
+	</div>
+	</div>
+	<%@recent_shir.order('created_at DESC').each do |f|%>
+	<div class="homeShir">
+		<%= image_tag(f.photo.url(:small), :alt => f.title) %>
+
+		<div class="desc">
+			<p class="small">For 20 kuai, <%=link_to f.user.username, username_path(f.user.username.downcase)%> will..</p>
+			<h4><%=link_to f.title, f%></h4>
+			<p class="shortDesc"><%=clean_split f.description, 100%></p>
+		</div> <!-- desc -->
+
+	</div> <!-- homeShir -->
+
+	<%end%>
+	<div id='lastFeatured1'></div>
   </div> <!-- colRight -->
   
   <div class="clear"></div>
