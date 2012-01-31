@@ -59,7 +59,8 @@
 				<label>Update Shir Photo</label><br />
 				<%= f.file_field :photo%>
 			</p>
-
+			<%= f.label :featured, :class=>"bold" %><br />
+		      <%= f.check_box :featured %>
 			<p>
 				<%= f.label :category_id %><br />
 				<select name='shir[category_id]'>
@@ -94,6 +95,7 @@
 					<%= f.label :shipping_id %><br />
 					<%= f.number_field :shipping_id %>
 				</p>
+				
 			</div> <!-- editShirShipping -->
 
 			<p>
