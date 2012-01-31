@@ -27,15 +27,7 @@
   
   <div class="colRight">
 	
-	<div class="dupleix">
-	<div class="ribbon-wrapper1">
-		<div class="ribbon-front1">
-			<span class='couture1'>	Recent Shirs</span>
-		</div>
-		<div class="ribbon-edge-topleft1"></div>
-		<div class="ribbon-edge-topright1"></div>
-	</div>
-	</div>
+  <h2>Latest Shir's</h2>
 	<%@recent_shir.order('created_at DESC').each do |f|%>
 	<div class="homeShir">
 		<%= image_tag(f.photo.url(:small), :alt => f.title) %>
