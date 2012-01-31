@@ -1,27 +1,46 @@
+<div class="wrap default" id=""> 
+  <div class="colLeft">
+  
+    <%if @common_messages%>
+    <%@common_messages.each do |m|%>
+    
+    <div id="<%=m.id%>" class="userMessage">
+      <p class="small"><span class="capitalize c333"><%=Message.find(m.message_id).author.username%></span> sent</p>
+      <h2><%=Message.find(m.message_id).subject%></h2>
+    
+      <p class="userMessageBody"><%=Message.find(m.message_id).body%></p>
+      
+      <p class="small"><%=time_ago_in_words(Message.find(m.message_id).created_at.to_time)%> ago</p>
+    </div> <!-- userMessage -->
+    
+    <%end%>
+    <%end%>
+    
+    
+    <!-- <h3><%= @message.subject%></h3>
+    <p><b>From: </b><%= @message.author.username%></p>
+    <p><b>Received: </b><%= @message.created_at.to_s(:long)%> (<%=distance_of_time_in_words(@message.created_at, Time.now)%>)</p>
+    Subject: <%=@message.subject%>
+    <pre><%= @message.body%></pre>
+    <hr> -->
 
-<style>
-hr{border:1px solid rgba(0,0,0,.8);}
-</style>
-<%if @common_messages%>
-<%@common_messages.each do |m|%>
-<div id="<%=m.id%>">
-	<%@photo = Message.find(m.message_id).author.photo_file_name ? Message.find(m.message_id).author.photo.url(:thumb) : 'test/santa.jpg'%>
-<%= image_tag @photo, :alt =>"#{Message.find(m.message_id).author.username}'s profile picture", :id => "profilePic"%>
-<%=Message.find(m.message_id).subject%><br />
-<%=Message.find(m.message_id).body%><br />
-<%=time_ago_in_words(Message.find(m.message_id).created_at.to_time)%><br />
-From: <%=Message.find(m.message_id).author.username%><br />
-</div>
-<hr>
-<%end%>
-<%end%>
-<!-- <h3><%= @message.subject%></h3>
-<p><b>From: </b><%= @message.author.username%></p>
-<p><b>Received: </b><%= @message.created_at.to_s(:long)%> (<%=distance_of_time_in_words(@message.created_at, Time.now)%>)</p>
-Subject: <%=@message.subject%>
-<pre><%= @message.body%></pre>
-<hr> -->
-
-
-<%=link_to "Reply", user_mailbox_sent_path(@message.author.username.downcase, params[:id])%><br />
-<%=link_to 'back to Mailbox', mailbox_index_path%>
+    
+  </div> <!-- colLeft -->
+  
+  <div class="colMiddle">
+    <div class="orderMain">
+      <%=link_to "Reply", user_mailbox_sent_path(@message.author.username.downcase, params[:id])%>
+    </div> <!-- orderMain -->
+    <br>
+    <div id="colMiddleUl">
+      <%=link_to 'Message Inbox', mailbox_index_path%>
+      <%=link_to "User Dashboard", "/#{current_user.username.downcase}"%>
+    </div> <!-- colMiddleUl -->
+    
+  </div> <!-- colMiddle -->
+  
+  <div class="colRight">
+  </div> <!-- colRight -->
+  
+  <div class="clear"></div>
+</div> <!-- wrap -->
