@@ -1,9 +1,12 @@
+
 <style>
 hr{border:1px solid rgba(0,0,0,.8);}
 </style>
 <%if @common_messages%>
 <%@common_messages.each do |m|%>
 <div id="<%=m.id%>">
+	<%@photo = Message.find(m.message_id).author.photo_file_name ? Message.find(m.message_id).author.photo.url(:thumb) : 'test/santa.jpg'%>
+<%= image_tag @photo, :alt =>"#{Message.find(m.message_id).author.username}'s profile picture", :id => "profilePic"%>
 <%=Message.find(m.message_id).subject%><br />
 <%=Message.find(m.message_id).body%><br />
 <%=time_ago_in_words(Message.find(m.message_id).created_at.to_time)%><br />
