@@ -50,6 +50,9 @@ class User < ActiveRecord::Base
        end
      end
 
+    #featured
+    
+    scope :featured, :conditions => {:featured => true}
 
   #check the username field
   validates :username, :presence=>true,:uniqueness=>true, :format => {:with => /^[A-Za-z0-9_\.@]+$/}, :length => {:minimum => 3, :maximum => 20}

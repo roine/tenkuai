@@ -6,10 +6,11 @@
 
 <div id="homeFeaturedOrgs">
 	<h2>Featured Sellers</h2>
-
-	<div class="homeFeaturedOrg"></div>
-	<div class="homeFeaturedOrg"></div>
-	<div class="homeFeaturedOrg"></div>
-	<div class="homeFeaturedOrg"></div>
-
+	
+	<%@featured_user.each do |u|%>
+  
+	  <div title="<%= u.username %>" class="homeFeaturedOrg"><%=link_to image_tag(u.photo.url(:thumb)), u%></div>
+  
+  <% end %>
+  
 </div> <!-- homeFeaturedOrgs -->

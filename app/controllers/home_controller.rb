@@ -9,6 +9,7 @@ class HomeController < ApplicationController
     @shirs = Shir.order('created_at desc').limit(6)
     @featured_shir = Shir.featured.order('created_at DESC')
     @recent_shir = Shir.recent
+    @featured_user = User.featured.order('created_at DESC')
     end
   end
 end

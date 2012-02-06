@@ -95,7 +95,7 @@ a {text-decoration: none;}
 .activityEntryDesc h4, .homeLatestDesc h4 {font-size: 13px; text-align:left; word-wrap: break-word; max-height: 58px; overflow: hidden;}
 #homeFeaturedOrgs {position: relative; top: 30px; text-align: center;}
 #homeFeaturedOrgs h2, .homeCatUl h2 {padding: 0 0 8px 0;}
-.homeFeaturedOrg {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;  border: 2px solid #EEEEEE; display: inline-block; float: left; height: 112px; margin: 3px; width: 112px;}
+.homeFeaturedOrg {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;  border: 2px solid #EEEEEE; display: inline-block; float: left; height: 100px; margin: 0 0 15px 15px; width: 100px;}
 .default .colRight h2 {margin-left: 20px;}
 .activityEntry {height: 515px;}
 /* Login and Signup */
