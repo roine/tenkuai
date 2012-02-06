@@ -98,6 +98,8 @@ a {text-decoration: none;}
 .homeFeaturedOrg {-webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px;  border: 2px solid #EEEEEE; display: inline-block; float: left; height: 100px; margin: 0 0 15px 15px; width: 100px;}
 .default .colRight h2 {margin-left: 20px;}
 .activityEntry {height: 515px;}
+.buyPaypal {border: 0; min-width: 245px;}
+
 /* Login and Signup */
 #loginSignup .colRight h2 {padding-left: 15px;}
 #loginSignup h2 {padding-left: 0; margin-bottom: 15px;}

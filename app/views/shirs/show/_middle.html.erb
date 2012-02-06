@@ -1,12 +1,17 @@
 		<%if not_own_by? @user%>
-			<div class="orderMain">
-				<%=link_to "buy this", new_shir_order_path(@shir)%>
-			</div> <!-- orderMain -->
-			
+		
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="VXKP7SGYHFXQ2">
+        <input type="submit" class="orderMain buyPaypal" value="Buy This" name="submit">
+        </form>
+        
 			<%=link_to "Ask the seller a question", root_path, :id => "askQuestion"%>
 			<%elsif !user_signed_in?%>
 			<div class="orderMain">
-				<%=link_to "buy ass", new_user_registration_path %>
+				
+        <%=link_to "buy this", new_user_registration_path %>
+        
 			</div> <!-- orderMain -->
 			
 		<%=link_to "Ask the seller a question!", new_user_registration_path, :id => "askQuestion"%>
