@@ -1,10 +1,13 @@
 <% if user_signed_in? %>
 
-<li><%=link_to current_user.username, username_path(current_user.username.downcase)%>
-	<%if new_message?%>
-	<%=link_to message_received, mailbox_index_path, :class => 'newMessage'%>
-		<%end%>	
+  <li>
+    <%=link_to current_user.username, username_path(current_user.username.downcase)%>
+	    <%if new_message?%>
+	      <%=link_to message_received, mailbox_index_path, :class => 'newMessage'%>
+		  <%end%>	
 	</li>
-	<li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li>
+	
+	<li><%= link_to 'Add New Shir', new_shir_path, :class => "signUp" %></li>
+	<!-- <li><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></li> -->
 
 	<% end %>

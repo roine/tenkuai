@@ -11,7 +11,7 @@ $(document).ready(function() {
 		btnPrev: ".up",
 		vertical: true,
 		circular: false,
-		visible: 3,
+		visible: 4,
 		start: 0
 	});
 
