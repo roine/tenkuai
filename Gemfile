@@ -7,6 +7,10 @@ gem 'rails', '3.1.3'
 
 gem 'sqlite3'
 
+
+gem 'active_utils'
+
+
 gem 'json'
 
 # Gems used only for assets and not required
@@ -49,3 +53,4 @@ gem 'will_paginate'
 gem "cancan"
 
 gem 'acts_as_tree'
+

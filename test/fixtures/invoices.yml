@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user_id: 
+  shir_id: 
+  payment_status: 
+  order_status: 
+  buyer_feedback_id: 
+
+two:
+  user_id: 
+  shir_id: 
+  payment_status: 
+  order_status: 
+  buyer_feedback_id: 
