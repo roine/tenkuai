@@ -6,7 +6,7 @@
 	
 	<div class="desc">
 		<p class="small">For 20 kuai, <%=link_to f.user.username, username_path(f.user.username.downcase)%> will..</p>
-		<h4><%=link_to f.title, f%></h4>
+		<h4><%=link_to f.title, shirs_user_path(f.user.username, f)%></h4>
 		<p class="shortDesc"><%=clean_split f.description, 100%></p>
 	</div> <!-- desc -->
 	

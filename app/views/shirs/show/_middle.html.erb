@@ -1,51 +1,51 @@
-		<%if not_own_by? @user%>
-		
-				<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="VXKP7SGYHFXQ2">
-        <input type="hidden" name="item_name" value="<%= @shir.title.capitalize %> by <%= @user.username%> for <%=current_user.username%>"> 
-        <input type="submit" class="orderMain buyPaypal" value="Buy This" name="submit">
-        </form>        
-        
-        <!-- link_to "buy this", new_shir_order_path(@shir) -->
-        
-			<%=link_to "Ask the seller a question", root_path, :id => "askQuestion"%>
-			<%elsif !user_signed_in?%>
-			<div class="orderMain">
-				
-        <%=link_to "buy this", new_user_registration_path %>
-        
-			</div> <!-- orderMain -->
-			
-		<%=link_to "Ask the seller a question!", new_user_registration_path, :id => "askQuestion"%>
-		
-			<%end%>
-			<div id="feedback">
-				<h4>Latest Buyer Feedback</h4>
-				
-				<div class="feedbackList">
-					<ul>
-						<li>
-							<%= image_tag("test/feedbackImg.jpg", :alt => "username", :class=> "left") %>
-							<div class="right"><a href="">Gengis Khan</a> <div class="smaller">posted this 1 day ago</div></div>
-							<div class="clear"></div>
-							<p>excellent work on time, i recommend to everyone try, must encourage arjunrocks to climb greater heights</p>
-						</li>
-					
-						<li>
-							<%= image_tag("test/feedbackImg.jpg", :alt => "username", :class=> "left") %>
-							<div class="right"><a href="">Mark Zuckerberg</a> <div class="smaller">posted this 1 day ago</div></div>
-							<div class="clear"></div>
-							<p>You did an amazing job! Thanks so much for your time, Ill let you know how my coworker reacts :)</p>
-						</li>
-					
-						<li>
-							<%= image_tag("test/feedbackImg.jpg", :alt => "username", :class=> "left") %>
-							<div class="right"><a href="">Sean Kingston</a> <div class="smaller">posted this 1 day ago</div></div>
-							<div class="clear"></div>
-							<p>Fantastic!!!!! It was very good! I see why you are a top-seller!</p>
-						</li>
-					</ul>
-				</div> <!-- feedbackList -->
-				<p class="center"><span class="up"><%= image_tag("up.png", :alt => "Up") %></span> <span class="down"><%= image_tag("down.png", :alt => "Down") %></span></p>
-			</div> <!-- feedback -->
+<%if not_own_by? @user%>
+
+<!-- <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+	<input type="hidden" name="cmd" value="_s-xclick">
+	<input type="hidden" name="hosted_button_id" value="VXKP7SGYHFXQ2">
+	<input type="hidden" name="item_name" value="<%= @shir.title.capitalize %> by <%= @user.username%> for <%=current_user.username%>"> 
+	<input type="submit" class="orderMain buyPaypal" value="Buy This" name="submit">
+</form>         -->
+<%=link_to "Buy This", fake_paypal_shir_path(@shir.id), :class => "orderMain buyPaypal"%>
+<!-- link_to "buy this", new_shir_order_path(@shir) -->
+
+<%=link_to "Ask the seller a question", root_path, :id => "askQuestion"%>
+<%elsif !user_signed_in?%>
+<div class="orderMain">
+
+	<%=link_to "buy this", new_user_registration_path %>
+
+</div> <!-- orderMain -->
+
+<%=link_to "Ask the seller a question!", new_user_registration_path, :id => "askQuestion"%>
+
+<%end%>
+<div id="feedback">
+	<h4>Latest Buyer Feedback</h4>
+
+	<div class="feedbackList">
+		<ul>
+			<li>
+				<%= image_tag("test/feedbackImg.jpg", :alt => "username", :class=> "left") %>
+				<div class="right"><a href="">Gengis Khan</a> <div class="smaller">posted this 1 day ago</div></div>
+				<div class="clear"></div>
+				<p>excellent work on time, i recommend to everyone try, must encourage arjunrocks to climb greater heights</p>
+			</li>
+
+			<li>
+				<%= image_tag("test/feedbackImg.jpg", :alt => "username", :class=> "left") %>
+				<div class="right"><a href="">Mark Zuckerberg</a> <div class="smaller">posted this 1 day ago</div></div>
+				<div class="clear"></div>
+				<p>You did an amazing job! Thanks so much for your time, Ill let you know how my coworker reacts :)</p>
+			</li>
+
+			<li>
+				<%= image_tag("test/feedbackImg.jpg", :alt => "username", :class=> "left") %>
+				<div class="right"><a href="">Sean Kingston</a> <div class="smaller">posted this 1 day ago</div></div>
+				<div class="clear"></div>
+				<p>Fantastic!!!!! It was very good! I see why you are a top-seller!</p>
+			</li>
+		</ul>
+	</div> <!-- feedbackList -->
+	<p class="center"><span class="up"><%= image_tag("up.png", :alt => "Up") %></span> <span class="down"><%= image_tag("down.png", :alt => "Down") %></span></p>
+</div> <!-- feedback -->

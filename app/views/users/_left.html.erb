@@ -37,5 +37,5 @@
 	</ul>
 	<p class="c888">Introduction</p>
 	<p><%=@introduction%></p>
-
+bought: <%@bought.each do |b|%><%=link_to b.shir.title, shirs_user_path(b.shir.user.username, b.shir)%>,<%end%>
 </div>

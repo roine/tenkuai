@@ -1,4 +1,6 @@
 Tenkuai::Application.routes.draw do
+  get "fake_paypal/index"
+
   resources :sent, :messages, :mailbox, :roles, :categories, :orders
 
   match "inbox" => "mailbox#index"
@@ -23,7 +25,7 @@ Tenkuai::Application.routes.draw do
   # get "/:shir_id/order-it", :to => "orders#new", :as => :user_shir_order
 
   get "home/index"
-
+  get "fake_paypal/i/:shir_id", :to => "fake_paypal#index", :as => :fake_paypal_shir
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

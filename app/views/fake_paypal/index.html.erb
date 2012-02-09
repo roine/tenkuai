@@ -1,0 +1,9 @@
+You bought it nigga!<br />
+And you gonna fucking be redirected in few seconds, so tie your belt!!
+
+<script>
+var delayedRedirect = function() {
+	window.location = "<%=username_path(current_user.username.downcase)%>"
+}
+</script>
+<body onload="setTimeout('delayedRedirect()', 3000)">

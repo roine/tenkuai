@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     @website = @user.website ? @user.website : ''
     @photo = @user.photo_file_name ? @user.photo.url(:small) : 'test/santa.jpg'
     @username = @user.username
-
+    @bought = Order.where(:user_id => @user.id)
       respond_to do |format|
         format.html # show.html.erb
         format.json { render :json => @user }
