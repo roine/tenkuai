@@ -10,6 +10,7 @@ class HomeController < ApplicationController
     @featured_shir = Shir.featured.order('created_at DESC')
     @recent_shir = Shir.recent
     @featured_user = User.featured.order('created_at DESC')
+    @title = "#{@users.count} Users #{@shirs_all.count} Shirs"
     end
   end
 end

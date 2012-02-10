@@ -1,10 +1,7 @@
 module ApplicationHelper
   def title(page_title)
-    if !page_title.nil?
-      content_for(:title) {page_title}
-    else
-      content_for(:title) {"Gig for 20 Kuai"}
-    end
+      return page_title if !page_title.nil?
+      return "Gig for 20 Kuai" if page_title.nil?
   end
 
   def resource_name

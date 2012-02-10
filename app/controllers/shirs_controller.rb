@@ -25,11 +25,12 @@ class ShirsController < ApplicationController
     @user = @shir.user
     @photo = @shir.photo_file_name ? @shir.photo.url(:medium) : 'test/shirMainImg.jpg'
     @category = @shir.category ? @shir.category : ''
+     @title = "#{@shir.title} by #{@shir.user.username}"
     respond_to do |format|
       format.html # show.html.erb
       format.json { render :json => @shir }
     end
-    
+
   end
 
   # GET /shirs/new

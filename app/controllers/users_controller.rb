@@ -17,6 +17,7 @@ class UsersController < ApplicationController
     @username = @user.username
     @bought = Order.where(:user_id => @user.id)
     @sold = Order.where(:shir_id => @shirs)
+    @title = @username
       respond_to do |format|
         format.html # show.html.erb
         format.json { render :json => @user }
