@@ -3,6 +3,7 @@ class Shir < ActiveRecord::Base
   belongs_to :user
   belongs_to :category
   has_many :orders
+  belongs_to :organisation
   
   scope :featured, :conditions => {:featured => true}
   scope :recent, where('created_at>= ?', Time.now-1.week)
