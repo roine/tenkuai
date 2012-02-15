@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120209063139) do
+ActiveRecord::Schema.define(:version => 20120215104824) do
 
   create_table "categories", :force => true do |t|
     t.string   "title"
@@ -22,6 +22,18 @@ ActiveRecord::Schema.define(:version => 20120209063139) do
   end
 
   add_index "categories", ["slug"], :name => "index_categories_on_slug", :unique => true
+
+  create_table "contact_people", :force => true do |t|
+    t.string   "designation"
+    t.string   "salutation"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "identification"
+    t.string   "tel"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "folders", :force => true do |t|
     t.integer  "user_id"
@@ -64,6 +76,35 @@ ActiveRecord::Schema.define(:version => 20120209063139) do
     t.integer  "user_id"
     t.integer  "order_status_id"
     t.integer  "buyer_feedback_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "org_payments", :force => true do |t|
+    t.string   "bank_name"
+    t.string   "bank_acc_name"
+    t.string   "bank_acc_no"
+    t.string   "bank_acc_type"
+    t.integer  "contact_person_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "org_types", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "organisations", :force => true do |t|
+    t.string   "name"
+    t.text     "summary"
+    t.string   "website"
+    t.string   "location"
+    t.integer  "shir_id"
+    t.integer  "org_type_id"
+    t.integer  "org_payment_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

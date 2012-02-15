@@ -2,6 +2,7 @@
 	<%if current_user.debug == true%>
 	<div class='clear'></div>
 	<div class=debug>
+		Params: <%=params.inspect%><br>
 		New Email? => <%=message_received%><br />
 		Controller =><%= controller_name%><br />
 		Action =><%=action_name%><br />

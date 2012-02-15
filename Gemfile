@@ -52,3 +52,5 @@ gem "cancan"
 
 gem 'acts_as_tree'
 
+gem 'awesome_print'
+
